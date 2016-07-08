@@ -9,6 +9,7 @@
 import Cocoa
 
 class ResourceesClassGenerator {
+    
     func generateClass(fromImages images : [ImageAssetMetadata], generatedFile : String) {
         var headerFile = ""
         var implementationFile = ""

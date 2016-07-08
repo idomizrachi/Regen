@@ -27,5 +27,14 @@ for asset in assets {
     }
 }
 
-let generator = ResourceesClassGenerator()
-generator.generateClass(fromImages: metadatas, generatedFile: "Images")
+let validator = Validator()
+let validationIssues = validator.validate(metadatas)
+if validationIssues.count == 0 {
+    let generator = ResourceesClassGenerator()
+    generator.generateClass(fromImages: metadatas, generatedFile: "Images")
+} else {
+    for validationIssue in validationIssues {
+        print("\(validationIssue.firstImageName) conflicts with \(validationIssue.secondImageName) for as property \(validationIssue.propertyName)")
+    }
+}
+
