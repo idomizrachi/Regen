@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		99922B291D30353800B63BC4 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99922B281D30353800B63BC4 /* Validator.swift */; };
+		99922B2B1D306B6B00B63BC4 /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99922B2A1D306B6B00B63BC4 /* Version.swift */; };
 		999D35561D2EE6E700C0184A /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999D35551D2EE6E700C0184A /* main.swift */; };
 		99CF695E1D2FE3E7001FFE03 /* AssetsFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CF695D1D2FE3E7001FFE03 /* AssetsFinder.swift */; };
 		99CF69601D2FE76C001FFE03 /* ImageFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CF695F1D2FE76B001FFE03 /* ImageFinder.swift */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		99922B281D30353800B63BC4 /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		99922B2A1D306B6B00B63BC4 /* Version.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Version.swift; sourceTree = "<group>"; };
 		999D35521D2EE6E700C0184A /* SafeAsset */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SafeAsset; sourceTree = BUILT_PRODUCTS_DIR; };
 		999D35551D2EE6E700C0184A /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		99CF695D1D2FE3E7001FFE03 /* AssetsFinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetsFinder.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				99CF69611D2FEAF9001FFE03 /* ImageAssetParser.swift */,
 				99922B281D30353800B63BC4 /* Validator.swift */,
 				99CF69631D2FF2DA001FFE03 /* ResourceesClassGenerator.swift */,
+				99922B2A1D306B6B00B63BC4 /* Version.swift */,
 				999D35551D2EE6E700C0184A /* main.swift */,
 			);
 			path = SafeAsset;
@@ -138,6 +141,7 @@
 				99CF695E1D2FE3E7001FFE03 /* AssetsFinder.swift in Sources */,
 				99CF69621D2FEAF9001FFE03 /* ImageAssetParser.swift in Sources */,
 				99CF69601D2FE76C001FFE03 /* ImageFinder.swift in Sources */,
+				99922B2B1D306B6B00B63BC4 /* Version.swift in Sources */,
 				99922B291D30353800B63BC4 /* Validator.swift in Sources */,
 				999D35561D2EE6E700C0184A /* main.swift in Sources */,
 			);

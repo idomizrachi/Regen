@@ -8,6 +8,11 @@
 
 import Foundation
 
+if (Process.arguments.contains("--version")) {
+    print("\(Version.current)")
+    exit(EXIT_SUCCESS)
+}
+
 let fileManager = NSFileManager.defaultManager()
 let searchPath = fileManager.currentDirectoryPath
 
@@ -19,7 +24,6 @@ let imageAssetParser = ImageAssetParser()
 var metadatas : [ImageAssetMetadata] = []
 
 for asset in assets {
-    print("\(asset)")
     let images = imageFinder.findImages(inAsset: asset)
     for image in images {
         let metadata = imageAssetParser.parseImage(image)
@@ -34,7 +38,9 @@ if validationIssues.count == 0 {
     generator.generateClass(fromImages: metadatas, generatedFile: "Images")
 } else {
     for validationIssue in validationIssues {
-        print("\(validationIssue.firstImageName) conflicts with \(validationIssue.secondImageName) for as property \(validationIssue.propertyName)")
+        print("\(validationIssue.firstImage) conflicts with \(validationIssue.secondImage) for as property \(validationIssue.property)")
     }
+    exit(EXIT_FAILURE)
 }
 
+exit(EXIT_SUCCESS)
