@@ -14,19 +14,18 @@ class ResourceesClassGenerator {
         var implementationFile = ""
         
         headerFile += "@import Foundation;\n\n"
-        headerFile += "@interface \(generatedFile) : NSObject {\n\n"
+        headerFile += "@interface \(generatedFile) : NSObject \n\n"
         
         implementationFile += "#import \"\(generatedFile).h\"\n"
         implementationFile += "@implementation \(generatedFile)\n"
         
         for metadata in images {
-            headerFile += "    @property (nonatomic, readonly) *\(metadata.property);\n"
-            implementationFile += "-(NSString *)\(metadata.property) {\n"
+            headerFile += "+(NSString *)\(metadata.property);\n"
+            implementationFile += "+(NSString *)\(metadata.property) {\n"
             implementationFile += "    return @\"\(metadata.imageNamed)\";\n"
             implementationFile += "}\n"
         }
-        
-        headerFile += "}\n"
+                
         headerFile += "@end\n"
 
         implementationFile += "@end\n"
