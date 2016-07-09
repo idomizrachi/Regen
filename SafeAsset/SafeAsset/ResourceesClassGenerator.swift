@@ -15,21 +15,19 @@ class ResourceesClassGenerator {
         var implementationFile = ""
         
         headerFile += "@import Foundation;\n\n"
-        headerFile += "@interface \(generatedFile) : NSObject \n\n"
+        headerFile += "extern const struct \(generatedFile) {\n"
         
         implementationFile += "#import \"\(generatedFile).h\"\n"
-        implementationFile += "@implementation \(generatedFile)\n"
+        implementationFile += "const struct \(generatedFile) \(generatedFile) = {\n"
         
         for metadata in images {
-            headerFile += "+(NSString *)\(metadata.property);\n"
-            implementationFile += "+(NSString *)\(metadata.property) {\n"
-            implementationFile += "    return @\"\(metadata.imageNamed)\";\n"
-            implementationFile += "}\n"
+            headerFile += "    __unsafe_unretained NSString *\(metadata.property);\n"
+            implementationFile += "    .\(metadata.property) = @\"\(metadata.imageNamed)\",\n"
+
         }
                 
-        headerFile += "\n@end\n"
-
-        implementationFile += "\n@end\n"
+        headerFile += "\n} \(generatedFile);\n"
+        implementationFile += "\n};\n"
         
         do {
             try headerFile.writeToFile(generatedFile + ".h", atomically: false, encoding: NSUTF8StringEncoding)
