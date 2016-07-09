@@ -13,6 +13,16 @@ if (Process.arguments.contains("--version")) {
     exit(EXIT_SUCCESS)
 }
 
+var output : String = "Images"
+let indexOfOutput = Process.arguments.indexOf("--output")
+if (indexOfOutput >= 0) {
+    if indexOfOutput!+1 < Process.arguments.count {
+        output = Process.arguments[indexOfOutput!+1]
+    } else {
+        print("Wrong format for --output parameter, please use SafeAsset --output filename")
+    }
+}
+
 let fileManager = NSFileManager.defaultManager()
 let searchPath = fileManager.currentDirectoryPath
 
@@ -35,7 +45,7 @@ let validator = Validator()
 let validationIssues = validator.validate(metadatas)
 if validationIssues.count == 0 {
     let generator = ResourceesClassGenerator()
-    generator.generateClass(fromImages: metadatas, generatedFile: "Images")
+    generator.generateClass(fromImages: metadatas, generatedFile: output)
 } else {
     for validationIssue in validationIssues {
         print("\(validationIssue.firstImage) conflicts with \(validationIssue.secondImage) for as property \(validationIssue.property)")

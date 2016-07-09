@@ -27,9 +27,9 @@ class ResourceesClassGenerator {
             implementationFile += "}\n"
         }
                 
-        headerFile += "@end\n"
+        headerFile += "\n@end\n"
 
-        implementationFile += "@end\n"
+        implementationFile += "\n@end\n"
         
         do {
             try headerFile.writeToFile(generatedFile + ".h", atomically: false, encoding: NSUTF8StringEncoding)
