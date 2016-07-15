@@ -1,4 +1,10 @@
 # Regen
-The goal of this project is to remove free typed string for images.
+Regen generates objective-c code for accessing your images and localized string. 
+
+So instead of:
+`[UIImage imageNamed: @"login-button"]`
+
+Use:
+`[UIImage imageNamed: Images.loginButton]`
 
 
