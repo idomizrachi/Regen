@@ -10,7 +10,7 @@ import Foundation
 
 class Usage {
     
-    let options = [ "--version" : "Prints the current version", "--output FILE" : "Set the generated file name (.h, .m)" ]
+    let options = [ "--version" : "Prints the current version", "--output FILE" : "Set the generated file name (without extension)" ]
     
     func printUsage() {
         print("Usage:".bold.underline)

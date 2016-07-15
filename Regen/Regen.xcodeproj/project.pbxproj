@@ -7,17 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		99344A661D38DB8E00380864 /* OperationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99344A651D38DB8E00380864 /* OperationType.swift */; };
-		99344A6A1D38DC3200380864 /* ArgumentsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99344A691D38DC3200380864 /* ArgumentsParser.swift */; };
-		99344A6D1D38DFA200380864 /* Usage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99344A6C1D38DFA200380864 /* Usage.swift */; };
-		99344A6F1D390B5500380864 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99344A6E1D390B5500380864 /* Colors.swift */; };
-		99922B291D30353800B63BC4 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99922B281D30353800B63BC4 /* Validator.swift */; };
-		99922B2B1D306B6B00B63BC4 /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99922B2A1D306B6B00B63BC4 /* Version.swift */; };
-		999D35561D2EE6E700C0184A /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999D35551D2EE6E700C0184A /* main.swift */; };
-		99CF695E1D2FE3E7001FFE03 /* AssetsFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CF695D1D2FE3E7001FFE03 /* AssetsFinder.swift */; };
-		99CF69601D2FE76C001FFE03 /* ImageFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CF695F1D2FE76B001FFE03 /* ImageFinder.swift */; };
-		99CF69621D2FEAF9001FFE03 /* ImageAssetParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CF69611D2FEAF9001FFE03 /* ImageAssetParser.swift */; };
-		99CF69641D2FF2DA001FFE03 /* ResourceesClassGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CF69631D2FF2DA001FFE03 /* ResourceesClassGenerator.swift */; };
+		99BDE23D1D39138100CA19CE /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BDE23C1D39138100CA19CE /* Colors.swift */; };
+		99BDE23F1D39138C00CA19CE /* Usage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BDE23E1D39138C00CA19CE /* Usage.swift */; };
+		99BDE2411D3913BE00CA19CE /* AssetsFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BDE2401D3913BE00CA19CE /* AssetsFinder.swift */; };
+		99BDE2481D3913CA00CA19CE /* ImageAssetParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BDE2431D3913CA00CA19CE /* ImageAssetParser.swift */; };
+		99BDE2491D3913CA00CA19CE /* ImageFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BDE2441D3913CA00CA19CE /* ImageFinder.swift */; };
+		99BDE24A1D3913CA00CA19CE /* ResourceesClassGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BDE2451D3913CA00CA19CE /* ResourceesClassGenerator.swift */; };
+		99BDE24B1D3913CA00CA19CE /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BDE2461D3913CA00CA19CE /* Validator.swift */; };
+		99BDE24E1D3913D300CA19CE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BDE24C1D3913D300CA19CE /* main.swift */; };
+		99BDE24F1D3913D300CA19CE /* OperationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BDE24D1D3913D300CA19CE /* OperationType.swift */; };
+		99BDE2511D3913DD00CA19CE /* ArgumentsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BDE2501D3913DD00CA19CE /* ArgumentsParser.swift */; };
+		99BDE2531D3913E400CA19CE /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BDE2521D3913E400CA19CE /* Version.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,18 +35,18 @@
 /* Begin PBXFileReference section */
 		9909F5221D3226710051FE1D /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		9909F5231D3226710051FE1D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		99344A651D38DB8E00380864 /* OperationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationType.swift; sourceTree = "<group>"; };
-		99344A691D38DC3200380864 /* ArgumentsParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArgumentsParser.swift; sourceTree = "<group>"; };
-		99344A6C1D38DFA200380864 /* Usage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Usage.swift; sourceTree = "<group>"; };
-		99344A6E1D390B5500380864 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
-		99922B281D30353800B63BC4 /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
-		99922B2A1D306B6B00B63BC4 /* Version.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Version.swift; sourceTree = "<group>"; };
 		999D35521D2EE6E700C0184A /* Regen */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Regen; sourceTree = BUILT_PRODUCTS_DIR; };
-		999D35551D2EE6E700C0184A /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		99CF695D1D2FE3E7001FFE03 /* AssetsFinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetsFinder.swift; sourceTree = "<group>"; };
-		99CF695F1D2FE76B001FFE03 /* ImageFinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFinder.swift; sourceTree = "<group>"; };
-		99CF69611D2FEAF9001FFE03 /* ImageAssetParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageAssetParser.swift; sourceTree = "<group>"; };
-		99CF69631D2FF2DA001FFE03 /* ResourceesClassGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourceesClassGenerator.swift; sourceTree = "<group>"; };
+		99BDE23C1D39138100CA19CE /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Colors.swift; path = Regen/Colors.swift; sourceTree = SOURCE_ROOT; };
+		99BDE23E1D39138C00CA19CE /* Usage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Usage.swift; path = Regen/Usage.swift; sourceTree = SOURCE_ROOT; };
+		99BDE2401D3913BE00CA19CE /* AssetsFinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AssetsFinder.swift; path = Regen/AssetsFinder.swift; sourceTree = SOURCE_ROOT; };
+		99BDE2431D3913CA00CA19CE /* ImageAssetParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageAssetParser.swift; path = Regen/ImageAssetParser.swift; sourceTree = SOURCE_ROOT; };
+		99BDE2441D3913CA00CA19CE /* ImageFinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageFinder.swift; path = Regen/ImageFinder.swift; sourceTree = SOURCE_ROOT; };
+		99BDE2451D3913CA00CA19CE /* ResourceesClassGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResourceesClassGenerator.swift; path = Regen/ResourceesClassGenerator.swift; sourceTree = SOURCE_ROOT; };
+		99BDE2461D3913CA00CA19CE /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Validator.swift; path = Regen/Validator.swift; sourceTree = SOURCE_ROOT; };
+		99BDE24C1D3913D300CA19CE /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = main.swift; path = Regen/main.swift; sourceTree = SOURCE_ROOT; };
+		99BDE24D1D3913D300CA19CE /* OperationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OperationType.swift; path = Regen/OperationType.swift; sourceTree = SOURCE_ROOT; };
+		99BDE2501D3913DD00CA19CE /* ArgumentsParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArgumentsParser.swift; path = Regen/ArgumentsParser.swift; sourceTree = SOURCE_ROOT; };
+		99BDE2521D3913E400CA19CE /* Version.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Version.swift; path = Regen/Version.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,11 +72,11 @@
 		99344A631D38D41B00380864 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				99CF695D1D2FE3E7001FFE03 /* AssetsFinder.swift */,
-				99CF695F1D2FE76B001FFE03 /* ImageFinder.swift */,
-				99CF69611D2FEAF9001FFE03 /* ImageAssetParser.swift */,
-				99CF69631D2FF2DA001FFE03 /* ResourceesClassGenerator.swift */,
-				99922B281D30353800B63BC4 /* Validator.swift */,
+				99BDE2401D3913BE00CA19CE /* AssetsFinder.swift */,
+				99BDE2431D3913CA00CA19CE /* ImageAssetParser.swift */,
+				99BDE2441D3913CA00CA19CE /* ImageFinder.swift */,
+				99BDE2451D3913CA00CA19CE /* ResourceesClassGenerator.swift */,
+				99BDE2461D3913CA00CA19CE /* Validator.swift */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -91,7 +91,7 @@
 		99344A6B1D38DF8D00380864 /* Usage */ = {
 			isa = PBXGroup;
 			children = (
-				99344A6C1D38DFA200380864 /* Usage.swift */,
+				99BDE23E1D39138C00CA19CE /* Usage.swift */,
 			);
 			name = Usage;
 			sourceTree = "<group>";
@@ -99,7 +99,7 @@
 		99344A701D390B7000380864 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				99344A6E1D390B5500380864 /* Colors.swift */,
+				99BDE23C1D39138100CA19CE /* Colors.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -128,10 +128,10 @@
 				99344A6B1D38DF8D00380864 /* Usage */,
 				99344A671D38DBAD00380864 /* Strings */,
 				99344A631D38D41B00380864 /* Images */,
-				99344A651D38DB8E00380864 /* OperationType.swift */,
-				99344A691D38DC3200380864 /* ArgumentsParser.swift */,
-				999D35551D2EE6E700C0184A /* main.swift */,
-				99922B2A1D306B6B00B63BC4 /* Version.swift */,
+				99BDE2501D3913DD00CA19CE /* ArgumentsParser.swift */,
+				99BDE24C1D3913D300CA19CE /* main.swift */,
+				99BDE24D1D3913D300CA19CE /* OperationType.swift */,
+				99BDE2521D3913E400CA19CE /* Version.swift */,
 			);
 			name = Regen;
 			path = SafeAsset;
@@ -194,17 +194,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99CF69641D2FF2DA001FFE03 /* ResourceesClassGenerator.swift in Sources */,
-				99344A6F1D390B5500380864 /* Colors.swift in Sources */,
-				99344A6A1D38DC3200380864 /* ArgumentsParser.swift in Sources */,
-				99CF695E1D2FE3E7001FFE03 /* AssetsFinder.swift in Sources */,
-				99CF69621D2FEAF9001FFE03 /* ImageAssetParser.swift in Sources */,
-				99344A6D1D38DFA200380864 /* Usage.swift in Sources */,
-				99344A661D38DB8E00380864 /* OperationType.swift in Sources */,
-				99CF69601D2FE76C001FFE03 /* ImageFinder.swift in Sources */,
-				99922B2B1D306B6B00B63BC4 /* Version.swift in Sources */,
-				99922B291D30353800B63BC4 /* Validator.swift in Sources */,
-				999D35561D2EE6E700C0184A /* main.swift in Sources */,
+				99BDE24E1D3913D300CA19CE /* main.swift in Sources */,
+				99BDE23D1D39138100CA19CE /* Colors.swift in Sources */,
+				99BDE2411D3913BE00CA19CE /* AssetsFinder.swift in Sources */,
+				99BDE24A1D3913CA00CA19CE /* ResourceesClassGenerator.swift in Sources */,
+				99BDE2531D3913E400CA19CE /* Version.swift in Sources */,
+				99BDE24B1D3913CA00CA19CE /* Validator.swift in Sources */,
+				99BDE2491D3913CA00CA19CE /* ImageFinder.swift in Sources */,
+				99BDE2511D3913DD00CA19CE /* ArgumentsParser.swift in Sources */,
+				99BDE23F1D39138C00CA19CE /* Usage.swift in Sources */,
+				99BDE2481D3913CA00CA19CE /* ImageAssetParser.swift in Sources */,
+				99BDE24F1D3913D300CA19CE /* OperationType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
