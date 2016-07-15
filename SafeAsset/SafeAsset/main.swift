@@ -1,6 +1,6 @@
 //
 //  main.swift
-//  SafeAsset
+//  Regen
 //
 //  Created by Ido Mizrachi on 7/7/16.
 //  Copyright © 2016 Ido Mizrachi. All rights reserved.
@@ -8,18 +8,22 @@
 
 import Foundation
 
-if (Process.arguments.contains("--version")) {
+if Process.arguments.contains("--version") {
     print("\(Version.current)")
     exit(EXIT_SUCCESS)
 }
 
+let usage = Usage()
+usage.printUsage()
+
+/*
 var output : String = "Images"
 let indexOfOutput = Process.arguments.indexOf("--output")
-if (indexOfOutput >= 0) {
+if indexOfOutput >= 0 {
     if indexOfOutput!+1 < Process.arguments.count {
         output = Process.arguments[indexOfOutput!+1]
     } else {
-        print("Wrong format for --output parameter, please use SafeAsset --output filename")
+        print("Wrong format for --output parameter, please use Regen --output filename")
     }
 }
 
@@ -52,5 +56,5 @@ if validationIssues.count == 0 {
     }
     exit(EXIT_FAILURE)
 }
-
+*/
 exit(EXIT_SUCCESS)

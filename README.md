@@ -1,2 +1,4 @@
-# SafeAsset
-Use properties for images names instead of free typed strings
+# Regen
+The goal of this project is to remove free typed string for images.
+
+

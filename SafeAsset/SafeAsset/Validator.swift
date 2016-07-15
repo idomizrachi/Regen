@@ -1,6 +1,6 @@
 //
 //  Validator.swift
-//  SafeAsset
+//  Regen
 //
 //  Created by Ido Mizrachi on 7/8/16.
 //  Copyright © 2016 Ido Mizrachi. All rights reserved.
