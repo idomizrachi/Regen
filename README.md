@@ -9,6 +9,16 @@ Use:
 
 `[UIImage imageNamed: Images.loginButton]`
 
+And instead of:
+
+`NSLocalizedString(@"login.button", @"Login")
+
+Use:
+
+`[Localization loginButton]`
+
+
+The generated class name is configurable from command line.
 
 
 ## Thanks
