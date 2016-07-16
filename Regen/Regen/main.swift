@@ -8,53 +8,29 @@
 
 import Foundation
 
-if Process.arguments.contains("--version") {
-    print("\(Version.current)")
-    exit(EXIT_SUCCESS)
-}
+let argumentsParser = ArgumentsParser(arguments: Process.arguments)
+let operationType = argumentsParser.operationType()
 
-let usage = Usage()
-usage.printUsage()
-
-/*
-var output : String = "Images"
-let indexOfOutput = Process.arguments.indexOf("--output")
-if indexOfOutput >= 0 {
-    if indexOfOutput!+1 < Process.arguments.count {
-        output = Process.arguments[indexOfOutput!+1]
+switch operationType {
+case .Version:
+    Version.printVersion()
+case .Images:
+    let imageOperation = ImageOperation()
+    if argumentsParser.output == nil{
+        imageOperation.run()
     } else {
-        print("Wrong format for --output parameter, please use Regen --output filename")
+        imageOperation.run(argumentsParser.output!)
     }
+case .Localization:
+    let localizationOperation = LocalizationOperation()
+    if argumentsParser.output == nil {
+        localizationOperation.run()
+    } else {
+        localizationOperation.run(argumentsParser.output!)
+    }
+default:
+    let usage = Usage()
+    usage.printUsage()
 }
 
-let fileManager = NSFileManager.defaultManager()
-let searchPath = fileManager.currentDirectoryPath
-
-let assetsFinder = AssetsFinder(fileManager: fileManager)
-let assets = assetsFinder.findAssets(inPath: searchPath)
-
-let imageFinder = ImageFinder(fileManager: fileManager)
-let imageAssetParser = ImageAssetParser()
-var metadatas : [ImageAssetMetadata] = []
-
-for asset in assets {
-    let images = imageFinder.findImages(inAsset: asset)
-    for image in images {
-        let metadata = imageAssetParser.parseImage(image)
-        metadatas.append(metadata)
-    }
-}
-
-let validator = Validator()
-let validationIssues = validator.validate(metadatas)
-if validationIssues.count == 0 {
-    let generator = ResourceesClassGenerator()
-    generator.generateClass(fromImages: metadatas, generatedFile: output)
-} else {
-    for validationIssue in validationIssues {
-        print("\(validationIssue.firstImage) conflicts with \(validationIssue.secondImage) for as property \(validationIssue.property)")
-    }
-    exit(EXIT_FAILURE)
-}
-*/
 exit(EXIT_SUCCESS)

@@ -14,7 +14,7 @@ struct ValidationIssue {
     var property : String
 }
 
-class Validator {
+class ImagesValidator {
     func validate(images : [ImageAssetMetadata]) -> [ValidationIssue] {
         var issues : [ValidationIssue] = []
         guard images.count > 1 else {

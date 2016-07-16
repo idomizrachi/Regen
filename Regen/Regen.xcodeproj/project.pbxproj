@@ -7,17 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9914C91E1D3A22FD00A0BEA9 /* PropertyName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9914C91D1D3A22FD00A0BEA9 /* PropertyName.swift */; };
+		9914C9201D3A2B5500A0BEA9 /* LocalizationClassGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9914C91F1D3A2B5500A0BEA9 /* LocalizationClassGenerator.swift */; };
 		99BDE23D1D39138100CA19CE /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BDE23C1D39138100CA19CE /* Colors.swift */; };
 		99BDE23F1D39138C00CA19CE /* Usage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BDE23E1D39138C00CA19CE /* Usage.swift */; };
 		99BDE2411D3913BE00CA19CE /* AssetsFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BDE2401D3913BE00CA19CE /* AssetsFinder.swift */; };
 		99BDE2481D3913CA00CA19CE /* ImageAssetParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BDE2431D3913CA00CA19CE /* ImageAssetParser.swift */; };
 		99BDE2491D3913CA00CA19CE /* ImageFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BDE2441D3913CA00CA19CE /* ImageFinder.swift */; };
-		99BDE24A1D3913CA00CA19CE /* ResourceesClassGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BDE2451D3913CA00CA19CE /* ResourceesClassGenerator.swift */; };
-		99BDE24B1D3913CA00CA19CE /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BDE2461D3913CA00CA19CE /* Validator.swift */; };
+		99BDE24A1D3913CA00CA19CE /* ImagesClassGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BDE2451D3913CA00CA19CE /* ImagesClassGenerator.swift */; };
+		99BDE24B1D3913CA00CA19CE /* ImagesValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BDE2461D3913CA00CA19CE /* ImagesValidator.swift */; };
 		99BDE24E1D3913D300CA19CE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BDE24C1D3913D300CA19CE /* main.swift */; };
 		99BDE24F1D3913D300CA19CE /* OperationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BDE24D1D3913D300CA19CE /* OperationType.swift */; };
 		99BDE2511D3913DD00CA19CE /* ArgumentsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BDE2501D3913DD00CA19CE /* ArgumentsParser.swift */; };
 		99BDE2531D3913E400CA19CE /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BDE2521D3913E400CA19CE /* Version.swift */; };
+		99BDE2561D39297900CA19CE /* ImageOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BDE2551D39297900CA19CE /* ImageOperation.swift */; };
+		99BDE2581D3929B900CA19CE /* LocalizationOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BDE2571D3929B900CA19CE /* LocalizationOperation.swift */; };
+		99BDE25A1D393A6B00CA19CE /* LocalizationFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BDE2591D393A6B00CA19CE /* LocalizationFinder.swift */; };
+		99BDE25C1D393C9900CA19CE /* LocalizationParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BDE25B1D393C9900CA19CE /* LocalizationParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,18 +41,24 @@
 /* Begin PBXFileReference section */
 		9909F5221D3226710051FE1D /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		9909F5231D3226710051FE1D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		999D35521D2EE6E700C0184A /* Regen */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Regen; sourceTree = BUILT_PRODUCTS_DIR; };
+		9914C91D1D3A22FD00A0BEA9 /* PropertyName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PropertyName.swift; path = Regen/PropertyName.swift; sourceTree = SOURCE_ROOT; };
+		9914C91F1D3A2B5500A0BEA9 /* LocalizationClassGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocalizationClassGenerator.swift; path = Regen/LocalizationClassGenerator.swift; sourceTree = SOURCE_ROOT; };
+		999D35521D2EE6E700C0184A /* regen */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = regen; sourceTree = BUILT_PRODUCTS_DIR; };
 		99BDE23C1D39138100CA19CE /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Colors.swift; path = Regen/Colors.swift; sourceTree = SOURCE_ROOT; };
 		99BDE23E1D39138C00CA19CE /* Usage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Usage.swift; path = Regen/Usage.swift; sourceTree = SOURCE_ROOT; };
 		99BDE2401D3913BE00CA19CE /* AssetsFinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AssetsFinder.swift; path = Regen/AssetsFinder.swift; sourceTree = SOURCE_ROOT; };
 		99BDE2431D3913CA00CA19CE /* ImageAssetParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageAssetParser.swift; path = Regen/ImageAssetParser.swift; sourceTree = SOURCE_ROOT; };
 		99BDE2441D3913CA00CA19CE /* ImageFinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageFinder.swift; path = Regen/ImageFinder.swift; sourceTree = SOURCE_ROOT; };
-		99BDE2451D3913CA00CA19CE /* ResourceesClassGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResourceesClassGenerator.swift; path = Regen/ResourceesClassGenerator.swift; sourceTree = SOURCE_ROOT; };
-		99BDE2461D3913CA00CA19CE /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Validator.swift; path = Regen/Validator.swift; sourceTree = SOURCE_ROOT; };
+		99BDE2451D3913CA00CA19CE /* ImagesClassGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImagesClassGenerator.swift; path = Regen/ImagesClassGenerator.swift; sourceTree = SOURCE_ROOT; };
+		99BDE2461D3913CA00CA19CE /* ImagesValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImagesValidator.swift; path = Regen/ImagesValidator.swift; sourceTree = SOURCE_ROOT; };
 		99BDE24C1D3913D300CA19CE /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = main.swift; path = Regen/main.swift; sourceTree = SOURCE_ROOT; };
 		99BDE24D1D3913D300CA19CE /* OperationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OperationType.swift; path = Regen/OperationType.swift; sourceTree = SOURCE_ROOT; };
 		99BDE2501D3913DD00CA19CE /* ArgumentsParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArgumentsParser.swift; path = Regen/ArgumentsParser.swift; sourceTree = SOURCE_ROOT; };
 		99BDE2521D3913E400CA19CE /* Version.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Version.swift; path = Regen/Version.swift; sourceTree = SOURCE_ROOT; };
+		99BDE2551D39297900CA19CE /* ImageOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageOperation.swift; path = Regen/ImageOperation.swift; sourceTree = SOURCE_ROOT; };
+		99BDE2571D3929B900CA19CE /* LocalizationOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocalizationOperation.swift; path = Regen/LocalizationOperation.swift; sourceTree = SOURCE_ROOT; };
+		99BDE2591D393A6B00CA19CE /* LocalizationFinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocalizationFinder.swift; path = Regen/LocalizationFinder.swift; sourceTree = SOURCE_ROOT; };
+		99BDE25B1D393C9900CA19CE /* LocalizationParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocalizationParser.swift; path = Regen/LocalizationParser.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,19 +85,24 @@
 			isa = PBXGroup;
 			children = (
 				99BDE2401D3913BE00CA19CE /* AssetsFinder.swift */,
-				99BDE2431D3913CA00CA19CE /* ImageAssetParser.swift */,
 				99BDE2441D3913CA00CA19CE /* ImageFinder.swift */,
-				99BDE2451D3913CA00CA19CE /* ResourceesClassGenerator.swift */,
-				99BDE2461D3913CA00CA19CE /* Validator.swift */,
+				99BDE2431D3913CA00CA19CE /* ImageAssetParser.swift */,
+				99BDE2451D3913CA00CA19CE /* ImagesClassGenerator.swift */,
+				99BDE2461D3913CA00CA19CE /* ImagesValidator.swift */,
+				99BDE2551D39297900CA19CE /* ImageOperation.swift */,
 			);
 			name = Images;
 			sourceTree = "<group>";
 		};
-		99344A671D38DBAD00380864 /* Strings */ = {
+		99344A671D38DBAD00380864 /* Localization */ = {
 			isa = PBXGroup;
 			children = (
+				99BDE2591D393A6B00CA19CE /* LocalizationFinder.swift */,
+				99BDE25B1D393C9900CA19CE /* LocalizationParser.swift */,
+				9914C91F1D3A2B5500A0BEA9 /* LocalizationClassGenerator.swift */,
+				99BDE2571D3929B900CA19CE /* LocalizationOperation.swift */,
 			);
-			name = Strings;
+			name = Localization;
 			sourceTree = "<group>";
 		};
 		99344A6B1D38DF8D00380864 /* Usage */ = {
@@ -100,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				99BDE23C1D39138100CA19CE /* Colors.swift */,
+				9914C91D1D3A22FD00A0BEA9 /* PropertyName.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -116,7 +134,7 @@
 		999D35531D2EE6E700C0184A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				999D35521D2EE6E700C0184A /* Regen */,
+				999D35521D2EE6E700C0184A /* regen */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -126,12 +144,12 @@
 			children = (
 				99344A701D390B7000380864 /* Utils */,
 				99344A6B1D38DF8D00380864 /* Usage */,
-				99344A671D38DBAD00380864 /* Strings */,
+				99344A671D38DBAD00380864 /* Localization */,
 				99344A631D38D41B00380864 /* Images */,
 				99BDE2501D3913DD00CA19CE /* ArgumentsParser.swift */,
-				99BDE24C1D3913D300CA19CE /* main.swift */,
 				99BDE24D1D3913D300CA19CE /* OperationType.swift */,
 				99BDE2521D3913E400CA19CE /* Version.swift */,
+				99BDE24C1D3913D300CA19CE /* main.swift */,
 			);
 			name = Regen;
 			path = SafeAsset;
@@ -154,7 +172,7 @@
 			);
 			name = Regen;
 			productName = SafeAsset;
-			productReference = 999D35521D2EE6E700C0184A /* Regen */;
+			productReference = 999D35521D2EE6E700C0184A /* regen */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -197,13 +215,19 @@
 				99BDE24E1D3913D300CA19CE /* main.swift in Sources */,
 				99BDE23D1D39138100CA19CE /* Colors.swift in Sources */,
 				99BDE2411D3913BE00CA19CE /* AssetsFinder.swift in Sources */,
-				99BDE24A1D3913CA00CA19CE /* ResourceesClassGenerator.swift in Sources */,
+				9914C91E1D3A22FD00A0BEA9 /* PropertyName.swift in Sources */,
+				99BDE24A1D3913CA00CA19CE /* ImagesClassGenerator.swift in Sources */,
 				99BDE2531D3913E400CA19CE /* Version.swift in Sources */,
-				99BDE24B1D3913CA00CA19CE /* Validator.swift in Sources */,
+				99BDE25C1D393C9900CA19CE /* LocalizationParser.swift in Sources */,
+				99BDE24B1D3913CA00CA19CE /* ImagesValidator.swift in Sources */,
 				99BDE2491D3913CA00CA19CE /* ImageFinder.swift in Sources */,
+				99BDE2581D3929B900CA19CE /* LocalizationOperation.swift in Sources */,
+				99BDE2561D39297900CA19CE /* ImageOperation.swift in Sources */,
 				99BDE2511D3913DD00CA19CE /* ArgumentsParser.swift in Sources */,
+				9914C9201D3A2B5500A0BEA9 /* LocalizationClassGenerator.swift in Sources */,
 				99BDE23F1D39138C00CA19CE /* Usage.swift in Sources */,
 				99BDE2481D3913CA00CA19CE /* ImageAssetParser.swift in Sources */,
+				99BDE25A1D393A6B00CA19CE /* LocalizationFinder.swift in Sources */,
 				99BDE24F1D3913D300CA19CE /* OperationType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,14 +320,14 @@
 		999D355A1D2EE6E700C0184A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				PRODUCT_NAME = Regen;
+				PRODUCT_NAME = regen;
 			};
 			name = Debug;
 		};
 		999D355B1D2EE6E700C0184A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				PRODUCT_NAME = Regen;
+				PRODUCT_NAME = regen;
 			};
 			name = Release;
 		};

@@ -10,18 +10,19 @@ import Foundation
 
 class Usage {
     
-    let options = [ "--version" : "Prints the current version", "--output FILE" : "Set the generated file name (without extension)" ]
+    let options = [ ["--version      " , "Prints the current version"],
+                    ["--output FILE  " , "Set the generated file name (without extension)"] ,
+                    ["--scanType TYPE" , "Use images orlocalization\n\t\timages - scans the projects .xcassets files\n\t\tlocalization - scans the projects Localizable.strings file"] ]
     
     func printUsage() {
         print("Usage:".bold.underline)
-        levelPrint("$ Regen ")
+        levelPrint("$ Regen [options]")
         newLine()
 
         print("Options:".bold.underline)
-        for (option,description) in options {
-            levelPrint("\(option) - \(description)")
+        for (option) in options {
+            levelPrint("\(option[0]) \t\t\t \(option[1])")
         }
-        
     }
     
     func levelPrint(string : String) {

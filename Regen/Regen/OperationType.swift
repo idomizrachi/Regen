@@ -11,6 +11,6 @@ import Foundation
 enum OperationType {
     case Version
     case Images
-    case Strings
+    case Localization
     case Usage
 }
