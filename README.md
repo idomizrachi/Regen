@@ -11,7 +11,7 @@ Use:
 
 And instead of:
 
-`NSLocalizedString(@"login.button", @"Login")
+`NSLocalizedString(@"login.button", @"Login")`
 
 Use:
 
