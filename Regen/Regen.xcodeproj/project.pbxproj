@@ -320,6 +320,8 @@
 		999D355A1D2EE6E700C0184A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEPLOYMENT_LOCATION = YES;
+				DEPLOYMENT_POSTPROCESSING = YES;
 				PRODUCT_NAME = regen;
 			};
 			name = Debug;
@@ -327,6 +329,9 @@
 		999D355B1D2EE6E700C0184A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEPLOYMENT_LOCATION = YES;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				DSTROOT = /;
 				PRODUCT_NAME = regen;
 			};
 			name = Release;
