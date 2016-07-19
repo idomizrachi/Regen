@@ -19,6 +19,7 @@ class ArgumentsParser {
     
     init(arguments : [String]) {
         self.arguments = arguments
+        parseOutput()
     }
     
     func operationType() -> OperationType {
