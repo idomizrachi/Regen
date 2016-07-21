@@ -16,12 +16,6 @@ struct LocalizationEntry {
 
 class LocalizationParser {
     
-    let fileManager : NSFileManager
-    
-    init(fileManager : NSFileManager) {
-        self.fileManager = fileManager
-    }
-    
     func parseLocalizationFile(file : String) -> [LocalizationEntry] {
         var localizationEntries : [LocalizationEntry] = []
         let content : String
@@ -39,7 +33,7 @@ class LocalizationParser {
                     if let indexOfPlural = line.characters.indexOf("#") {
                         key = key.substringToIndex(indexOfPlural)
                     }
-                    let parts = key.componentsSeparatedByString(".")
+                    let parts = key.componentsSeparatedByCharactersInSet(NSCharacterSet(charactersInString: ". "))
                     let property = PropertyName.propertyName(parts)
                     localizationEntries.append(LocalizationEntry(path: file, key: key, property: property))
                 }

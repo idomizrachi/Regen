@@ -12,9 +12,11 @@ class PropertyName {
     static func propertyName(parts : [String]) -> String {
         var propertyName = ""
         propertyName = parts[0]
-        for index in 1...parts.count-1 {
-            propertyName += capitalizeFirstCharacter(parts[index])
-        }
+        if (parts.count > 1) {
+            for index in 1...parts.count-1 {
+                propertyName += capitalizeFirstCharacter(parts[index])
+            }
+        }        
         return propertyName
     }
     

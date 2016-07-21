@@ -8,26 +8,27 @@
 
 import Foundation
 
+let fileManager = NSFileManager.defaultManager()
 let argumentsParser = ArgumentsParser(arguments: Process.arguments)
 let operationType = argumentsParser.operationType()
-
+let searchPath = fileManager.currentDirectoryPath
 switch operationType {
 case .Version:
     Version.printVersion()
 case .Images:
-    let imageOperation = ImageOperation()
-    if argumentsParser.output == nil{
-        imageOperation.run()
-    } else {
-        imageOperation.run(argumentsParser.output!)
+    let imageOperation = ImageOperation(fileManager: fileManager)
+    var output = "Images"
+    if argumentsParser.output != nil{
+        output = argumentsParser.output!
     }
+    imageOperation.run(searchPath, output: output)
 case .Localization:
-    let localizationOperation = LocalizationOperation()
-    if argumentsParser.output == nil {
-        localizationOperation.run()
-    } else {
-        localizationOperation.run(argumentsParser.output!)
+    let localizationOperation = LocalizationOperation(fileManager: fileManager)
+    var output = "Strings"
+    if argumentsParser.output != nil {
+        output = argumentsParser.output!
     }
+    localizationOperation.run(searchPath, output: output)
 default:
     let usage = Usage()
     usage.printUsage()

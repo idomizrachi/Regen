@@ -12,18 +12,20 @@ class LocalizationOperation{
     
     static let localizableStrings = "Localizable.strings"
     
+    let fileManager : NSFileManager
     
-    func run(output : String = "Localization") {
-        print("Localization operation")
-        let fileManager = NSFileManager.defaultManager()
-        
+    init(fileManager : NSFileManager) {
+        self.fileManager = fileManager
+    }
+    
+    func run(searchPath : String, output : String) {
         let localizationFinder = LocalizationFinder(fileManager: fileManager)
-        let files = localizationFinder.findLocalizationFiles(inPath: fileManager.currentDirectoryPath)
-        let parser = LocalizationParser(fileManager: fileManager)        
+        let files = localizationFinder.findLocalizationFiles(inPath: searchPath)
+        let parser = LocalizationParser()        
         var localizationEntries : [LocalizationEntry] = []
         for file in files {            
-            let newEntries = parser.parseLocalizationFile(file)
-            parser.appendEntries(newEntries, to: &localizationEntries)
+            let parsedFile = parser.parseLocalizationFile(file)
+            parser.appendEntries(parsedFile, to: &localizationEntries)
         }
         let generator = LocalizationClassGenerator()
         generator.generateClass(fromLocalizationEntries: localizationEntries, generatedFile: output)
