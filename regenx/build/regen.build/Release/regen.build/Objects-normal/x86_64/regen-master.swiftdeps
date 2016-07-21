@@ -1,0 +1,21 @@
+version: "Apple Swift version 2.2 (swiftlang-703.0.18.8 clang-703.0.31)"
+options: "d09f7630084f91d406eda1e6a5dbbeb7"
+build_time: [522416515, 652569000]
+inputs:
+  "/Users/ido.mizrachi/Dev/Ido/Regen/regen/regen/ImagesClassGenerator.swift": [522240635, 0]
+  "/Users/ido.mizrachi/Dev/Ido/Regen/regen/regen/main.swift": [522240635, 0]
+  "/Users/ido.mizrachi/Dev/Ido/Regen/regen/regen/AssetsFinder.swift": [521975572, 0]
+  "/Users/ido.mizrachi/Dev/Ido/Regen/regen/regen/ImageOperation.swift": [522240635, 0]
+  "/Users/ido.mizrachi/Dev/Ido/Regen/regen/regen/ImageAssetParser.swift": [521975572, 0]
+  "/Users/ido.mizrachi/Dev/Ido/Regen/regen/regen/LocalizationClassGenerator.swift": [522240635, 0]
+  "/Users/ido.mizrachi/Dev/Ido/Regen/regen/regen/LocalizationParser.swift": [522240561, 0]
+  "/Users/ido.mizrachi/Dev/Ido/Regen/regen/regen/ImagesValidator.swift": [521975572, 0]
+  "/Users/ido.mizrachi/Dev/Ido/Regen/regen/regen/Version.swift": [522240635, 0]
+  "/Users/ido.mizrachi/Dev/Ido/Regen/regen/regen/Colors.swift": [521975572, 0]
+  "/Users/ido.mizrachi/Dev/Ido/Regen/regen/regen/LocalizationOperation.swift": [522240635, 0]
+  "/Users/ido.mizrachi/Dev/Ido/Regen/regen/regen/ImageFinder.swift": [521975572, 0]
+  "/Users/ido.mizrachi/Dev/Ido/Regen/regen/regen/Usage.swift": [522416501, 0]
+  "/Users/ido.mizrachi/Dev/Ido/Regen/regen/regen/PropertyName.swift": [521975572, 0]
+  "/Users/ido.mizrachi/Dev/Ido/Regen/regen/regen/OperationType.swift": [521975572, 0]
+  "/Users/ido.mizrachi/Dev/Ido/Regen/regen/regen/LocalizationFinder.swift": [522244614, 0]
+  "/Users/ido.mizrachi/Dev/Ido/Regen/regen/regen/ArgumentsParser.swift": [522234636, 0]

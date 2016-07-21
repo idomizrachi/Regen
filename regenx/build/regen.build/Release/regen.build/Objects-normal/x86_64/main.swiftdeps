@@ -1,0 +1,90 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "argumentsParser"
+- "operationType"
+provides-nominal:
+provides-member:
+provides-dynamic-lookup:
+depends-top-level:
+- "argumentsParser"
+- "operationType"
+- "=="
+- "Version"
+- "Usage"
+- "LocalizationOperation"
+- "ArgumentsParser"
+- "ImageOperation"
+- "Process"
+- "EXIT_SUCCESS"
+- "exit"
+depends-member:
+- ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", "operationType"]
+- ["Ps9AnyObject", "output"]
+- ["Ps9AnyObject", "printUsage"]
+- ["Ps9AnyObject", "printVersion"]
+- ["Ps9AnyObject", "run"]
+- ["C5regen15ArgumentsParser", "init"]
+- ["C5regen15ArgumentsParser", "operationType"]
+- ["C5regen15ArgumentsParser", "output"]
+- ["Sb", "_getBuiltinLogicValue"]
+- ["Ps25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- ["Ps11BooleanType", "_getBuiltinLogicValue"]
+- ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- ["Ps9Equatable", "Images"]
+- ["Ps9Equatable", "Localization"]
+- ["Ps9Equatable", "Version"]
+- ["Ps9Equatable", "_getBuiltinLogicValue"]
+- ["Ps8Hashable", "Images"]
+- ["Ps8Hashable", "Localization"]
+- ["Ps8Hashable", "Version"]
+- ["Ps8Hashable", "_getBuiltinLogicValue"]
+- ["C5regen14ImageOperation", "init"]
+- ["C5regen14ImageOperation", "run"]
+- ["C5regen21LocalizationOperation", "init"]
+- ["C5regen21LocalizationOperation", "run"]
+- ["O5regen13OperationType", "Images"]
+- ["O5regen13OperationType", "Localization"]
+- ["O5regen13OperationType", "Version"]
+- ["Sq", "deinit"]
+- ["Os7Process", "arguments"]
+- ["C5regen5Usage", "init"]
+- ["C5regen5Usage", "printUsage"]
+- ["C5regen7Version", "printVersion"]
+- ["Ps33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- ["Vs26_OptionalNilComparisonType", "deinit"]
+- ["Ps12_Reflectable", "_getBuiltinLogicValue"]
+depends-nominal:
+- "Ps9AnyObject"
+- "C5regen15ArgumentsParser"
+- "Sb"
+- "Ps25BooleanLiteralConvertible"
+- "Ps11BooleanType"
+- "Ps23CustomStringConvertible"
+- "Ps9Equatable"
+- "Ps8Hashable"
+- "C5regen14ImageOperation"
+- "C5regen21LocalizationOperation"
+- "O5regen13OperationType"
+- "Sq"
+- "Os7Process"
+- "C5regen5Usage"
+- "C5regen7Version"
+- "Ps33_BuiltinBooleanLiteralConvertible"
+- "Ps21_ObjectiveCBridgeable"
+- "Vs26_OptionalNilComparisonType"
+- "Ps12_Reflectable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/AppKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreData.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreImage.swiftmodule"
+interface-hash: "f61ad191a3f281f864496de88ff9261e"
