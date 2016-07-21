@@ -70,6 +70,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		997B36751D40EE6F000BF2DA /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				99B9E4AB1D40EC1B00738100 /* PropertyName.swift */,
+				99B9E49F1D40EC1B00738100 /* Colors.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		997B36761D40EE7B000BF2DA /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				99B9E4A51D40EC1B00738100 /* LocalizationClassGenerator.swift */,
+				99B9E4A61D40EC1B00738100 /* LocalizationFinder.swift */,
+				99B9E4A71D40EC1B00738100 /* LocalizationOperation.swift */,
+				99B9E4A81D40EC1B00738100 /* LocalizationParser.swift */,
+			);
+			name = Localization;
+			sourceTree = "<group>";
+		};
+		997B36771D40EE83000BF2DA /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				99B9E49E1D40EC1B00738100 /* AssetsFinder.swift */,
+				99B9E4A01D40EC1B00738100 /* ImageAssetParser.swift */,
+				99B9E4A11D40EC1B00738100 /* ImageFinder.swift */,
+				99B9E4A21D40EC1B00738100 /* ImageOperation.swift */,
+				99B9E4A31D40EC1B00738100 /* ImagesClassGenerator.swift */,
+				99B9E4A41D40EC1B00738100 /* ImagesValidator.swift */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		99B9E48A1D40EBF900738100 = {
 			isa = PBXGroup;
 			children = (
@@ -89,23 +122,14 @@
 		99B9E4951D40EBF900738100 /* regen */ = {
 			isa = PBXGroup;
 			children = (
+				997B36771D40EE83000BF2DA /* Images */,
+				997B36761D40EE7B000BF2DA /* Localization */,
+				997B36751D40EE6F000BF2DA /* Utilities */,
 				99B9E49D1D40EC1B00738100 /* ArgumentsParser.swift */,
-				99B9E49E1D40EC1B00738100 /* AssetsFinder.swift */,
-				99B9E49F1D40EC1B00738100 /* Colors.swift */,
-				99B9E4A01D40EC1B00738100 /* ImageAssetParser.swift */,
-				99B9E4A11D40EC1B00738100 /* ImageFinder.swift */,
-				99B9E4A21D40EC1B00738100 /* ImageOperation.swift */,
-				99B9E4A31D40EC1B00738100 /* ImagesClassGenerator.swift */,
-				99B9E4A41D40EC1B00738100 /* ImagesValidator.swift */,
-				99B9E4A51D40EC1B00738100 /* LocalizationClassGenerator.swift */,
-				99B9E4A61D40EC1B00738100 /* LocalizationFinder.swift */,
-				99B9E4A71D40EC1B00738100 /* LocalizationOperation.swift */,
-				99B9E4A81D40EC1B00738100 /* LocalizationParser.swift */,
-				99B9E4A91D40EC1B00738100 /* main.swift */,
 				99B9E4AA1D40EC1B00738100 /* OperationType.swift */,
-				99B9E4AB1D40EC1B00738100 /* PropertyName.swift */,
 				99B9E4AC1D40EC1B00738100 /* Usage.swift */,
 				99B9E4AD1D40EC1B00738100 /* Version.swift */,
+				99B9E4A91D40EC1B00738100 /* main.swift */,
 			);
 			path = regen;
 			sourceTree = "<group>";
