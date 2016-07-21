@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "999D35511D2EE6E700C0184A"
+               BlueprintIdentifier = "99B9E4921D40EBF900738100"
                BuildableName = "regen"
-               BlueprintName = "Regen"
-               ReferencedContainer = "container:Regen.xcodeproj">
+               BlueprintName = "regen"
+               ReferencedContainer = "container:regen.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "999D35511D2EE6E700C0184A"
+            BlueprintIdentifier = "99B9E4921D40EBF900738100"
             BuildableName = "regen"
-            BlueprintName = "Regen"
-            ReferencedContainer = "container:Regen.xcodeproj">
+            BlueprintName = "regen"
+            ReferencedContainer = "container:regen.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -55,10 +55,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "999D35511D2EE6E700C0184A"
+            BlueprintIdentifier = "99B9E4921D40EBF900738100"
             BuildableName = "regen"
-            BlueprintName = "Regen"
-            ReferencedContainer = "container:Regen.xcodeproj">
+            BlueprintName = "regen"
+            ReferencedContainer = "container:regen.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -74,10 +74,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "999D35511D2EE6E700C0184A"
+            BlueprintIdentifier = "99B9E4921D40EBF900738100"
             BuildableName = "regen"
-            BlueprintName = "Regen"
-            ReferencedContainer = "container:Regen.xcodeproj">
+            BlueprintName = "regen"
+            ReferencedContainer = "container:regen.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

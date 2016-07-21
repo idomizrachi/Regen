@@ -16,7 +16,7 @@ class Usage {
     
     func printUsage() {
         print("Usage:".bold.underline)
-        levelPrint("$ Regen [options]")
+        levelPrint("$ regen [options]")
         newLine()
 
         print("Options:".bold.underline)

@@ -7,27 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9914C91E1D3A22FD00A0BEA9 /* PropertyName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9914C91D1D3A22FD00A0BEA9 /* PropertyName.swift */; };
-		9914C9201D3A2B5500A0BEA9 /* LocalizationClassGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9914C91F1D3A2B5500A0BEA9 /* LocalizationClassGenerator.swift */; };
-		99BDE23D1D39138100CA19CE /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BDE23C1D39138100CA19CE /* Colors.swift */; };
-		99BDE23F1D39138C00CA19CE /* Usage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BDE23E1D39138C00CA19CE /* Usage.swift */; };
-		99BDE2411D3913BE00CA19CE /* AssetsFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BDE2401D3913BE00CA19CE /* AssetsFinder.swift */; };
-		99BDE2481D3913CA00CA19CE /* ImageAssetParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BDE2431D3913CA00CA19CE /* ImageAssetParser.swift */; };
-		99BDE2491D3913CA00CA19CE /* ImageFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BDE2441D3913CA00CA19CE /* ImageFinder.swift */; };
-		99BDE24A1D3913CA00CA19CE /* ImagesClassGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BDE2451D3913CA00CA19CE /* ImagesClassGenerator.swift */; };
-		99BDE24B1D3913CA00CA19CE /* ImagesValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BDE2461D3913CA00CA19CE /* ImagesValidator.swift */; };
-		99BDE24E1D3913D300CA19CE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BDE24C1D3913D300CA19CE /* main.swift */; };
-		99BDE24F1D3913D300CA19CE /* OperationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BDE24D1D3913D300CA19CE /* OperationType.swift */; };
-		99BDE2511D3913DD00CA19CE /* ArgumentsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BDE2501D3913DD00CA19CE /* ArgumentsParser.swift */; };
-		99BDE2531D3913E400CA19CE /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BDE2521D3913E400CA19CE /* Version.swift */; };
-		99BDE2561D39297900CA19CE /* ImageOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BDE2551D39297900CA19CE /* ImageOperation.swift */; };
-		99BDE2581D3929B900CA19CE /* LocalizationOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BDE2571D3929B900CA19CE /* LocalizationOperation.swift */; };
-		99BDE25A1D393A6B00CA19CE /* LocalizationFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BDE2591D393A6B00CA19CE /* LocalizationFinder.swift */; };
-		99BDE25C1D393C9900CA19CE /* LocalizationParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BDE25B1D393C9900CA19CE /* LocalizationParser.swift */; };
+		99B9E4AE1D40EC1B00738100 /* ArgumentsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B9E49D1D40EC1B00738100 /* ArgumentsParser.swift */; };
+		99B9E4AF1D40EC1B00738100 /* AssetsFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B9E49E1D40EC1B00738100 /* AssetsFinder.swift */; };
+		99B9E4B01D40EC1B00738100 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B9E49F1D40EC1B00738100 /* Colors.swift */; };
+		99B9E4B11D40EC1B00738100 /* ImageAssetParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B9E4A01D40EC1B00738100 /* ImageAssetParser.swift */; };
+		99B9E4B21D40EC1B00738100 /* ImageFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B9E4A11D40EC1B00738100 /* ImageFinder.swift */; };
+		99B9E4B31D40EC1B00738100 /* ImageOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B9E4A21D40EC1B00738100 /* ImageOperation.swift */; };
+		99B9E4B41D40EC1B00738100 /* ImagesClassGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B9E4A31D40EC1B00738100 /* ImagesClassGenerator.swift */; };
+		99B9E4B51D40EC1B00738100 /* ImagesValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B9E4A41D40EC1B00738100 /* ImagesValidator.swift */; };
+		99B9E4B61D40EC1B00738100 /* LocalizationClassGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B9E4A51D40EC1B00738100 /* LocalizationClassGenerator.swift */; };
+		99B9E4B71D40EC1B00738100 /* LocalizationFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B9E4A61D40EC1B00738100 /* LocalizationFinder.swift */; };
+		99B9E4B81D40EC1B00738100 /* LocalizationOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B9E4A71D40EC1B00738100 /* LocalizationOperation.swift */; };
+		99B9E4B91D40EC1B00738100 /* LocalizationParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B9E4A81D40EC1B00738100 /* LocalizationParser.swift */; };
+		99B9E4BA1D40EC1B00738100 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B9E4A91D40EC1B00738100 /* main.swift */; };
+		99B9E4BB1D40EC1B00738100 /* OperationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B9E4AA1D40EC1B00738100 /* OperationType.swift */; };
+		99B9E4BC1D40EC1B00738100 /* PropertyName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B9E4AB1D40EC1B00738100 /* PropertyName.swift */; };
+		99B9E4BD1D40EC1B00738100 /* Usage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B9E4AC1D40EC1B00738100 /* Usage.swift */; };
+		99B9E4BE1D40EC1B00738100 /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B9E4AD1D40EC1B00738100 /* Version.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		999D35501D2EE6E700C0184A /* CopyFiles */ = {
+		99B9E4911D40EBF900738100 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -39,30 +39,28 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		9909F5221D3226710051FE1D /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		9909F5231D3226710051FE1D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		9914C91D1D3A22FD00A0BEA9 /* PropertyName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PropertyName.swift; path = Regen/PropertyName.swift; sourceTree = SOURCE_ROOT; };
-		9914C91F1D3A2B5500A0BEA9 /* LocalizationClassGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocalizationClassGenerator.swift; path = Regen/LocalizationClassGenerator.swift; sourceTree = SOURCE_ROOT; };
-		999D35521D2EE6E700C0184A /* regen */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = regen; sourceTree = BUILT_PRODUCTS_DIR; };
-		99BDE23C1D39138100CA19CE /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Colors.swift; path = Regen/Colors.swift; sourceTree = SOURCE_ROOT; };
-		99BDE23E1D39138C00CA19CE /* Usage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Usage.swift; path = Regen/Usage.swift; sourceTree = SOURCE_ROOT; };
-		99BDE2401D3913BE00CA19CE /* AssetsFinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AssetsFinder.swift; path = Regen/AssetsFinder.swift; sourceTree = SOURCE_ROOT; };
-		99BDE2431D3913CA00CA19CE /* ImageAssetParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageAssetParser.swift; path = Regen/ImageAssetParser.swift; sourceTree = SOURCE_ROOT; };
-		99BDE2441D3913CA00CA19CE /* ImageFinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageFinder.swift; path = Regen/ImageFinder.swift; sourceTree = SOURCE_ROOT; };
-		99BDE2451D3913CA00CA19CE /* ImagesClassGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImagesClassGenerator.swift; path = Regen/ImagesClassGenerator.swift; sourceTree = SOURCE_ROOT; };
-		99BDE2461D3913CA00CA19CE /* ImagesValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImagesValidator.swift; path = Regen/ImagesValidator.swift; sourceTree = SOURCE_ROOT; };
-		99BDE24C1D3913D300CA19CE /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = main.swift; path = Regen/main.swift; sourceTree = SOURCE_ROOT; };
-		99BDE24D1D3913D300CA19CE /* OperationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OperationType.swift; path = Regen/OperationType.swift; sourceTree = SOURCE_ROOT; };
-		99BDE2501D3913DD00CA19CE /* ArgumentsParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArgumentsParser.swift; path = Regen/ArgumentsParser.swift; sourceTree = SOURCE_ROOT; };
-		99BDE2521D3913E400CA19CE /* Version.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Version.swift; path = Regen/Version.swift; sourceTree = SOURCE_ROOT; };
-		99BDE2551D39297900CA19CE /* ImageOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageOperation.swift; path = Regen/ImageOperation.swift; sourceTree = SOURCE_ROOT; };
-		99BDE2571D3929B900CA19CE /* LocalizationOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocalizationOperation.swift; path = Regen/LocalizationOperation.swift; sourceTree = SOURCE_ROOT; };
-		99BDE2591D393A6B00CA19CE /* LocalizationFinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocalizationFinder.swift; path = Regen/LocalizationFinder.swift; sourceTree = SOURCE_ROOT; };
-		99BDE25B1D393C9900CA19CE /* LocalizationParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocalizationParser.swift; path = Regen/LocalizationParser.swift; sourceTree = SOURCE_ROOT; };
+		99B9E4931D40EBF900738100 /* regen */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = regen; sourceTree = BUILT_PRODUCTS_DIR; };
+		99B9E49D1D40EC1B00738100 /* ArgumentsParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArgumentsParser.swift; sourceTree = "<group>"; };
+		99B9E49E1D40EC1B00738100 /* AssetsFinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetsFinder.swift; sourceTree = "<group>"; };
+		99B9E49F1D40EC1B00738100 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		99B9E4A01D40EC1B00738100 /* ImageAssetParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageAssetParser.swift; sourceTree = "<group>"; };
+		99B9E4A11D40EC1B00738100 /* ImageFinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFinder.swift; sourceTree = "<group>"; };
+		99B9E4A21D40EC1B00738100 /* ImageOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageOperation.swift; sourceTree = "<group>"; };
+		99B9E4A31D40EC1B00738100 /* ImagesClassGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesClassGenerator.swift; sourceTree = "<group>"; };
+		99B9E4A41D40EC1B00738100 /* ImagesValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesValidator.swift; sourceTree = "<group>"; };
+		99B9E4A51D40EC1B00738100 /* LocalizationClassGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizationClassGenerator.swift; sourceTree = "<group>"; };
+		99B9E4A61D40EC1B00738100 /* LocalizationFinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizationFinder.swift; sourceTree = "<group>"; };
+		99B9E4A71D40EC1B00738100 /* LocalizationOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizationOperation.swift; sourceTree = "<group>"; };
+		99B9E4A81D40EC1B00738100 /* LocalizationParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizationParser.swift; sourceTree = "<group>"; };
+		99B9E4A91D40EC1B00738100 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		99B9E4AA1D40EC1B00738100 /* OperationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationType.swift; sourceTree = "<group>"; };
+		99B9E4AB1D40EC1B00738100 /* PropertyName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyName.swift; sourceTree = "<group>"; };
+		99B9E4AC1D40EC1B00738100 /* Usage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Usage.swift; sourceTree = "<group>"; };
+		99B9E4AD1D40EC1B00738100 /* Version.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Version.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		999D354F1D2EE6E700C0184A /* Frameworks */ = {
+		99B9E4901D40EBF900738100 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -72,170 +70,127 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9909F5211D3226570051FE1D /* Support Files */ = {
+		99B9E48A1D40EBF900738100 = {
 			isa = PBXGroup;
 			children = (
-				9909F5221D3226710051FE1D /* LICENSE */,
-				9909F5231D3226710051FE1D /* README.md */,
-			);
-			name = "Support Files";
-			sourceTree = "<group>";
-		};
-		99344A631D38D41B00380864 /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				99BDE2401D3913BE00CA19CE /* AssetsFinder.swift */,
-				99BDE2441D3913CA00CA19CE /* ImageFinder.swift */,
-				99BDE2431D3913CA00CA19CE /* ImageAssetParser.swift */,
-				99BDE2451D3913CA00CA19CE /* ImagesClassGenerator.swift */,
-				99BDE2461D3913CA00CA19CE /* ImagesValidator.swift */,
-				99BDE2551D39297900CA19CE /* ImageOperation.swift */,
-			);
-			name = Images;
-			sourceTree = "<group>";
-		};
-		99344A671D38DBAD00380864 /* Localization */ = {
-			isa = PBXGroup;
-			children = (
-				99BDE2591D393A6B00CA19CE /* LocalizationFinder.swift */,
-				99BDE25B1D393C9900CA19CE /* LocalizationParser.swift */,
-				9914C91F1D3A2B5500A0BEA9 /* LocalizationClassGenerator.swift */,
-				99BDE2571D3929B900CA19CE /* LocalizationOperation.swift */,
-			);
-			name = Localization;
-			sourceTree = "<group>";
-		};
-		99344A6B1D38DF8D00380864 /* Usage */ = {
-			isa = PBXGroup;
-			children = (
-				99BDE23E1D39138C00CA19CE /* Usage.swift */,
-			);
-			name = Usage;
-			sourceTree = "<group>";
-		};
-		99344A701D390B7000380864 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				99BDE23C1D39138100CA19CE /* Colors.swift */,
-				9914C91D1D3A22FD00A0BEA9 /* PropertyName.swift */,
-			);
-			name = Utils;
-			sourceTree = "<group>";
-		};
-		999D35491D2EE6E700C0184A = {
-			isa = PBXGroup;
-			children = (
-				999D35541D2EE6E700C0184A /* Regen */,
-				9909F5211D3226570051FE1D /* Support Files */,
-				999D35531D2EE6E700C0184A /* Products */,
+				99B9E4951D40EBF900738100 /* regen */,
+				99B9E4941D40EBF900738100 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		999D35531D2EE6E700C0184A /* Products */ = {
+		99B9E4941D40EBF900738100 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				999D35521D2EE6E700C0184A /* regen */,
+				99B9E4931D40EBF900738100 /* regen */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		999D35541D2EE6E700C0184A /* Regen */ = {
+		99B9E4951D40EBF900738100 /* regen */ = {
 			isa = PBXGroup;
 			children = (
-				99344A701D390B7000380864 /* Utils */,
-				99344A6B1D38DF8D00380864 /* Usage */,
-				99344A671D38DBAD00380864 /* Localization */,
-				99344A631D38D41B00380864 /* Images */,
-				99BDE2501D3913DD00CA19CE /* ArgumentsParser.swift */,
-				99BDE24D1D3913D300CA19CE /* OperationType.swift */,
-				99BDE2521D3913E400CA19CE /* Version.swift */,
-				99BDE24C1D3913D300CA19CE /* main.swift */,
+				99B9E49D1D40EC1B00738100 /* ArgumentsParser.swift */,
+				99B9E49E1D40EC1B00738100 /* AssetsFinder.swift */,
+				99B9E49F1D40EC1B00738100 /* Colors.swift */,
+				99B9E4A01D40EC1B00738100 /* ImageAssetParser.swift */,
+				99B9E4A11D40EC1B00738100 /* ImageFinder.swift */,
+				99B9E4A21D40EC1B00738100 /* ImageOperation.swift */,
+				99B9E4A31D40EC1B00738100 /* ImagesClassGenerator.swift */,
+				99B9E4A41D40EC1B00738100 /* ImagesValidator.swift */,
+				99B9E4A51D40EC1B00738100 /* LocalizationClassGenerator.swift */,
+				99B9E4A61D40EC1B00738100 /* LocalizationFinder.swift */,
+				99B9E4A71D40EC1B00738100 /* LocalizationOperation.swift */,
+				99B9E4A81D40EC1B00738100 /* LocalizationParser.swift */,
+				99B9E4A91D40EC1B00738100 /* main.swift */,
+				99B9E4AA1D40EC1B00738100 /* OperationType.swift */,
+				99B9E4AB1D40EC1B00738100 /* PropertyName.swift */,
+				99B9E4AC1D40EC1B00738100 /* Usage.swift */,
+				99B9E4AD1D40EC1B00738100 /* Version.swift */,
 			);
-			name = Regen;
-			path = SafeAsset;
+			path = regen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		999D35511D2EE6E700C0184A /* Regen */ = {
+		99B9E4921D40EBF900738100 /* regen */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 999D35591D2EE6E700C0184A /* Build configuration list for PBXNativeTarget "Regen" */;
+			buildConfigurationList = 99B9E49A1D40EBF900738100 /* Build configuration list for PBXNativeTarget "regen" */;
 			buildPhases = (
-				999D354E1D2EE6E700C0184A /* Sources */,
-				999D354F1D2EE6E700C0184A /* Frameworks */,
-				999D35501D2EE6E700C0184A /* CopyFiles */,
+				99B9E48F1D40EBF900738100 /* Sources */,
+				99B9E4901D40EBF900738100 /* Frameworks */,
+				99B9E4911D40EBF900738100 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Regen;
-			productName = SafeAsset;
-			productReference = 999D35521D2EE6E700C0184A /* regen */;
+			name = regen;
+			productName = regen;
+			productReference = 99B9E4931D40EBF900738100 /* regen */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		999D354A1D2EE6E700C0184A /* Project object */ = {
+		99B9E48B1D40EBF900738100 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Ido Mizrachi";
 				TargetAttributes = {
-					999D35511D2EE6E700C0184A = {
+					99B9E4921D40EBF900738100 = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
 				};
 			};
-			buildConfigurationList = 999D354D1D2EE6E700C0184A /* Build configuration list for PBXProject "Regen" */;
+			buildConfigurationList = 99B9E48E1D40EBF900738100 /* Build configuration list for PBXProject "regen" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 999D35491D2EE6E700C0184A;
-			productRefGroup = 999D35531D2EE6E700C0184A /* Products */;
+			mainGroup = 99B9E48A1D40EBF900738100;
+			productRefGroup = 99B9E4941D40EBF900738100 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				999D35511D2EE6E700C0184A /* Regen */,
+				99B9E4921D40EBF900738100 /* regen */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		999D354E1D2EE6E700C0184A /* Sources */ = {
+		99B9E48F1D40EBF900738100 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99BDE24E1D3913D300CA19CE /* main.swift in Sources */,
-				99BDE23D1D39138100CA19CE /* Colors.swift in Sources */,
-				99BDE2411D3913BE00CA19CE /* AssetsFinder.swift in Sources */,
-				9914C91E1D3A22FD00A0BEA9 /* PropertyName.swift in Sources */,
-				99BDE24A1D3913CA00CA19CE /* ImagesClassGenerator.swift in Sources */,
-				99BDE2531D3913E400CA19CE /* Version.swift in Sources */,
-				99BDE25C1D393C9900CA19CE /* LocalizationParser.swift in Sources */,
-				99BDE24B1D3913CA00CA19CE /* ImagesValidator.swift in Sources */,
-				99BDE2491D3913CA00CA19CE /* ImageFinder.swift in Sources */,
-				99BDE2581D3929B900CA19CE /* LocalizationOperation.swift in Sources */,
-				99BDE2561D39297900CA19CE /* ImageOperation.swift in Sources */,
-				99BDE2511D3913DD00CA19CE /* ArgumentsParser.swift in Sources */,
-				9914C9201D3A2B5500A0BEA9 /* LocalizationClassGenerator.swift in Sources */,
-				99BDE23F1D39138C00CA19CE /* Usage.swift in Sources */,
-				99BDE2481D3913CA00CA19CE /* ImageAssetParser.swift in Sources */,
-				99BDE25A1D393A6B00CA19CE /* LocalizationFinder.swift in Sources */,
-				99BDE24F1D3913D300CA19CE /* OperationType.swift in Sources */,
+				99B9E4B41D40EC1B00738100 /* ImagesClassGenerator.swift in Sources */,
+				99B9E4BA1D40EC1B00738100 /* main.swift in Sources */,
+				99B9E4AF1D40EC1B00738100 /* AssetsFinder.swift in Sources */,
+				99B9E4B31D40EC1B00738100 /* ImageOperation.swift in Sources */,
+				99B9E4B11D40EC1B00738100 /* ImageAssetParser.swift in Sources */,
+				99B9E4B61D40EC1B00738100 /* LocalizationClassGenerator.swift in Sources */,
+				99B9E4B91D40EC1B00738100 /* LocalizationParser.swift in Sources */,
+				99B9E4B51D40EC1B00738100 /* ImagesValidator.swift in Sources */,
+				99B9E4BE1D40EC1B00738100 /* Version.swift in Sources */,
+				99B9E4B01D40EC1B00738100 /* Colors.swift in Sources */,
+				99B9E4B81D40EC1B00738100 /* LocalizationOperation.swift in Sources */,
+				99B9E4B21D40EC1B00738100 /* ImageFinder.swift in Sources */,
+				99B9E4BD1D40EC1B00738100 /* Usage.swift in Sources */,
+				99B9E4BC1D40EC1B00738100 /* PropertyName.swift in Sources */,
+				99B9E4BB1D40EC1B00738100 /* OperationType.swift in Sources */,
+				99B9E4B71D40EC1B00738100 /* LocalizationFinder.swift in Sources */,
+				99B9E4AE1D40EC1B00738100 /* ArgumentsParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		999D35571D2EE6E700C0184A /* Debug */ = {
+		99B9E4981D40EBF900738100 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -280,7 +235,7 @@
 			};
 			name = Debug;
 		};
-		999D35581D2EE6E700C0184A /* Release */ = {
+		99B9E4991D40EBF900738100 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -317,47 +272,49 @@
 			};
 			name = Release;
 		};
-		999D355A1D2EE6E700C0184A /* Debug */ = {
+		99B9E49B1D40EBF900738100 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEPLOYMENT_LOCATION = YES;
-				DEPLOYMENT_POSTPROCESSING = YES;
-				PRODUCT_NAME = regen;
+				CLANG_ENABLE_MODULES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		999D355B1D2EE6E700C0184A /* Release */ = {
+		99B9E49C1D40EBF900738100 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEPLOYMENT_LOCATION = YES;
-				DEPLOYMENT_POSTPROCESSING = YES;
 				DSTROOT = /;
-				PRODUCT_NAME = regen;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		999D354D1D2EE6E700C0184A /* Build configuration list for PBXProject "Regen" */ = {
+		99B9E48E1D40EBF900738100 /* Build configuration list for PBXProject "regen" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				999D35571D2EE6E700C0184A /* Debug */,
-				999D35581D2EE6E700C0184A /* Release */,
+				99B9E4981D40EBF900738100 /* Debug */,
+				99B9E4991D40EBF900738100 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		999D35591D2EE6E700C0184A /* Build configuration list for PBXNativeTarget "Regen" */ = {
+		99B9E49A1D40EBF900738100 /* Build configuration list for PBXNativeTarget "regen" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				999D355A1D2EE6E700C0184A /* Debug */,
-				999D355B1D2EE6E700C0184A /* Release */,
+				99B9E49B1D40EBF900738100 /* Debug */,
+				99B9E49C1D40EBF900738100 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 999D354A1D2EE6E700C0184A /* Project object */;
+	rootObject = 99B9E48B1D40EBF900738100 /* Project object */;
 }

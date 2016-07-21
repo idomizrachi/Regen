@@ -18,10 +18,10 @@ class LocalizationFinder{
     
     func findLocalizationFiles(inPath path : String) -> [String] {
         let enumerator = fileManager.enumeratorAtPath(path)
+    
         
         var localizationFiles : [String] = []
-        
-        while let element = enumerator?.nextObject() as? String  {            
+        while let element = enumerator?.nextObject() as? String  {
             if element.hasSuffix(LocalizationOperation.localizableStrings) {
                 localizationFiles.append(element)
             }

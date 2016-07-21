@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>SafeAsset.xcscheme</key>
+		<key>regen.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>999D35511D2EE6E700C0184A</key>
+		<key>99B9E4921D40EBF900738100</key>
 		<dict>
 			<key>primary</key>
 			<true/>
