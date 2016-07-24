@@ -4,7 +4,9 @@ Regen generates objective-c code for accessing your images and localized string.
 ## Installation
 
 After cloning\download the project, use:
+
 `xcodebuild install` 
+
 to install regen to /usr/local/bin
 
 ## Usage
