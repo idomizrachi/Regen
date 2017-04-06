@@ -30,7 +30,7 @@ class ImageAssetParser {
     
     func propertyName(_ imageName : String) -> String {
         var parts : [String] = []
-        let capitalizedImageName = imageName.capitalized
+        let capitalizedImageName = imageName.camelcase()
         var shouldUpperCase = false
         for character in capitalizedImageName.characters {
             if (seperators.contains(String(character))) {

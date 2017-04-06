@@ -14,7 +14,7 @@ class PropertyName {
         propertyName = parts[0]
         if (parts.count > 1) {
             for index in 1...parts.count-1 {
-                propertyName += parts[index].capitalized
+                propertyName += parts[index].camelcase()
             }
         }        
         return propertyName
