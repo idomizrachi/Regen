@@ -11,15 +11,15 @@ import Cocoa
 class AssetsFinder {
     let assetsSuffix = ".xcassets"
     
-    let fileManager : NSFileManager
+    let fileManager : FileManager
     
-    init(fileManager: NSFileManager) {
+    init(fileManager: FileManager) {
         self.fileManager = fileManager
     }
 
     func findAssets(inPath path : String) -> [String] {
         var assets : [String] = []
-        let enumerator = fileManager.enumeratorAtPath(path)
+        let enumerator = fileManager.enumerator(atPath: path)
         while let element = enumerator?.nextObject() as? String  {
             if isAsset(element) {
                 assets.append(path + "/" + element)
@@ -28,7 +28,7 @@ class AssetsFinder {
         return assets
     }
     
-    func isAsset(element : String) -> Bool {
+    func isAsset(_ element : String) -> Bool {
         return element.hasSuffix(assetsSuffix)
     }
     

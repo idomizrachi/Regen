@@ -12,13 +12,13 @@ class LocalizationOperation{
     
     static let localizableStrings = "Localizable.strings"
     
-    let fileManager : NSFileManager
+    let fileManager : FileManager
     
-    init(fileManager : NSFileManager) {
+    init(fileManager : FileManager) {
         self.fileManager = fileManager
     }
     
-    func run(searchPath : String, output : String) {
+    func run(_ searchPath : String, output : String) {
         let localizationFinder = LocalizationFinder(fileManager: fileManager)
         let files = localizationFinder.findLocalizationFiles(inPath: searchPath)
         let parser = LocalizationParser()        

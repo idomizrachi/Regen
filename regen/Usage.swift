@@ -25,7 +25,7 @@ class Usage {
         }
     }
     
-    func levelPrint(string : String) {
+    func levelPrint(_ string : String) {
         print("\t" + string)
     }
     

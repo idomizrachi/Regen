@@ -24,15 +24,15 @@ class ArgumentsParser {
     
     func operationType() -> OperationType {
         if isVersionOperationType() {
-            return .Version
+            return .version
         }
         if isImagesOperationType() {
-            return .Images
+            return .images
         }
         if isLocalizationOperationType() {
-            return .Localization
+            return .localization
         }
-        return .Usage
+        return .usage
     }
     
     func isVersionOperationType() -> Bool {
@@ -44,12 +44,12 @@ class ArgumentsParser {
     }
     
     func scanType() -> String? {
-        guard let indexOfScanType = arguments.indexOf("--scanType") else {
+        guard let indexOfScanType = arguments.index(of: "--scanType") else {
             return nil
         }
         if indexOfScanType+1 < arguments.count {
             let scanType = arguments[indexOfScanType+1]
-            return scanType.lowercaseString
+            return scanType.lowercased()
         }
         return nil
     }
@@ -74,7 +74,7 @@ class ArgumentsParser {
     }
     
     func parseOutput() {
-        guard let indexOfOutput = arguments.indexOf("--output") else {
+        guard let indexOfOutput = arguments.index(of: "--output") else {
             return
         }
         if indexOfOutput+1 < arguments.count {

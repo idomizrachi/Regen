@@ -82,7 +82,8 @@
 		997B36761D40EE7B000BF2DA /* Localization */ = {
 			isa = PBXGroup;
 			children = (
-				99B9E4A51D40EC1B00738100 /* LocalizationClassGenerator.swift */,
+				998C20BA1D683C58000F7AF0 /* ObjC */,
+				998C20BB1D683C5D000F7AF0 /* Swift */,
 				99B9E4A61D40EC1B00738100 /* LocalizationFinder.swift */,
 				99B9E4A71D40EC1B00738100 /* LocalizationOperation.swift */,
 				99B9E4A81D40EC1B00738100 /* LocalizationParser.swift */,
@@ -93,14 +94,45 @@
 		997B36771D40EE83000BF2DA /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				998C20B91D683C51000F7AF0 /* ObjC */,
+				998C20B81D683C4C000F7AF0 /* Swift */,
 				99B9E49E1D40EC1B00738100 /* AssetsFinder.swift */,
 				99B9E4A01D40EC1B00738100 /* ImageAssetParser.swift */,
 				99B9E4A11D40EC1B00738100 /* ImageFinder.swift */,
 				99B9E4A21D40EC1B00738100 /* ImageOperation.swift */,
-				99B9E4A31D40EC1B00738100 /* ImagesClassGenerator.swift */,
 				99B9E4A41D40EC1B00738100 /* ImagesValidator.swift */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		998C20B81D683C4C000F7AF0 /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Swift;
+			sourceTree = "<group>";
+		};
+		998C20B91D683C51000F7AF0 /* ObjC */ = {
+			isa = PBXGroup;
+			children = (
+				99B9E4A31D40EC1B00738100 /* ImagesClassGenerator.swift */,
+			);
+			name = ObjC;
+			sourceTree = "<group>";
+		};
+		998C20BA1D683C58000F7AF0 /* ObjC */ = {
+			isa = PBXGroup;
+			children = (
+				99B9E4A51D40EC1B00738100 /* LocalizationClassGenerator.swift */,
+			);
+			name = ObjC;
+			sourceTree = "<group>";
+		};
+		998C20BB1D683C5D000F7AF0 /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Swift;
 			sourceTree = "<group>";
 		};
 		99B9E48A1D40EBF900738100 = {
@@ -166,6 +198,7 @@
 				TargetAttributes = {
 					99B9E4921D40EBF900738100 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0830;
 					};
 				};
 			};
@@ -303,6 +336,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -313,6 +347,7 @@
 				DEPLOYMENT_LOCATION = YES;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

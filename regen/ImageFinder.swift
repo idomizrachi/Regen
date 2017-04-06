@@ -11,9 +11,9 @@ import Cocoa
 class ImageFinder {
     static let imageSuffix = ".imageset"
     
-    let fileManager : NSFileManager
+    let fileManager : FileManager
     
-    init(fileManager: NSFileManager) {
+    init(fileManager: FileManager) {
         self.fileManager = fileManager
     }
     
@@ -23,7 +23,7 @@ class ImageFinder {
         if !asset.hasSuffix("/") {
             searchPath = searchPath + "/"
         }
-        let enumaretor = fileManager.enumeratorAtPath(searchPath)
+        let enumaretor = fileManager.enumerator(atPath: searchPath)
         while let element = enumaretor?.nextObject() as? String {            
             if isImage(element) {
                 images.append(searchPath + element)
@@ -32,7 +32,7 @@ class ImageFinder {
         return images
     }
 
-    func isImage(element : String) -> Bool {
+    func isImage(_ element : String) -> Bool {
         return element.hasSuffix(ImageFinder.imageSuffix)
     }
 }

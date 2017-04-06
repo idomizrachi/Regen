@@ -9,13 +9,13 @@
 import Foundation
 
 class ImageOperation {
-    let fileManager : NSFileManager
+    let fileManager : FileManager
     
-    init(fileManager : NSFileManager) {
+    init(fileManager : FileManager) {
         self.fileManager = fileManager
     }
     
-    func run(searchPath : String, output : String) {        
+    func run(_ searchPath : String, output : String) {        
         let assetsFinder = AssetsFinder(fileManager: fileManager)
         let assets = assetsFinder.findAssets(inPath: searchPath)
         
