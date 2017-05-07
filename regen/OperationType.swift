@@ -9,8 +9,8 @@
 import Foundation
 
 enum OperationType {
-    case Version
-    case Images
-    case Localization
-    case Usage
+    case version
+    case images
+    case localization
+    case usage
 }

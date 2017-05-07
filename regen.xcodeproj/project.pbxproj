@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		99A338CD1E963D5A00DAB7E1 /* StringCamelcase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A338CC1E963D5A00DAB7E1 /* StringCamelcase.swift */; };
 		99B9E4AE1D40EC1B00738100 /* ArgumentsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B9E49D1D40EC1B00738100 /* ArgumentsParser.swift */; };
 		99B9E4AF1D40EC1B00738100 /* AssetsFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B9E49E1D40EC1B00738100 /* AssetsFinder.swift */; };
 		99B9E4B01D40EC1B00738100 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B9E49F1D40EC1B00738100 /* Colors.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		99A338CC1E963D5A00DAB7E1 /* StringCamelcase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringCamelcase.swift; sourceTree = "<group>"; };
 		99B9E4931D40EBF900738100 /* regen */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = regen; sourceTree = BUILT_PRODUCTS_DIR; };
 		99B9E49D1D40EC1B00738100 /* ArgumentsParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArgumentsParser.swift; sourceTree = "<group>"; };
 		99B9E49E1D40EC1B00738100 /* AssetsFinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetsFinder.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 			children = (
 				99B9E4AB1D40EC1B00738100 /* PropertyName.swift */,
 				99B9E49F1D40EC1B00738100 /* Colors.swift */,
+				99A338CC1E963D5A00DAB7E1 /* StringCamelcase.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -82,7 +85,8 @@
 		997B36761D40EE7B000BF2DA /* Localization */ = {
 			isa = PBXGroup;
 			children = (
-				99B9E4A51D40EC1B00738100 /* LocalizationClassGenerator.swift */,
+				998C20BA1D683C58000F7AF0 /* ObjC */,
+				998C20BB1D683C5D000F7AF0 /* Swift */,
 				99B9E4A61D40EC1B00738100 /* LocalizationFinder.swift */,
 				99B9E4A71D40EC1B00738100 /* LocalizationOperation.swift */,
 				99B9E4A81D40EC1B00738100 /* LocalizationParser.swift */,
@@ -93,14 +97,45 @@
 		997B36771D40EE83000BF2DA /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				998C20B91D683C51000F7AF0 /* ObjC */,
+				998C20B81D683C4C000F7AF0 /* Swift */,
 				99B9E49E1D40EC1B00738100 /* AssetsFinder.swift */,
 				99B9E4A01D40EC1B00738100 /* ImageAssetParser.swift */,
 				99B9E4A11D40EC1B00738100 /* ImageFinder.swift */,
 				99B9E4A21D40EC1B00738100 /* ImageOperation.swift */,
-				99B9E4A31D40EC1B00738100 /* ImagesClassGenerator.swift */,
 				99B9E4A41D40EC1B00738100 /* ImagesValidator.swift */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		998C20B81D683C4C000F7AF0 /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Swift;
+			sourceTree = "<group>";
+		};
+		998C20B91D683C51000F7AF0 /* ObjC */ = {
+			isa = PBXGroup;
+			children = (
+				99B9E4A31D40EC1B00738100 /* ImagesClassGenerator.swift */,
+			);
+			name = ObjC;
+			sourceTree = "<group>";
+		};
+		998C20BA1D683C58000F7AF0 /* ObjC */ = {
+			isa = PBXGroup;
+			children = (
+				99B9E4A51D40EC1B00738100 /* LocalizationClassGenerator.swift */,
+			);
+			name = ObjC;
+			sourceTree = "<group>";
+		};
+		998C20BB1D683C5D000F7AF0 /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Swift;
 			sourceTree = "<group>";
 		};
 		99B9E48A1D40EBF900738100 = {
@@ -166,6 +201,7 @@
 				TargetAttributes = {
 					99B9E4921D40EBF900738100 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0830;
 					};
 				};
 			};
@@ -206,6 +242,7 @@
 				99B9E4BD1D40EC1B00738100 /* Usage.swift in Sources */,
 				99B9E4BC1D40EC1B00738100 /* PropertyName.swift in Sources */,
 				99B9E4BB1D40EC1B00738100 /* OperationType.swift in Sources */,
+				99A338CD1E963D5A00DAB7E1 /* StringCamelcase.swift in Sources */,
 				99B9E4B71D40EC1B00738100 /* LocalizationFinder.swift in Sources */,
 				99B9E4AE1D40EC1B00738100 /* ArgumentsParser.swift in Sources */,
 			);
@@ -303,6 +340,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -313,6 +351,7 @@
 				DEPLOYMENT_LOCATION = YES;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

@@ -17,20 +17,20 @@ struct ImageAssetMetadata {
 class ImageAssetParser {
     let seperators = ["-", "_"]
     
-    func parseImage(imageAsset : String) -> ImageAssetMetadata {
+    func parseImage(_ imageAsset : String) -> ImageAssetMetadata {
         var metadata = ImageAssetMetadata(path: imageAsset, imageNamed: "", property: "")
-        guard var imageName = imageAsset.componentsSeparatedByString("/").last else {
+        guard var imageName = imageAsset.components(separatedBy: "/").last else {
             return metadata
         }
-        imageName = imageName.substringToIndex(imageName.endIndex.advancedBy(-ImageFinder.imageSuffix.characters.count))
+        imageName = imageName.substring(to: imageName.characters.index(imageName.endIndex, offsetBy: -ImageFinder.imageSuffix.characters.count))
         metadata.imageNamed = imageName
         metadata.property = propertyName(imageName)
         return metadata
     }
     
-    func propertyName(imageName : String) -> String {
+    func propertyName(_ imageName : String) -> String {
         var parts : [String] = []
-        let capitalizedImageName = capitalizeFirstCharacter(imageName)
+        let capitalizedImageName = imageName.camelcase()
         var shouldUpperCase = false
         for character in capitalizedImageName.characters {
             if (seperators.contains(String(character))) {
@@ -38,19 +38,13 @@ class ImageAssetParser {
                 continue
             } else {
                 if (shouldUpperCase) {
-                    parts.append(String(character).uppercaseString)
+                    parts.append(String(character).uppercased())
                     shouldUpperCase = false
                 } else {
                     parts.append(String(character))
                 }
             }
         }
-        return parts.joinWithSeparator("")
-    }
-    
-    func capitalizeFirstCharacter(string : String) -> String {
-        let capitalized = String(string[string.startIndex]).uppercaseString
-        return string.stringByReplacingCharactersInRange(string.startIndex...string.startIndex,
-                                                  withString: capitalized)
+        return parts.joined(separator: "")
     }
 }

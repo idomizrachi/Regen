@@ -15,7 +15,7 @@ struct ValidationIssue {
 }
 
 class ImagesValidator {
-    func validate(images : [ImageAssetMetadata]) -> [ValidationIssue] {
+    func validate(_ images : [ImageAssetMetadata]) -> [ValidationIssue] {
         var issues : [ValidationIssue] = []
         guard images.count > 1 else {
             return issues

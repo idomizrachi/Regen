@@ -16,24 +16,24 @@ struct LocalizationEntry {
 
 class LocalizationParser {
     
-    func parseLocalizationFile(file : String) -> [LocalizationEntry] {
+    func parseLocalizationFile(_ file : String) -> [LocalizationEntry] {
         var localizationEntries : [LocalizationEntry] = []
         let content : String
         do {
             content = try String(contentsOfFile: file)
-            let lines = content.componentsSeparatedByString("\n")
+            let lines = content.components(separatedBy: "\n")
             for var line in lines {                
-                line = line.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+                line = line.trimmingCharacters(in: CharacterSet.whitespaces)
                 guard line.hasPrefix("\"") else {
                     continue
                 }
-                line.removeAtIndex(line.startIndex)
-                if let index = line.characters.indexOf("\"") {
-                    var key = line.substringToIndex(index)
-                    if let indexOfPlural = line.characters.indexOf("#") {
-                        key = key.substringToIndex(indexOfPlural)
+                line.remove(at: line.startIndex)
+                if let index = line.characters.index(of: "\"") {
+                    var key = line.substring(to: index)
+                    if let indexOfPlural = line.characters.index(of: "#") {
+                        key = key.substring(to: indexOfPlural)
                     }
-                    let parts = key.componentsSeparatedByCharactersInSet(NSCharacterSet(charactersInString: ". "))
+                    let parts = key.components(separatedBy: CharacterSet(charactersIn: ". "))
                     let property = PropertyName.propertyName(parts)
                     localizationEntries.append(LocalizationEntry(path: file, key: key, property: property))
                 }
@@ -44,7 +44,7 @@ class LocalizationParser {
         return localizationEntries
     }
     
-    func appendEntries(from : [LocalizationEntry], inout to : [LocalizationEntry]) {
+    func appendEntries(_ from : [LocalizationEntry], to : inout [LocalizationEntry]) {
         for entry in from {
             if LocalizationParser.contains(to, key: entry.key) {
                 continue
@@ -53,7 +53,7 @@ class LocalizationParser {
         }
     }
     
-    static func contains(entries : [LocalizationEntry], key : String) -> Bool {
+    static func contains(_ entries : [LocalizationEntry], key : String) -> Bool {
         for entry in entries {
             if entry.key == key {
                 return true
