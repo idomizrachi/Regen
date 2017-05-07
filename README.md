@@ -9,6 +9,10 @@ After cloning\download the project, run:
 
 And `regen` will install to `/usr/local/bin`
 
+Alternativly you can use brew:
+
+`brew install https://raw.githubusercontent.com/idomizrachi/Regen/master/regen.rb`
+
 ## Usage
 
 So instead of: 
