@@ -5,8 +5,8 @@
 class Regen < Formula
   desc "Regen generates objective-c code for accessing your images and localized string"
   homepage "https://github.com/idomizrachi/Regen"
-  url "https://github.com/idomizrachi/Regen/archive/0.0.3.tar.gz"
-  version "0.0.3"
+  url "https://github.com/idomizrachi/Regen/archive/0.0.4.tar.gz"
+  version "0.0.4"
   sha256 "abde4c20927f68ffd124dc70c0b4182a05aa9e3a95decd5139f5431aa4dafd30"
   head "https://github.com/idomizrachi/Regen.git"
 
