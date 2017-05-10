@@ -3,7 +3,6 @@
 //  Regen
 //
 //  Created by Ido Mizrachi on 7/7/16.
-//  Copyright © 2016 Ido Mizrachi. All rights reserved.
 //
 
 import Foundation
@@ -16,14 +15,14 @@ switch operationType {
 case .version:
     Version.printVersion()
 case .images:
-    let imageOperation = ImageOperation(fileManager: fileManager)
+    let imageOperation = ImageOperation(fileManager: fileManager, language: argumentsParser.language)
     var output = "Images"
     if argumentsParser.output != nil {
         output = argumentsParser.output!
     }
     imageOperation.run(searchPath, output: output)
 case .localization:
-    let localizationOperation = LocalizationOperation(fileManager: fileManager)
+    let localizationOperation = LocalizationOperation(fileManager: fileManager, language: argumentsParser.language)
     var output = "Strings"
     if argumentsParser.output != nil {
         output = argumentsParser.output!
@@ -33,5 +32,6 @@ default:
     let usage = Usage()
     usage.printUsage()
 }
+
 
 exit(EXIT_SUCCESS)

@@ -3,16 +3,17 @@
 //  Regen
 //
 //  Created by Ido Mizrachi on 7/15/16.
-//  Copyright © 2016 Ido Mizrachi. All rights reserved.
 //
 
 import Foundation
 
 class ImageOperation {
     let fileManager : FileManager
+    let language: Language
     
-    init(fileManager : FileManager) {
+    init(fileManager : FileManager, language: Language) {
         self.fileManager = fileManager
+        self.language = language
     }
     
     func run(_ searchPath : String, output : String) {        
@@ -34,7 +35,12 @@ class ImageOperation {
         let validator = ImagesValidator()
         let validationIssues = validator.validate(metadatas)
         if validationIssues.count == 0 {
-            let generator = ImagesClassGenerator()
+            let generator: ImagesClassGenerator
+            if self.language == .ObjC {
+                generator = ImagesClassGeneratorObjC()
+            } else {
+                generator = ImagesClassGeneratorSwift()
+            }
             generator.generateClass(fromImages: metadatas, generatedFile: output)
         } else {
             for validationIssue in validationIssues {

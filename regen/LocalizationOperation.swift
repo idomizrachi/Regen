@@ -3,7 +3,6 @@
 //  Regen
 //
 //  Created by Ido Mizrachi on 7/15/16.
-//  Copyright © 2016 Ido Mizrachi. All rights reserved.
 //
 
 import Foundation
@@ -13,9 +12,11 @@ class LocalizationOperation{
     static let localizableStrings = "Localizable.strings"
     
     let fileManager : FileManager
+    let language: Language
     
-    init(fileManager : FileManager) {
+    init(fileManager : FileManager, language: Language) {
         self.fileManager = fileManager
+        self.language = language
     }
     
     func run(_ searchPath : String, output : String) {
@@ -27,7 +28,12 @@ class LocalizationOperation{
             let parsedFile = parser.parseLocalizationFile(file)
             parser.appendEntries(parsedFile, to: &localizationEntries)
         }
-        let generator = LocalizationClassGenerator()
+        let generator: LocalizationClassGenerator
+        if language == .ObjC {
+            generator = LocalizationClassGeneratorObjC()
+        } else {
+            generator = LocalizationClassGeneratorSwift()
+        }
         generator.generateClass(fromLocalizationEntries: localizationEntries, generatedFile: output)
     }
 }

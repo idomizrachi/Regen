@@ -3,7 +3,6 @@
 //  regen
 //
 //  Created by Ido Mizrachi on 4/6/17.
-//  Copyright © 2017 Ido Mizrachi. All rights reserved.
 //
 
 import Foundation
