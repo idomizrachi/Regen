@@ -1,5 +1,9 @@
 # Regen
-Regen generates objective-c code for accessing your images and localized string. 
+Regen generates objective-c code for accessing your images and localized string.
+
+## What's New
+### 0.0.5
+Added swift generated files
 
 ## Installation
 
@@ -11,7 +15,7 @@ And `regen` will install to `/usr/local/bin`
 
 Alternativly you can use brew:
 
-`brew install https://raw.githubusercontent.com/idomizrachi/Regen/master/regen.rb`
+`brew install https://raw.githubusercontent.com/idomizrachi/Regen/master/formula/regen.rb`
 
 ## Usage
 
