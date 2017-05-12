@@ -4,6 +4,7 @@ Regen generates objective-c code for accessing your images and localized string.
 ## What's New
 ### 0.0.5
 Added swift generated files
+
 Print additional information during the execution using "-v" or "--verbose"
 
 ## Installation
