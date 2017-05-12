@@ -4,12 +4,13 @@ Regen generates objective-c code for accessing your images and localized string.
 ## What's New
 ### 0.0.5
 Added swift generated files
+Print additional information during the execution using "-v" or "--verbose"
 
 ## Installation
 
 After cloning\download the project, run:
 
-`xcodebuild install` 
+`xcodebuild install`
 
 And `regen` will install to `/usr/local/bin`
 
@@ -19,7 +20,7 @@ Alternativly you can use brew:
 
 ## Usage
 
-So instead of: 
+So instead of:
 
 `[UIImage imageNamed: @"login-button"]`
 
