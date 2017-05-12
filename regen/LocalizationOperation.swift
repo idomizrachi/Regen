@@ -20,14 +20,17 @@ class LocalizationOperation{
     }
     
     func run(_ searchPath : String, output : String) {
+        Logger.info("Localization scan: started")
         let localizationFinder = LocalizationFinder(fileManager: fileManager)
         let files = localizationFinder.findLocalizationFiles(inPath: searchPath)
         let parser = LocalizationParser()        
         var localizationEntries : [LocalizationEntry] = []
+        Logger.debug("\tParse localization files: started")
         for file in files {            
             let parsedFile = parser.parseLocalizationFile(file)
             parser.appendEntries(parsedFile, to: &localizationEntries)
         }
+        Logger.debug("\tParse localization files: finished")
         let generator: LocalizationClassGenerator
         if language == .ObjC {
             generator = LocalizationClassGeneratorObjC()
@@ -35,5 +38,6 @@ class LocalizationOperation{
             generator = LocalizationClassGeneratorSwift()
         }
         generator.generateClass(fromLocalizationEntries: localizationEntries, generatedFile: output)
+        Logger.info("Localization scan: finished")
     }
 }

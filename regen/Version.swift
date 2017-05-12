@@ -11,6 +11,6 @@ class Version {
     static let current = "0.0.5"
     
     static func printVersion() {
-        print(current)
+        print("Regen (\(current))")
     }
 }

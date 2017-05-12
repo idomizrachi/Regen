@@ -16,7 +16,8 @@ class ImageOperation {
         self.language = language
     }
     
-    func run(_ searchPath : String, output : String) {        
+    func run(_ searchPath : String, output : String) {
+        Logger.info("Images scan: started")
         let assetsFinder = AssetsFinder(fileManager: fileManager)
         let assets = assetsFinder.findAssets(inPath: searchPath)
         
@@ -43,10 +44,17 @@ class ImageOperation {
             }
             generator.generateClass(fromImages: metadatas, generatedFile: output)
         } else {
+            Logger.error("Issues found:".bold.underline)
             for validationIssue in validationIssues {
-                print("\(validationIssue.firstImage) conflicts with \(validationIssue.secondImage) for as property \(validationIssue.property)")
+                let image = "image "
+                let firstImage = validationIssue.firstImage.bold
+                let conflicts = " conflicts with ".boldOff
+                let secondImage = validationIssue.secondImage.bold
+                let asProperty = " as property ".boldOff +  "\(validationIssue.property)".bold
+                Logger.error("\t\(image)\(firstImage)\(conflicts)\(secondImage)\(asProperty)")
             }
             exit(EXIT_FAILURE)
         }
+        Logger.info("Images scan: Finished")
     }
 }

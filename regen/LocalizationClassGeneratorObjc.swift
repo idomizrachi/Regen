@@ -19,8 +19,8 @@ class LocalizationClassGeneratorObjC: LocalizationClassGenerator {
         implementationFile += "@implementation \(generatedFile)\n\n"
         
         for localizationEntry in localization {
-            headerFile += "+(NSString *) \(localizationEntry.property);\n"
-            implementationFile += "+(NSString *) \(localizationEntry.property) {\n"
+            headerFile += "+(NSString *)\(localizationEntry.property);\n"
+            implementationFile += "+(NSString *)\(localizationEntry.property) {\n"
             implementationFile += "    return NSLocalizedString(@\"\(localizationEntry.key)\" , \"\");\n"
             implementationFile += "}\n\n";
         }
@@ -32,7 +32,7 @@ class LocalizationClassGeneratorObjC: LocalizationClassGenerator {
             try headerFile.write(toFile: generatedFile + ".h", atomically: false, encoding: String.Encoding.utf8)
             try implementationFile.write(toFile: generatedFile + ".m", atomically: false, encoding: String.Encoding.utf8)
         } catch let error {
-            print("Error: \(error)")
+            Logger.error("\(error)")
         }
     }
 }

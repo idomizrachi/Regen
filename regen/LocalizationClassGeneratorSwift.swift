@@ -20,7 +20,7 @@ class LocalizationClassGeneratorSwift: LocalizationClassGenerator {
         do {
             try file.write(toFile: generatedFile + ".swift", atomically: false, encoding: String.Encoding.utf8)
         } catch let error {
-            print("Error: \(error)")
+            Logger.error("\(error)")
         }
     }
 }

@@ -9,6 +9,7 @@ import Foundation
 
 class ImagesClassGeneratorSwift: ImagesClassGenerator {
     func generateClass(fromImages images : [ImageAssetMetadata], generatedFile : String) {
+        Logger.debug("\tGenerating images Swift class: started")
         var file = ""
         
         file += "public struct \(generatedFile) {\n"        
@@ -20,7 +21,8 @@ class ImagesClassGeneratorSwift: ImagesClassGenerator {
         do {
             try file.write(toFile: generatedFile + ".swift", atomically: false, encoding: String.Encoding.utf8)
         } catch let error {
-            print("Error: \(error)")
+            Logger.error("\(error)")
         }
+        Logger.debug("\tGenerating images Swift class: finished")
     }
 }

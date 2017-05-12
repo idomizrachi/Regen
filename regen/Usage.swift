@@ -12,7 +12,9 @@ class Usage {
     let options = [ ["--version          ", "Prints the current version"],
                     ["--output FILE      ", "Set the generated file name (without extension)"] ,
                     ["--scanType TYPE    ", "Use images or localization\n\t\timages - scans the projects .xcassets files\n\t\tlocalization - scans the projects Localizable.strings file"],
-                    ["--language LANGUAGE", "Use swift or objc\n\t\tSets the language of the generated filess"]]
+                    ["--language LANGUAGE", "Use swift or objc\n\t\tSets the language of the generated filess"],
+                    ["--verbose or -v    ", "Print detailed information while running"]
+    ]
     
     func printUsage() {
         print("Usage:".bold.underline)

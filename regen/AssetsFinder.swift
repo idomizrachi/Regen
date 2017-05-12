@@ -18,12 +18,14 @@ class AssetsFinder {
 
     func findAssets(inPath path : String) -> [String] {
         var assets : [String] = []
+        Logger.debug("\tSearching image assets files: started")
         let enumerator = fileManager.enumerator(atPath: path)
         while let element = enumerator?.nextObject() as? String  {
             if isAsset(element) {
                 assets.append(path + "/" + element)
             }
         }
+        Logger.debug("\tSearching image assets files: finished (\(assets.count) asset\\s found)")
         return assets
     }
     

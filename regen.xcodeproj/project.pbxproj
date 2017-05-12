@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		99A338CD1E963D5A00DAB7E1 /* StringCamelcase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A338CC1E963D5A00DAB7E1 /* StringCamelcase.swift */; };
+		99AF6AF21EC5EB9600C91BA8 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AF6AF11EC5EB9600C91BA8 /* Logger.swift */; };
 		99B9E4AE1D40EC1B00738100 /* ArgumentsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B9E49D1D40EC1B00738100 /* ArgumentsParser.swift */; };
 		99B9E4AF1D40EC1B00738100 /* AssetsFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B9E49E1D40EC1B00738100 /* AssetsFinder.swift */; };
 		99B9E4B01D40EC1B00738100 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B9E49F1D40EC1B00738100 /* Colors.swift */; };
@@ -45,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		99A338CC1E963D5A00DAB7E1 /* StringCamelcase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringCamelcase.swift; sourceTree = "<group>"; };
+		99AF6AF11EC5EB9600C91BA8 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		99B9E4931D40EBF900738100 /* regen */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = regen; sourceTree = BUILT_PRODUCTS_DIR; };
 		99B9E49D1D40EC1B00738100 /* ArgumentsParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArgumentsParser.swift; sourceTree = "<group>"; };
 		99B9E49E1D40EC1B00738100 /* AssetsFinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetsFinder.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				99B9E4AB1D40EC1B00738100 /* PropertyName.swift */,
 				99B9E49F1D40EC1B00738100 /* Colors.swift */,
 				99A338CC1E963D5A00DAB7E1 /* StringCamelcase.swift */,
+				99AF6AF11EC5EB9600C91BA8 /* Logger.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 				99D74E341EC39AF8003BFACE /* LocalizationClassGeneratorObjc.swift in Sources */,
 				99D74E1B1EC3919D003BFACE /* ImagesClassGeneratorSwift.swift in Sources */,
 				99B9E4B61D40EC1B00738100 /* LocalizationClassGenerator.swift in Sources */,
+				99AF6AF21EC5EB9600C91BA8 /* Logger.swift in Sources */,
 				99B9E4B91D40EC1B00738100 /* LocalizationParser.swift in Sources */,
 				99B9E4B51D40EC1B00738100 /* ImagesValidator.swift in Sources */,
 				99B9E4BE1D40EC1B00738100 /* Version.swift in Sources */,

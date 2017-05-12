@@ -19,7 +19,10 @@ class LocalizationParser {
         var localizationEntries : [LocalizationEntry] = []
         let content : String
         do {
+            Logger.verbose("\t\tLoading localization file: started")
             content = try String(contentsOfFile: file)
+            Logger.verbose("\t\tLoading localization file: finished")
+            Logger.verbose("\t\tAnalyzing localization file: started \(file)")
             let lines = content.components(separatedBy: "\n")
             for var line in lines {                
                 line = line.trimmingCharacters(in: CharacterSet.whitespaces)
@@ -32,12 +35,13 @@ class LocalizationParser {
                     if let indexOfPlural = line.characters.index(of: "#") {
                         key = key.substring(to: indexOfPlural)
                     }
-                    let parts = key.components(separatedBy: CharacterSet(charactersIn: ". "))
-                    let property = PropertyName.propertyName(parts)
+                    let property = key.propertyName()
                     localizationEntries.append(LocalizationEntry(path: file, key: key, property: property))
                 }
             }
+            Logger.verbose("\t\tAnalyzing localization file: finished \(file)") 
         } catch {
+            Logger.error("\(error)")
             content = ""
         }
         return localizationEntries

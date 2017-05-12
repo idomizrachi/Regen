@@ -22,12 +22,14 @@ class ImageFinder {
         if !asset.hasSuffix("/") {
             searchPath = searchPath + "/"
         }
+        Logger.debug("\tSearching for images: started")
         let enumaretor = fileManager.enumerator(atPath: searchPath)
         while let element = enumaretor?.nextObject() as? String {            
             if isImage(element) {
                 images.append(searchPath + element)
             }
         }
+        Logger.debug("\tSearching for images: finished (\(images.count) image\\s found)")
         return images
     }
 

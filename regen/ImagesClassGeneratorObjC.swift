@@ -9,6 +9,7 @@ import Cocoa
 
 class ImagesClassGeneratorObjC: ImagesClassGenerator {
     func generateClass(fromImages images : [ImageAssetMetadata], generatedFile : String) {
+        Logger.debug("\tGenerating images ObjectiveC class: started")
         var headerFile = ""
         var implementationFile = ""
  
@@ -20,8 +21,8 @@ class ImagesClassGeneratorObjC: ImagesClassGenerator {
         
         
         for metadata in images {
-            headerFile += "+(NSString *) \(metadata.property);\n"
-            implementationFile += "+(NSString *) \(metadata.property) {\n"
+            headerFile += "+(NSString *)\(metadata.property);\n"
+            implementationFile += "+(NSString *)\(metadata.property) {\n"
             implementationFile += "    return \"\(metadata.imageNamed)\";\n"
             implementationFile += "}\n\n";
         }
@@ -33,7 +34,8 @@ class ImagesClassGeneratorObjC: ImagesClassGenerator {
             try headerFile.write(toFile: generatedFile + ".h", atomically: false, encoding: String.Encoding.utf8)
             try implementationFile.write(toFile: generatedFile + ".m", atomically: false, encoding: String.Encoding.utf8)
         } catch let error {
-            print("Error: \(error)")
+            Logger.error("\(error)")
         }
+        Logger.debug("\tGenerating images ObjectiveC class: finished")
     }
 }

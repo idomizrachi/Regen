@@ -7,10 +7,17 @@
 
 import Foundation
 
+Logger.logLevel = .warning
+
 let fileManager = FileManager.default
 let argumentsParser = ArgumentsParser(arguments: CommandLine.arguments)
 let operationType = argumentsParser.operationType()
 let searchPath = fileManager.currentDirectoryPath
+
+if argumentsParser.verbose {
+    Logger.logLevel = .verbose
+}
+
 switch operationType {
 case .version:
     Version.printVersion()
@@ -32,6 +39,5 @@ default:
     let usage = Usage()
     usage.printUsage()
 }
-
 
 exit(EXIT_SUCCESS)
