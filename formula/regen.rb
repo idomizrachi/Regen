@@ -5,8 +5,8 @@
 class Regen < Formula
   desc "Regen generates objective-c code for accessing your images and localized string"
   homepage "https://github.com/idomizrachi/Regen"
-  url "https://github.com/idomizrachi/Regen/archive/0.0.4.tar.gz"
-  version "0.0.4"
+  url "https://github.com/idomizrachi/Regen/archive/0.0.5.tar.gz"
+  version "0.0.5"
   sha256 "1c4af06de15454e30aedb5ecb3b6a71497dd9ab5d468e02a5ebf19b6f828b71c"
   head "https://github.com/idomizrachi/Regen.git"
 
@@ -22,11 +22,11 @@ class Regen < Formula
     #                      "--disable-silent-rules",
     #                      "--prefix=#{prefix}"
     # syste	m "cmake", ".", *std_cmake_args
-    # system "make", "install" # if this fails, try separate make/make install steps	
+    # system "make", "install" # if this fails, try separate make/make install steps
     xcodebuild "-target", "regen", "-configuration", "Release", "SYMROOT=symroot", "OBJROOT=objroot"
     bin.install "symroot/Release/regen"
   end
-  
+
 
 
   test do
