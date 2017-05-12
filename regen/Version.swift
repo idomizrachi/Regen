@@ -8,7 +8,7 @@
 import Cocoa
 
 class Version {
-    static let current = "0.0.5"
+    static let current = "0.0.6"
     
     static func printVersion() {
         print("Regen (\(current))")
