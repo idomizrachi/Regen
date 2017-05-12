@@ -3,27 +3,33 @@
 //  Regen
 //
 //  Created by Ido Mizrachi on 7/7/16.
-//  Copyright © 2016 Ido Mizrachi. All rights reserved.
 //
 
 import Foundation
+
+Logger.logLevel = .warning
 
 let fileManager = FileManager.default
 let argumentsParser = ArgumentsParser(arguments: CommandLine.arguments)
 let operationType = argumentsParser.operationType()
 let searchPath = fileManager.currentDirectoryPath
+
+if argumentsParser.verbose {
+    Logger.logLevel = .verbose
+}
+
 switch operationType {
 case .version:
     Version.printVersion()
 case .images:
-    let imageOperation = ImageOperation(fileManager: fileManager)
+    let imageOperation = ImageOperation(fileManager: fileManager, language: argumentsParser.language)
     var output = "Images"
     if argumentsParser.output != nil {
         output = argumentsParser.output!
     }
     imageOperation.run(searchPath, output: output)
 case .localization:
-    let localizationOperation = LocalizationOperation(fileManager: fileManager)
+    let localizationOperation = LocalizationOperation(fileManager: fileManager, language: argumentsParser.language)
     var output = "Strings"
     if argumentsParser.output != nil {
         output = argumentsParser.output!

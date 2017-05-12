@@ -3,10 +3,14 @@
 //  Regen
 //
 //  Created by Ido Mizrachi on 7/15/16.
-//  Copyright © 2016 Ido Mizrachi. All rights reserved.
 //
 
 import Foundation
+
+enum Language {
+    case ObjC
+    case Swift
+}
 
 class ArgumentsParser {
     
@@ -16,10 +20,16 @@ class ArgumentsParser {
     let arguments : [String]
     
     var output : String?
+    var language: Language = .ObjC
+    var verbose:Bool = false
     
     init(arguments : [String]) {
         self.arguments = arguments
+        Logger.verbose("Parsing input: started")
         parseOutput()
+        parseLanguage()
+        parseVerbose()
+        Logger.verbose("Parsing input: finished")
     }
     
     func operationType() -> OperationType {
@@ -80,6 +90,31 @@ class ArgumentsParser {
         if indexOfOutput+1 < arguments.count {
             self.output = arguments[indexOfOutput+1]
         }
+    }
+    
+    func parseLanguage() {
+        guard let indexOfLanguage = arguments.index(of: "--language") else {
+            return
+        }
+        if indexOfLanguage+1 < arguments.count {
+            let language = arguments[indexOfLanguage+1].lowercased()
+            if (language == "swift") {
+                self.language = .Swift
+            } else {
+                self.language = .ObjC
+            }
+        }
+    }
+    
+    func parseVerbose() {
+        if arguments.index(of: "--verbose") != nil {
+            self.verbose = true
+        } else if arguments.index(of: "-v") != nil {
+            self.verbose = true
+        } else {
+            self.verbose = false
+        }
+        
     }
     
 }

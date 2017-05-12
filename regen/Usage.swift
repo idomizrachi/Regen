@@ -3,16 +3,18 @@
 //  Regen
 //
 //  Created by Ido Mizrachi on 7/15/16.
-//  Copyright © 2016 Ido Mizrachi. All rights reserved.
 //
 
 import Foundation
 
 class Usage {
     
-    let options = [ ["--version      " , "Prints the current version"],
-                    ["--output FILE  " , "Set the generated file name (without extension)"] ,
-                    ["--scanType TYPE" , "Use images orlocalization\n\t\timages - scans the projects .xcassets files\n\t\tlocalization - scans the projects Localizable.strings file"] ]
+    let options = [ ["--version          ", "Prints the current version"],
+                    ["--output FILE      ", "Set the generated file name (without extension)"] ,
+                    ["--scanType TYPE    ", "Use images or localization\n\t\timages - scans the projects .xcassets files\n\t\tlocalization - scans the projects Localizable.strings file"],
+                    ["--language LANGUAGE", "Use swift or objc\n\t\tSets the language of the generated filess"],
+                    ["--verbose or -v    ", "Print detailed information while running"]
+    ]
     
     func printUsage() {
         print("Usage:".bold.underline)

@@ -3,7 +3,6 @@
 //  Regen
 //
 //  Created by Ido Mizrachi on 7/8/16.
-//  Copyright © 2016 Ido Mizrachi. All rights reserved.
 //
 
 import Cocoa
@@ -16,8 +15,10 @@ struct ValidationIssue {
 
 class ImagesValidator {
     func validate(_ images : [ImageAssetMetadata]) -> [ValidationIssue] {
+        Logger.debug("\tImages validation: started")
         var issues : [ValidationIssue] = []
         guard images.count > 1 else {
+            Logger.debug("\tImages validation: finished")
             return issues
         }
         for i in 0...images.count-2 {
@@ -27,6 +28,7 @@ class ImagesValidator {
                 }
             }
         }
+        Logger.debug("\tImages validation: finished (\(issues.count) issue\\s found)")
         return issues
     }
 }

@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		99A338CD1E963D5A00DAB7E1 /* StringCamelcase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A338CC1E963D5A00DAB7E1 /* StringCamelcase.swift */; };
+		99AF6AF21EC5EB9600C91BA8 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AF6AF11EC5EB9600C91BA8 /* Logger.swift */; };
 		99B9E4AE1D40EC1B00738100 /* ArgumentsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B9E49D1D40EC1B00738100 /* ArgumentsParser.swift */; };
 		99B9E4AF1D40EC1B00738100 /* AssetsFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B9E49E1D40EC1B00738100 /* AssetsFinder.swift */; };
 		99B9E4B01D40EC1B00738100 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B9E49F1D40EC1B00738100 /* Colors.swift */; };
 		99B9E4B11D40EC1B00738100 /* ImageAssetParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B9E4A01D40EC1B00738100 /* ImageAssetParser.swift */; };
 		99B9E4B21D40EC1B00738100 /* ImageFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B9E4A11D40EC1B00738100 /* ImageFinder.swift */; };
 		99B9E4B31D40EC1B00738100 /* ImageOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B9E4A21D40EC1B00738100 /* ImageOperation.swift */; };
-		99B9E4B41D40EC1B00738100 /* ImagesClassGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B9E4A31D40EC1B00738100 /* ImagesClassGenerator.swift */; };
+		99B9E4B41D40EC1B00738100 /* ImagesClassGeneratorObjC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B9E4A31D40EC1B00738100 /* ImagesClassGeneratorObjC.swift */; };
 		99B9E4B51D40EC1B00738100 /* ImagesValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B9E4A41D40EC1B00738100 /* ImagesValidator.swift */; };
 		99B9E4B61D40EC1B00738100 /* LocalizationClassGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B9E4A51D40EC1B00738100 /* LocalizationClassGenerator.swift */; };
 		99B9E4B71D40EC1B00738100 /* LocalizationFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B9E4A61D40EC1B00738100 /* LocalizationFinder.swift */; };
@@ -25,6 +26,10 @@
 		99B9E4BC1D40EC1B00738100 /* PropertyName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B9E4AB1D40EC1B00738100 /* PropertyName.swift */; };
 		99B9E4BD1D40EC1B00738100 /* Usage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B9E4AC1D40EC1B00738100 /* Usage.swift */; };
 		99B9E4BE1D40EC1B00738100 /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B9E4AD1D40EC1B00738100 /* Version.swift */; };
+		99D74E1B1EC3919D003BFACE /* ImagesClassGeneratorSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D74E1A1EC3919D003BFACE /* ImagesClassGeneratorSwift.swift */; };
+		99D74E1D1EC391BE003BFACE /* ImagesClassGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D74E1C1EC391BE003BFACE /* ImagesClassGenerator.swift */; };
+		99D74E341EC39AF8003BFACE /* LocalizationClassGeneratorObjc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D74E331EC39AF8003BFACE /* LocalizationClassGeneratorObjc.swift */; };
+		99D74E361EC39B62003BFACE /* LocalizationClassGeneratorSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D74E351EC39B62003BFACE /* LocalizationClassGeneratorSwift.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		99A338CC1E963D5A00DAB7E1 /* StringCamelcase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringCamelcase.swift; sourceTree = "<group>"; };
+		99AF6AF11EC5EB9600C91BA8 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		99B9E4931D40EBF900738100 /* regen */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = regen; sourceTree = BUILT_PRODUCTS_DIR; };
 		99B9E49D1D40EC1B00738100 /* ArgumentsParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArgumentsParser.swift; sourceTree = "<group>"; };
 		99B9E49E1D40EC1B00738100 /* AssetsFinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetsFinder.swift; sourceTree = "<group>"; };
@@ -48,7 +54,7 @@
 		99B9E4A01D40EC1B00738100 /* ImageAssetParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageAssetParser.swift; sourceTree = "<group>"; };
 		99B9E4A11D40EC1B00738100 /* ImageFinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFinder.swift; sourceTree = "<group>"; };
 		99B9E4A21D40EC1B00738100 /* ImageOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageOperation.swift; sourceTree = "<group>"; };
-		99B9E4A31D40EC1B00738100 /* ImagesClassGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesClassGenerator.swift; sourceTree = "<group>"; };
+		99B9E4A31D40EC1B00738100 /* ImagesClassGeneratorObjC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesClassGeneratorObjC.swift; sourceTree = "<group>"; };
 		99B9E4A41D40EC1B00738100 /* ImagesValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesValidator.swift; sourceTree = "<group>"; };
 		99B9E4A51D40EC1B00738100 /* LocalizationClassGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizationClassGenerator.swift; sourceTree = "<group>"; };
 		99B9E4A61D40EC1B00738100 /* LocalizationFinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizationFinder.swift; sourceTree = "<group>"; };
@@ -59,6 +65,10 @@
 		99B9E4AB1D40EC1B00738100 /* PropertyName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyName.swift; sourceTree = "<group>"; };
 		99B9E4AC1D40EC1B00738100 /* Usage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Usage.swift; sourceTree = "<group>"; };
 		99B9E4AD1D40EC1B00738100 /* Version.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Version.swift; sourceTree = "<group>"; };
+		99D74E1A1EC3919D003BFACE /* ImagesClassGeneratorSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesClassGeneratorSwift.swift; sourceTree = "<group>"; };
+		99D74E1C1EC391BE003BFACE /* ImagesClassGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesClassGenerator.swift; sourceTree = "<group>"; };
+		99D74E331EC39AF8003BFACE /* LocalizationClassGeneratorObjc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizationClassGeneratorObjc.swift; sourceTree = "<group>"; };
+		99D74E351EC39B62003BFACE /* LocalizationClassGeneratorSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizationClassGeneratorSwift.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +88,7 @@
 				99B9E4AB1D40EC1B00738100 /* PropertyName.swift */,
 				99B9E49F1D40EC1B00738100 /* Colors.swift */,
 				99A338CC1E963D5A00DAB7E1 /* StringCamelcase.swift */,
+				99AF6AF11EC5EB9600C91BA8 /* Logger.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -85,8 +96,9 @@
 		997B36761D40EE7B000BF2DA /* Localization */ = {
 			isa = PBXGroup;
 			children = (
-				998C20BA1D683C58000F7AF0 /* ObjC */,
-				998C20BB1D683C5D000F7AF0 /* Swift */,
+				99B9E4A51D40EC1B00738100 /* LocalizationClassGenerator.swift */,
+				99D74E331EC39AF8003BFACE /* LocalizationClassGeneratorObjc.swift */,
+				99D74E351EC39B62003BFACE /* LocalizationClassGeneratorSwift.swift */,
 				99B9E4A61D40EC1B00738100 /* LocalizationFinder.swift */,
 				99B9E4A71D40EC1B00738100 /* LocalizationOperation.swift */,
 				99B9E4A81D40EC1B00738100 /* LocalizationParser.swift */,
@@ -97,8 +109,9 @@
 		997B36771D40EE83000BF2DA /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				998C20B91D683C51000F7AF0 /* ObjC */,
-				998C20B81D683C4C000F7AF0 /* Swift */,
+				99D74E1C1EC391BE003BFACE /* ImagesClassGenerator.swift */,
+				99B9E4A31D40EC1B00738100 /* ImagesClassGeneratorObjC.swift */,
+				99D74E1A1EC3919D003BFACE /* ImagesClassGeneratorSwift.swift */,
 				99B9E49E1D40EC1B00738100 /* AssetsFinder.swift */,
 				99B9E4A01D40EC1B00738100 /* ImageAssetParser.swift */,
 				99B9E4A11D40EC1B00738100 /* ImageFinder.swift */,
@@ -106,36 +119,6 @@
 				99B9E4A41D40EC1B00738100 /* ImagesValidator.swift */,
 			);
 			name = Images;
-			sourceTree = "<group>";
-		};
-		998C20B81D683C4C000F7AF0 /* Swift */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Swift;
-			sourceTree = "<group>";
-		};
-		998C20B91D683C51000F7AF0 /* ObjC */ = {
-			isa = PBXGroup;
-			children = (
-				99B9E4A31D40EC1B00738100 /* ImagesClassGenerator.swift */,
-			);
-			name = ObjC;
-			sourceTree = "<group>";
-		};
-		998C20BA1D683C58000F7AF0 /* ObjC */ = {
-			isa = PBXGroup;
-			children = (
-				99B9E4A51D40EC1B00738100 /* LocalizationClassGenerator.swift */,
-			);
-			name = ObjC;
-			sourceTree = "<group>";
-		};
-		998C20BB1D683C5D000F7AF0 /* Swift */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Swift;
 			sourceTree = "<group>";
 		};
 		99B9E48A1D40EBF900738100 = {
@@ -196,7 +179,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Ido Mizrachi";
 				TargetAttributes = {
 					99B9E4921D40EBF900738100 = {
@@ -227,12 +210,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99B9E4B41D40EC1B00738100 /* ImagesClassGenerator.swift in Sources */,
+				99B9E4B41D40EC1B00738100 /* ImagesClassGeneratorObjC.swift in Sources */,
 				99B9E4BA1D40EC1B00738100 /* main.swift in Sources */,
 				99B9E4AF1D40EC1B00738100 /* AssetsFinder.swift in Sources */,
 				99B9E4B31D40EC1B00738100 /* ImageOperation.swift in Sources */,
+				99D74E1D1EC391BE003BFACE /* ImagesClassGenerator.swift in Sources */,
 				99B9E4B11D40EC1B00738100 /* ImageAssetParser.swift in Sources */,
+				99D74E341EC39AF8003BFACE /* LocalizationClassGeneratorObjc.swift in Sources */,
+				99D74E1B1EC3919D003BFACE /* ImagesClassGeneratorSwift.swift in Sources */,
 				99B9E4B61D40EC1B00738100 /* LocalizationClassGenerator.swift in Sources */,
+				99AF6AF21EC5EB9600C91BA8 /* Logger.swift in Sources */,
 				99B9E4B91D40EC1B00738100 /* LocalizationParser.swift in Sources */,
 				99B9E4B51D40EC1B00738100 /* ImagesValidator.swift in Sources */,
 				99B9E4BE1D40EC1B00738100 /* Version.swift in Sources */,
@@ -241,6 +228,7 @@
 				99B9E4B21D40EC1B00738100 /* ImageFinder.swift in Sources */,
 				99B9E4BD1D40EC1B00738100 /* Usage.swift in Sources */,
 				99B9E4BC1D40EC1B00738100 /* PropertyName.swift in Sources */,
+				99D74E361EC39B62003BFACE /* LocalizationClassGeneratorSwift.swift in Sources */,
 				99B9E4BB1D40EC1B00738100 /* OperationType.swift in Sources */,
 				99A338CD1E963D5A00DAB7E1 /* StringCamelcase.swift in Sources */,
 				99B9E4B71D40EC1B00738100 /* LocalizationFinder.swift in Sources */,
@@ -265,8 +253,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
@@ -310,8 +300,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
@@ -330,6 +322,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
 			name = Release;
 		};
