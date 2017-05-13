@@ -28,27 +28,41 @@ Alternativly you can use brew:
 
 `brew install https://raw.githubusercontent.com/idomizrachi/Regen/master/formula/regen.rb`
 
-## Usage
+## Integration
+Add new build phases:
+![alt text](https://raw.githubusercontent.com/idomizrachi/Regen/master/Screenshots/Build%20Phases.png "Build Phases")
 
-So instead of:
+![alt text](https://github.com/idomizrachi/Regen/raw/master/Screenshots/Build%20Phase%20-%20images.png "Build Phase - Images")
+
+![alt text](https://github.com/idomizrachi/Regen/raw/master/Screenshots/Build%20Phase%20-%20localization.png "Build Phase - Localization")
+
+Build once to generate the files
+
+Add the generated files to your project, make sure to **uncheck** the "Copy items if needed" option
+![alt text](https://raw.githubusercontent.com/idomizrachi/Regen/master/Screenshots/Generated%20files.png "Generated Files")
+
+Update your code:
+1. Import the classes
+
+`#import "Images.h"`
+
+`#import "Strings.h"`
+
+2. Update your code from:
 
 `[UIImage imageNamed: @"login-button"]`
 
-Use:
+To:
 
 `[UIImage imageNamed: Images.loginButton]`
 
-And instead of:
+And from:
 
 `NSLocalizedString(@"login.button", @"Login")`
 
-Use:
+To:
 
 `Localization.loginButton`
 
-
-The generated class name is configurable from command line.
-
-
-## Thanks
+## Credits\Thanks
 https://github.com/icodeforlove/Colors for the ANSI color library
