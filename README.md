@@ -44,7 +44,7 @@ And instead of:
 
 Use:
 
-`[Localization loginButton]`
+`Localization.loginButton`
 
 
 The generated class name is configurable from command line.
