@@ -34,19 +34,19 @@ public class Logger {
     }
         
     public static func debug(_ text: String) {
-        log(color ? text.green.blackBackground : text, level: .debug)
+        log(color ? text.green : text, level: .debug)
     }
     
     public static func info(_ text: String) {
-        log(color ? text.white.blackBackground : text, level: .info)
+        log(color ? text.blue : text, level: .info)
     }
     
     public static func warning(_ text: String) {
-        log(color ? text.black.yellowBackground : text, level: .warning)
+        log(color ? text.yellow.bold : text, level: .warning)
     }
     
     public static func error(_ text: String) {
-        log(color ? text.white.redBackground : text, level: .error)
+        log(color ? text.red.bold : text, level: .error)
     }
     
     
