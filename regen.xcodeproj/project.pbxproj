@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		99A338CD1E963D5A00DAB7E1 /* StringCamelcase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A338CC1E963D5A00DAB7E1 /* StringCamelcase.swift */; };
+		99ABD9F41EC7185D00032E1B /* OperationTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99ABD9F31EC7185D00032E1B /* OperationTimer.swift */; };
 		99AF6AF21EC5EB9600C91BA8 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AF6AF11EC5EB9600C91BA8 /* Logger.swift */; };
 		99B9E4AE1D40EC1B00738100 /* ArgumentsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B9E49D1D40EC1B00738100 /* ArgumentsParser.swift */; };
 		99B9E4AF1D40EC1B00738100 /* AssetsFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B9E49E1D40EC1B00738100 /* AssetsFinder.swift */; };
@@ -45,7 +45,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		99A338CC1E963D5A00DAB7E1 /* StringCamelcase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringCamelcase.swift; sourceTree = "<group>"; };
+		99ABD9F31EC7185D00032E1B /* OperationTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationTimer.swift; sourceTree = "<group>"; };
 		99AF6AF11EC5EB9600C91BA8 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		99B9E4931D40EBF900738100 /* regen */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = regen; sourceTree = BUILT_PRODUCTS_DIR; };
 		99B9E49D1D40EC1B00738100 /* ArgumentsParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArgumentsParser.swift; sourceTree = "<group>"; };
@@ -87,8 +87,8 @@
 			children = (
 				99B9E4AB1D40EC1B00738100 /* PropertyName.swift */,
 				99B9E49F1D40EC1B00738100 /* Colors.swift */,
-				99A338CC1E963D5A00DAB7E1 /* StringCamelcase.swift */,
 				99AF6AF11EC5EB9600C91BA8 /* Logger.swift */,
+				99ABD9F31EC7185D00032E1B /* OperationTimer.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -226,11 +226,11 @@
 				99B9E4B01D40EC1B00738100 /* Colors.swift in Sources */,
 				99B9E4B81D40EC1B00738100 /* LocalizationOperation.swift in Sources */,
 				99B9E4B21D40EC1B00738100 /* ImageFinder.swift in Sources */,
+				99ABD9F41EC7185D00032E1B /* OperationTimer.swift in Sources */,
 				99B9E4BD1D40EC1B00738100 /* Usage.swift in Sources */,
 				99B9E4BC1D40EC1B00738100 /* PropertyName.swift in Sources */,
 				99D74E361EC39B62003BFACE /* LocalizationClassGeneratorSwift.swift in Sources */,
 				99B9E4BB1D40EC1B00738100 /* OperationType.swift in Sources */,
-				99A338CD1E963D5A00DAB7E1 /* StringCamelcase.swift in Sources */,
 				99B9E4B71D40EC1B00738100 /* LocalizationFinder.swift in Sources */,
 				99B9E4AE1D40EC1B00738100 /* ArgumentsParser.swift in Sources */,
 			);

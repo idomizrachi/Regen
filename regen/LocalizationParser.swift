@@ -43,7 +43,7 @@ class LocalizationParser {
         } catch {
             Logger.error("\(error)")
             content = ""
-        }
+        }        
         return localizationEntries
     }
     

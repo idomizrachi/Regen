@@ -27,8 +27,9 @@ class LocalizationClassGeneratorObjC: LocalizationClassGenerator {
         
         headerFile += "@end"
         implementationFile += "@end"
-        
+                
         do {
+            
             try headerFile.write(toFile: generatedFile + ".h", atomically: false, encoding: String.Encoding.utf8)
             try implementationFile.write(toFile: generatedFile + ".m", atomically: false, encoding: String.Encoding.utf8)
         } catch let error {

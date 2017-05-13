@@ -27,26 +27,28 @@ public class Logger {
     
     public static var logLevel: Level = .error
     
+    public static var color: Bool = true
 
     public static func verbose(_ text: String) {
         log(text, level: .verbose)
     }
-    
+        
     public static func debug(_ text: String) {
-        log(text.green.blackBackground, level: .debug)
+        log(color ? text.green.blackBackground : text, level: .debug)
     }
     
     public static func info(_ text: String) {
-        log(text.white.blackBackground, level: .info)
+        log(color ? text.white.blackBackground : text, level: .info)
     }
     
     public static func warning(_ text: String) {
-        log(text.black.yellowBackground, level: .warning)
+        log(color ? text.black.yellowBackground : text, level: .warning)
     }
     
     public static func error(_ text: String) {
-        log(text.white.redBackground, level: .error)
+        log(color ? text.white.redBackground : text, level: .error)
     }
+    
     
     private static func log(_ text: String, level: Level) {
         if shouldLog(level: level) == false {

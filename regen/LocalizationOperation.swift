@@ -26,11 +26,15 @@ class LocalizationOperation{
         let parser = LocalizationParser()        
         var localizationEntries : [LocalizationEntry] = []
         Logger.debug("\tParse localization files: started")
-        for file in files {            
-            let parsedFile = parser.parseLocalizationFile(file)
-            parser.appendEntries(parsedFile, to: &localizationEntries)
+        for file in files {
+            //Scanning only the english file saves a few seconds
+            if file.hasSuffix("en.lproj/Localizable.strings") {
+                let parsedFile = parser.parseLocalizationFile(file)
+                parser.appendEntries(parsedFile, to: &localizationEntries)
+            }
         }
-        Logger.debug("\tParse localization files: finished")
+        //TODO: Add validator for duplicated properties
+        Logger.debug("\tParse localization files: finished (\(localizationEntries.count) keys found)")
         let generator: LocalizationClassGenerator
         if language == .ObjC {
             generator = LocalizationClassGeneratorObjC()

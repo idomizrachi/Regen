@@ -7,16 +7,18 @@
 
 import Foundation
 
-Logger.logLevel = .warning
+let operationTimer = OperationTimer()
+operationTimer.start()
 
 let fileManager = FileManager.default
 let argumentsParser = ArgumentsParser(arguments: CommandLine.arguments)
 let operationType = argumentsParser.operationType()
 let searchPath = fileManager.currentDirectoryPath
 
-if argumentsParser.verbose {
-    Logger.logLevel = .verbose
-}
+Logger.logLevel = argumentsParser.verbose ? .verbose : .info;
+Logger.color = argumentsParser.color
+
+Logger.info("Searching in path: \(searchPath)")
 
 switch operationType {
 case .version:
@@ -39,5 +41,7 @@ default:
     let usage = Usage()
     usage.printUsage()
 }
+let totalTime = String(format: "%.2f", operationTimer.end())
+Logger.info("Finish in \(totalTime) seconds")
 
 exit(EXIT_SUCCESS)

@@ -17,8 +17,8 @@ class ImagesClassGeneratorSwift: ImagesClassGenerator {
             file += "    static let \(metadata.property) = \"\(metadata.imageNamed)\"\n"
         }
         file += "}\n"
-
-        do {
+        
+        do {            
             try file.write(toFile: generatedFile + ".swift", atomically: false, encoding: String.Encoding.utf8)
         } catch let error {
             Logger.error("\(error)")

@@ -43,15 +43,12 @@ class ImageOperation {
                 generator = ImagesClassGeneratorSwift()
             }
             generator.generateClass(fromImages: metadatas, generatedFile: output)
-        } else {
-            Logger.error("Issues found:".bold.underline)
+        } else {            
+            Logger.error("Issues found:")
             for validationIssue in validationIssues {
-                let image = "image "
-                let firstImage = validationIssue.firstImage.bold
-                let conflicts = " conflicts with ".boldOff
-                let secondImage = validationIssue.secondImage.bold
-                let asProperty = " as property ".boldOff +  "\(validationIssue.property)".bold
-                Logger.error("\t\(image)\(firstImage)\(conflicts)\(secondImage)\(asProperty)")
+                let firstImage = validationIssue.firstImage
+                let secondImage = validationIssue.secondImage
+                Logger.error("\timage \(firstImage) conflicts with \(secondImage) as property \(validationIssue.property)")
             }
             exit(EXIT_FAILURE)
         }

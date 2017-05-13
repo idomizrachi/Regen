@@ -7,83 +7,92 @@
 
 import Foundation
 
-extension String {
-    func propertyName() -> String {
-        guard self.characters.count > 0 else {
-            return self
-        }
-        var propertyNameParts: [String] = []
-        var currentToken = ""
-        var isPreviousCharacterLowercased = self.characters.first!.isLowercased()
-        var isPreviousCharacterUppercased = self.characters.first!.isUppercased()
-        for character in self.characters {
-            if character.isValidForPropertyName() == false {
-                propertyNameParts.append((currentToken))
-                currentToken = ""
-                continue
-            }
-            let isScanningLowercaseString = isPreviousCharacterLowercased && character.isLowercased()
-            let isScanningUppercaseString = isPreviousCharacterUppercased && character.isUppercased()
-            
-            if (isScanningUppercaseString == false && isScanningLowercaseString == false) {
-                propertyNameParts.append(currentToken)
-                currentToken = ""
-            }
-            currentToken += String(character)
-            isPreviousCharacterLowercased = character.isLowercased()
-            isPreviousCharacterUppercased = character.isUppercased()
-        }
-        propertyNameParts.append(currentToken)
-        var propertyName = ""
-        var index = 0
-        var p: [String] = []
-        while index < propertyNameParts.count {
-            let part = propertyNameParts[index]
-            if part.characters.count == 1 && index < propertyNameParts.count - 1 {
-                let nextPart = propertyNameParts[index+1]
-                if part.isUppercased() && nextPart.isLowercased() {
-                    p.append(part + nextPart)
-                    index += 1
-                }
-            } else {
-                p.append(part)
-            }
-            index += 1
-        }
-        index = 0
-        for part in p {
-            if (index == 0) {
-                propertyName += part.lowercased()
-            } else {
-                propertyName += part.capitalized
-            }
-            index += 1
-        }
-        return propertyName
+private extension String {
+    func isUppercased() -> Bool {
+        return self == self.uppercased()
     }
     
     func isLowercased() -> Bool {
-        for character in self.characters {
-            if character.isLowercased() == false {
-                return false
-            }
-        }
-        return true
+        return self == self.lowercased()
     }
-    
-    func isUppercased() -> Bool {
-        for character in self.characters {
-            if character.isUppercased() == false {
-                return false
-            }
+}
+
+extension String {
+    func propertyName() -> String {
+        if self.characters.count == 0 {
+            return self
         }
-        return true
+        var propertyName = ""
+        var tokens: [String] = []
+        var currentToken = String(self[self.index(self.startIndex, offsetBy: 0)])
+        var previousCharacterType = CharacterType.fromCharacter(self[self.index(self.startIndex, offsetBy: 0)])
+        var isFirstToken = true
+        for i in 1..<self.characters.count {
+            let character = self[self.index(self.startIndex, offsetBy: i)]
+            let characterType = CharacterType.fromCharacter(character)
+            if character.isValidForPropertyName() {
+                if characterType != previousCharacterType {
+                    if currentToken.isUppercased() && currentToken.characters.count == 1 {
+                    } else {
+                        if isFirstToken == false {
+                            currentToken = currentToken.capitalized
+                        } else {
+                            currentToken = currentToken.lowercased()
+                            isFirstToken = false
+                        }
+                        tokens.append(currentToken)
+                        currentToken = ""
+                    }
+                }
+                currentToken += String(character)
+            } else {
+            }
+            previousCharacterType = characterType
+        }
+        if isFirstToken == false {
+            currentToken = currentToken.capitalized
+        } else {
+            currentToken = currentToken.lowercased()
+            isFirstToken = false
+        }
+        tokens.append(currentToken)
+        
+        var index = 0
+        while index < tokens.count {
+            let token = tokens[index]
+            if token.characters.count == 1 && token.isUppercased() && index+1 < tokens.count && token != "A" {
+                propertyName += token + tokens[index+1].lowercased()
+                index += 1
+            } else {
+                propertyName += token
+            }
+            index += 1
+        }
+        
+        return propertyName
+    }
+}
+
+
+private enum CharacterType {
+    case lowercase
+    case uppercase
+    case other
+    
+    static func fromCharacter(_ character: Character) -> CharacterType {
+        if character.isLowercased() {
+            return .lowercase
+        } else if character.isUppercased() {
+            return .uppercase
+        } else {
+            return .other
+        }
     }
 }
 
 private extension Character {
     func isValidForPropertyName() -> Bool {
-        return self.isLowercased() || self.isUppercased() || self.isNumeric() || self.isDelimiter()
+        return self.isLowercased() || self.isUppercased() || self.isNumeric()
     }
     
     func isLowercased() -> Bool {
@@ -96,9 +105,5 @@ private extension Character {
     
     func isNumeric() -> Bool {
         return self >= "0" && self <= "9"
-    }
-    
-    func isDelimiter() -> Bool {
-        return " -_.".contains(String(self))
     }
 }

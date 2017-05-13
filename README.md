@@ -2,6 +2,11 @@
 Regen generates objective-c code for accessing your images and localized string.
 
 ## What's New
+### 0.0.6
+Improve generated property names
+Added new parameter to remove console color
+Run localization operation only on the english strings file to save time
+
 ### 0.0.5
 Added swift generated files
 

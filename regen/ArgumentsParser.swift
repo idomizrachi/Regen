@@ -22,14 +22,14 @@ class ArgumentsParser {
     var output : String?
     var language: Language = .ObjC
     var verbose:Bool = false
+    var color:Bool = true
     
     init(arguments : [String]) {
         self.arguments = arguments
-        Logger.verbose("Parsing input: started")
         parseOutput()
         parseLanguage()
         parseVerbose()
-        Logger.verbose("Parsing input: finished")
+        parseColor()
     }
     
     func operationType() -> OperationType {
@@ -114,7 +114,14 @@ class ArgumentsParser {
         } else {
             self.verbose = false
         }
-        
+    }
+    
+    func parseColor() {
+        if arguments.index(of: "--nocolor") != nil {
+            self.color = false
+        } else {
+            self.color = true
+        }
     }
     
 }
