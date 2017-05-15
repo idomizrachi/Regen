@@ -18,7 +18,7 @@ Print additional information during the execution using "-v" or "--verbose"
 
 ## Installation
 
-After cloning\download the project, run:
+After cloning\downloading the project, run:
 
 `xcodebuild install`
 
