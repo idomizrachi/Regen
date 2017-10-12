@@ -8,18 +8,18 @@
 
 import Cocoa
 
-public class Node<T> {
+public class TreeNode<T> {
     public let item: Optional<T>
-    public private(set) var children: [Node<T>] = []
+    public private(set) var children: [TreeNode<T>] = []
     
     public init(item: Optional<T>) {
         self.item = item
     }
     
-    public func addChild(_ child: Node<T>) {
+    public func addChild(_ child: TreeNode<T>) {
         self.children.append(child)
     }
 }
 
-public class Tree<T>: Node<T> {
+public class Tree<T>: TreeNode<T> {
 }

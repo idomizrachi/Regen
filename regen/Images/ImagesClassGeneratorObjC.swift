@@ -78,7 +78,7 @@ class ImagesClassGeneratorObjC: ImagesClassGenerator {
         Logger.info("\tCreated: \(implementationFilename)")
     }
     
-    func generateClassX(node: Node<ImageNodeItem>, headerFile: inout String, implementationFile: inout String) {
+    func generateClassX(node: TreeNode<ImageNodeItem>, headerFile: inout String, implementationFile: inout String) {
         for folder in node.children {
             generateClassX(node: folder, headerFile: &headerFile, implementationFile: &implementationFile)
         }
@@ -103,7 +103,7 @@ class ImagesClassGeneratorObjC: ImagesClassGenerator {
 
 
     
-    func generateFoldersProperties(node: Node<ImageNodeItem>, headerFile: inout String, implementationFile: inout String) {
+    func generateFoldersProperties(node: TreeNode<ImageNodeItem>, headerFile: inout String, implementationFile: inout String) {
         generateFoldersHeaderProperties(node: node, headerFile: &headerFile)
         for folder in node.children {
             implementationFile += """
@@ -118,13 +118,13 @@ class ImagesClassGeneratorObjC: ImagesClassGenerator {
         }
     }
     
-    func generateFoldersHeaderProperties(node: Node<ImageNodeItem>, headerFile: inout String) {
+    func generateFoldersHeaderProperties(node: TreeNode<ImageNodeItem>, headerFile: inout String) {
         for folder in node.children {
             headerFile += "@property (nonatomic, strong) id<\(folder.item!.folderClass)Protocol> \(folder.item!.folder.propertyName());\n"
         }
     }
     
-    func generateAssetsProperties(node: Node<ImageNodeItem>, headerFile: inout String, implementationFile: inout String) {
+    func generateAssetsProperties(node: TreeNode<ImageNodeItem>, headerFile: inout String, implementationFile: inout String) {
         if let assets = node.item {
             for image in assets.images {
                 headerFile += "@property (nonatomic, strong, readonly) NSString *\(image.propertyName);\n"
@@ -139,7 +139,7 @@ class ImagesClassGeneratorObjC: ImagesClassGenerator {
         }
     }
     
-    func generateAssetsHeaderProperties(node: Node<ImageNodeItem>, headerFile: inout String) {
+    func generateAssetsHeaderProperties(node: TreeNode<ImageNodeItem>, headerFile: inout String) {
         if let assets = node.item {
             for image in assets.images {
                 headerFile += "@property (nonatomic, strong, readonly) NSString *\(image.propertyName);\n"

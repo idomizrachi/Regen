@@ -64,8 +64,8 @@ class ImageOperation {
             if image.folders.count == 0 {
                 tree.item?.images.append(image.file)
             } else {
-                var node: Node<ImageNodeItem> = tree
-                var nextNode: Node<ImageNodeItem>? = nil
+                var node: TreeNode<ImageNodeItem> = tree
+                var nextNode: TreeNode<ImageNodeItem>? = nil
                 for folder in image.folders {
                     var found = false
                     for child in node.children {
@@ -78,7 +78,7 @@ class ImageOperation {
                     if found == false {
                         let uuid = UUID().uuidString
                         let folderClass = folder.propertyName.className() + "_" + String(uuid[..<uuid.index(uuid.startIndex, offsetBy: 5)])
-                        let folderNode: Node<ImageNodeItem> = Node(item: ImageNodeItem(folder: folder.propertyName, folderClass: folderClass))
+                        let folderNode: TreeNode<ImageNodeItem> = TreeNode(item: ImageNodeItem(folder: folder.propertyName, folderClass: folderClass))
                         node.addChild(folderNode)
                         node = folderNode
                     } else {
