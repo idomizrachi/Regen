@@ -2,6 +2,9 @@
 Regen generates objective-c code for accessing your images and localized string.
 
 ## What's New
+### 0.0.7
+Images generated class reflects the xcassets folders hierarchy
+
 ### 0.0.6
 Improve generated property names
 

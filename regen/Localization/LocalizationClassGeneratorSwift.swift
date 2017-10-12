@@ -11,9 +11,10 @@ class LocalizationClassGeneratorSwift: LocalizationClassGenerator {
     func generateClass(fromLocalizationEntries localization : [LocalizationEntry], generatedFile : String) {
         var file = ""
         
+        file += "import Foundation\n\n"
         file += "public struct \(generatedFile) {\n"
         for localizationEntry in localization {
-            file += "    static let \(localizationEntry.property) = NSLocalizedString(\"\(localizationEntry.key)\", comment: \"\")\n"
+            file += "    static let \(localizationEntry.property) = NSLocalizedString(\"\(localizationEntry.key)\", comment: \"\(localizationEntry.value)\")\n"
         }
         file += "}\n"
         

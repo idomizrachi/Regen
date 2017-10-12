@@ -8,7 +8,7 @@
 import Cocoa
 
 class AssetsFinder {
-    let assetsSuffix = ".xcassets"
+    public static let assetsSuffix = ".xcassets"
     
     let fileManager : FileManager
     
@@ -16,7 +16,7 @@ class AssetsFinder {
         self.fileManager = fileManager
     }
 
-    func findAssets(inPath path : String) -> [String] {
+    func findAssetsFiles(in path : String) -> [String] {
         var assets : [String] = []
         Logger.debug("\tSearching image assets files: started")
         let enumerator = fileManager.enumerator(atPath: path)
@@ -30,7 +30,7 @@ class AssetsFinder {
     }
     
     func isAsset(_ element : String) -> Bool {
-        return element.hasSuffix(assetsSuffix)
+        return element.hasSuffix(AssetsFinder.assetsSuffix)
     }
     
 }
