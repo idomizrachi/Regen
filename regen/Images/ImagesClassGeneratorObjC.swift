@@ -83,10 +83,10 @@ class ImagesClassGeneratorObjC: ImagesClassGenerator {
             generateClassX(node: folder, headerFile: &headerFile, implementationFile: &implementationFile)
         }
         
-        let generatedProtocol = "\(node.item!.folderClass)Protocol"
+        let generatedProtocol = "\(node.item.folderClass)Protocol"
         headerFile += "@protocol \(generatedProtocol)\n"
         
-        implementationFile += "@implementation \(node.item!.folderClass)\n\n"
+        implementationFile += "@implementation \(node.item.folderClass)\n\n"
         
         generateFoldersProperties(node: node, headerFile: &headerFile, implementationFile: &implementationFile)
         headerFile += "\n"
@@ -94,7 +94,7 @@ class ImagesClassGeneratorObjC: ImagesClassGenerator {
         generateAssetsProperties(node: node, headerFile: &headerFile, implementationFile: &implementationFile)
         
         headerFile += "@end\n"
-        headerFile += "@interface \(node.item!.folderClass) : NSObject<\(generatedProtocol)>\n\n"
+        headerFile += "@interface \(node.item.folderClass) : NSObject<\(generatedProtocol)>\n\n"
         generateFoldersHeaderProperties(node: node, headerFile: &headerFile)
         
         headerFile += "@end\n"
@@ -107,11 +107,11 @@ class ImagesClassGeneratorObjC: ImagesClassGenerator {
         generateFoldersHeaderProperties(node: node, headerFile: &headerFile)
         for folder in node.children {
             implementationFile += """
-            -(id<\(folder.item!.folderClass)Protocol>)\(folder.item!.folder.propertyName()) {
-                if (! _\(folder.item!.folder.propertyName())) {
-                    _\(folder.item!.folder.propertyName()) = [[\(folder.item!.folderClass) alloc] init];
+            -(id<\(folder.item.folderClass)Protocol>)\(folder.item.folder.propertyName()) {
+                if (! _\(folder.item.folder.propertyName())) {
+                    _\(folder.item.folder.propertyName()) = [[\(folder.item.folderClass) alloc] init];
                 }
-                return _\(folder.item!.folder.propertyName());
+                return _\(folder.item.folder.propertyName());
             }
             
             """
@@ -120,30 +120,26 @@ class ImagesClassGeneratorObjC: ImagesClassGenerator {
     
     func generateFoldersHeaderProperties(node: TreeNode<ImageNodeItem>, headerFile: inout String) {
         for folder in node.children {
-            headerFile += "@property (nonatomic, strong) id<\(folder.item!.folderClass)Protocol> \(folder.item!.folder.propertyName());\n"
+            headerFile += "@property (nonatomic, strong) id<\(folder.item.folderClass)Protocol> \(folder.item.folder.propertyName());\n"
         }
     }
     
     func generateAssetsProperties(node: TreeNode<ImageNodeItem>, headerFile: inout String, implementationFile: inout String) {
-        if let assets = node.item {
-            for image in assets.images {
-                headerFile += "@property (nonatomic, strong, readonly) NSString *\(image.propertyName);\n"
-                implementationFile += """
-                -(NSString *)\(image.propertyName) {
-                    return @"\(image.name)";
-                }
-                
-                
-                """
+        for image in node.item.images {
+            headerFile += "@property (nonatomic, strong, readonly) NSString *\(image.propertyName);\n"
+            implementationFile += """
+            -(NSString *)\(image.propertyName) {
+                return @"\(image.name)";
             }
+            
+            
+            """
         }
     }
     
     func generateAssetsHeaderProperties(node: TreeNode<ImageNodeItem>, headerFile: inout String) {
-        if let assets = node.item {
-            for image in assets.images {
-                headerFile += "@property (nonatomic, strong, readonly) NSString *\(image.propertyName);\n"
-            }
+        for image in node.item.images {
+            headerFile += "@property (nonatomic, strong, readonly) NSString *\(image.propertyName);\n"
         }
     }
     

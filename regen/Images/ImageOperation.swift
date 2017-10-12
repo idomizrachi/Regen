@@ -62,14 +62,14 @@ class ImageOperation {
         let tree: Tree<ImageNodeItem> = Tree<ImageNodeItem>(item: root)
         for image in images {
             if image.folders.count == 0 {
-                tree.item?.images.append(image.file)
+                tree.item.images.append(image.file)
             } else {
                 var node: TreeNode<ImageNodeItem> = tree
                 var nextNode: TreeNode<ImageNodeItem>? = nil
                 for folder in image.folders {
                     var found = false
                     for child in node.children {
-                        if child.item?.folder == folder.propertyName {
+                        if child.item.folder == folder.propertyName {
                             found = true
                             nextNode = child
                             break
@@ -85,7 +85,7 @@ class ImageOperation {
                         node = nextNode!
                     }
                 }
-                node.item?.images.append(image.file)
+                node.item.images.append(image.file)
             }
         }
         

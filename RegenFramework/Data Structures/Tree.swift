@@ -9,10 +9,10 @@
 import Cocoa
 
 public class TreeNode<T> {
-    public let item: Optional<T>
+    public let item: T
     public private(set) var children: [TreeNode<T>] = []
     
-    public init(item: Optional<T>) {
+    public init(item: T) {
         self.item = item
     }
     

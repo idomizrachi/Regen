@@ -89,7 +89,7 @@ class ImagesClassGeneratorSwift: ImagesClassGenerator {
             generateClassX(node: folder, file: &file)
         }
         
-        file += "class \(node.item!.folderClass) {\n\n"
+        file += "class \(node.item.folderClass) {\n\n"
         
         generateFoldersProperties(node: node, file: &file)
         if (node.children.count > 0) {
@@ -105,15 +105,13 @@ class ImagesClassGeneratorSwift: ImagesClassGenerator {
     
     func generateFoldersProperties(node: TreeNode<ImageNodeItem>, file: inout String) {
         for folder in node.children {
-            file += "    let \(folder.item!.folder.propertyName()) = \(folder.item!.folderClass)()\n"
+            file += "    let \(folder.item.folder.propertyName()) = \(folder.item.folderClass)()\n"
         }
     }
     
     func generateAssetsProperties(node: TreeNode<ImageNodeItem>, file: inout String) {
-        if let assets = node.item {
-            for image in assets.images {
-                file += "    let \(image.propertyName) = \"\(image.name)\"\n"
-            }
+        for image in node.item.images {
+            file += "    let \(image.propertyName) = \"\(image.name)\"\n"
         }
     }
 }
