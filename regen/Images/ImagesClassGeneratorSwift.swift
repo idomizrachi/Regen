@@ -17,7 +17,7 @@ class ImagesClassGeneratorSwift: ImagesClassGenerator {
         
         var file = ""
         
-        File.deleteFileAt(filePath: filename)
+        FileUtils.deleteFileAt(filePath: filename)
         
         let className = String(NSString(string: generatedFile).lastPathComponent)
         
@@ -37,47 +37,9 @@ class ImagesClassGeneratorSwift: ImagesClassGenerator {
         generateFoldersProperties(node: imagesTree, file: &file)
         file += "\n"
         generateAssetsProperties(node: imagesTree, file: &file)
-        
-        /*
-        headerFile += "@protocol \(generatedProtocol)\n"
-        
-        generateFoldersHeaderProperties(node: imagesTree, headerFile: &headerFile)
-        
-        headerFile += "\n"
-        
-        generateAssetsHeaderProperties(node: imagesTree, headerFile: &headerFile)
-        
-        headerFile += "@end\n"
-        
-        headerFile += "@interface \(className) : NSObject<\(generatedProtocol)>\n\n"
-        
-        implementationFile += "@implementation \(className)\n\n"
-        
-        headerFile += "+(id<\(generatedProtocol)>)sharedInstance;\n\n"
-        implementationFile += """
-        +(id<\(generatedProtocol)>)sharedInstance {
-        static \(className) *_sharedInstance = nil;
-        static dispatch_once_t onceToken;
-        dispatch_once(&onceToken, ^{
-        _sharedInstance = [\(className) new];
-        });
-        return _sharedInstance;
-        }
-        
-        
-        """
-        generateFoldersProperties(node: imagesTree, headerFile: &headerFile, implementationFile: &implementationFile)
-        headerFile += "\n"
-        
-        generateAssetsProperties(node: imagesTree, headerFile: &headerFile, implementationFile: &implementationFile)
-        
-        
-        headerFile += "@end\n"
-        implementationFile += "@end\n"
-    */
         file += "}\n"
         
-        File.append(filePath: filename, content: file)
+        FileUtils.append(filePath: filename, content: file)
         
         Logger.debug("\tGenerating images swift class: finished")
         Logger.info("\tCreated: \(filename)")

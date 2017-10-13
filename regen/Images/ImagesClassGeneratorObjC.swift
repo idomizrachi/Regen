@@ -20,8 +20,8 @@ class ImagesClassGeneratorObjC: ImagesClassGenerator {
         var headerFile = ""
         var implementationFile = ""
         
-        File.deleteFileAt(filePath: headerFilename)
-        File.deleteFileAt(filePath: implementationFilename)
+        FileUtils.deleteFileAt(filePath: headerFilename)
+        FileUtils.deleteFileAt(filePath: implementationFilename)
         
         let className = String(NSString(string: generatedFile).lastPathComponent)
         let generatedProtocol = "\(className)Protocol"
@@ -70,8 +70,8 @@ class ImagesClassGeneratorObjC: ImagesClassGenerator {
         headerFile += "@end\n"
         implementationFile += "@end\n"
                 
-        File.append(filePath: headerFilename, content: headerFile)
-        File.append(filePath: implementationFilename, content: implementationFile)
+        FileUtils.append(filePath: headerFilename, content: headerFile)
+        FileUtils.append(filePath: implementationFilename, content: implementationFile)
         
         Logger.debug("\tGenerating images objc class: finished")
         Logger.info("\tCreated: \(headerFilename)")

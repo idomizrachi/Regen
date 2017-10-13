@@ -11,7 +11,7 @@
 		994BF8321F8275B9006A62C3 /* ImageNodeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994BF8311F8275B9006A62C3 /* ImageNodeItem.swift */; };
 		994BF8341F8275DB006A62C3 /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994BF8331F8275DB006A62C3 /* Property.swift */; };
 		994BF8361F8275FF006A62C3 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994BF8351F8275FF006A62C3 /* Image.swift */; };
-		99667CD11F8C064B00D4A853 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99667CD01F8C064B00D4A853 /* File.swift */; };
+		99667CD11F8C064B00D4A853 /* FileUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99667CD01F8C064B00D4A853 /* FileUtils.swift */; };
 		9977F4681F834C7E00D77D2C /* Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9977F4671F834C7E00D77D2C /* Tree.swift */; };
 		99ABD9F41EC7185D00032E1B /* OperationTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99ABD9F31EC7185D00032E1B /* OperationTimer.swift */; };
 		99AF6AF21EC5EB9600C91BA8 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AF6AF11EC5EB9600C91BA8 /* Logger.swift */; };
@@ -55,7 +55,7 @@
 		994BF8311F8275B9006A62C3 /* ImageNodeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageNodeItem.swift; sourceTree = "<group>"; };
 		994BF8331F8275DB006A62C3 /* Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
 		994BF8351F8275FF006A62C3 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
-		99667CD01F8C064B00D4A853 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		99667CD01F8C064B00D4A853 /* FileUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileUtils.swift; sourceTree = "<group>"; };
 		9977F4671F834C7E00D77D2C /* Tree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tree.swift; sourceTree = "<group>"; };
 		99ABD9F31EC7185D00032E1B /* OperationTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationTimer.swift; sourceTree = "<group>"; };
 		99AF6AF11EC5EB9600C91BA8 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
@@ -190,7 +190,7 @@
 				99AF6AF11EC5EB9600C91BA8 /* Logger.swift */,
 				99ABD9F31EC7185D00032E1B /* OperationTimer.swift */,
 				992D521A1F8418EB00258395 /* ClassName.swift */,
-				99667CD01F8C064B00D4A853 /* File.swift */,
+				99667CD01F8C064B00D4A853 /* FileUtils.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -277,7 +277,7 @@
 				99B9E4BD1D40EC1B00738100 /* Usage.swift in Sources */,
 				99B9E4BC1D40EC1B00738100 /* PropertyName.swift in Sources */,
 				99D74E361EC39B62003BFACE /* LocalizationClassGeneratorSwift.swift in Sources */,
-				99667CD11F8C064B00D4A853 /* File.swift in Sources */,
+				99667CD11F8C064B00D4A853 /* FileUtils.swift in Sources */,
 				99B9E4BB1D40EC1B00738100 /* OperationType.swift in Sources */,
 				99B9E4B71D40EC1B00738100 /* LocalizationFinder.swift in Sources */,
 				99B9E4AE1D40EC1B00738100 /* ArgumentsParser.swift in Sources */,

@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class File {
+class FileUtils {
     //Create a new file is does not exists
     static func append(filePath: String, content: String) {
         do {
