@@ -8,12 +8,15 @@ For the first time installation add the custom repo using `brew tap`:
 `brew tap idomizrachi/regen`
 
 Install regen:
+
 `brew install regen`
 
 Verify installation:
 
 `regen --version`
+
 or
+
 `regen`
 
 ## What's New
