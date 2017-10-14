@@ -5,6 +5,24 @@ Regen generates objective-c code for accessing your images and localized string.
 ### 0.0.7
 Images generated class reflects the xcassets folders hierarchy
 
+The images generated class reflects the folders hierarchy of the .xcassets file.
+
+For example:
+
+Images.xcassets -> Icons/logo
+
+will be generated as:
+
+Images.sharedInstance.icons.logo
+
+for objective-c
+
+and will be generated as:
+
+Images.shared.icons.logo
+
+for swift
+
 ### 0.0.6
 Improve generated property names
 
