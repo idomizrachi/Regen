@@ -21,15 +21,18 @@ Print additional information during the execution using "-v" or "--verbose"
 
 ## Installation
 
-After cloning\downloading the project, run:
+For the first time installation add the custom repo using `brew tap`:
 
-`xcodebuild install`
+`brew tap idomizrachi/regen`
 
-And `regen` will install to `/usr/local/bin`
+Install regen:
+`brew install regen`
 
-Alternativly you can use brew:
+Verify installation:
 
-`brew install https://raw.githubusercontent.com/idomizrachi/Regen/master/formula/regen.rb`
+`regen --version`
+or
+`regen`
 
 ## Integration
 Add new build phases:
