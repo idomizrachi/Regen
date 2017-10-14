@@ -1,6 +1,21 @@
 # Regen
 Regen generates objective-c code for accessing your images and localized string.
 
+## Installation
+
+For the first time installation add the custom repo using `brew tap`:
+
+`brew tap idomizrachi/regen`
+
+Install regen:
+`brew install regen`
+
+Verify installation:
+
+`regen --version`
+or
+`regen`
+
 ## What's New
 ### 0.0.7
 Images generated class reflects the xcassets folders hierarchy
@@ -13,13 +28,13 @@ Images.xcassets -> Icons/logo
 
 will be generated as:
 
-Images.sharedInstance.icons.logo
+`Images.sharedInstance.icons.logo`
 
 for objective-c
 
 and will be generated as:
 
-Images.shared.icons.logo
+`Images.shared.icons.logo`
 
 for swift
 
@@ -36,21 +51,6 @@ Update color codes
 Added swift generated files
 
 Print additional information during the execution using "-v" or "--verbose"
-
-## Installation
-
-For the first time installation add the custom repo using `brew tap`:
-
-`brew tap idomizrachi/regen`
-
-Install regen:
-`brew install regen`
-
-Verify installation:
-
-`regen --version`
-or
-`regen`
 
 ## Integration
 Add new build phases:
@@ -87,6 +87,7 @@ And from:
 To:
 
 `Localization.loginButton`
+
 
 ## Credits\Thanks
 https://github.com/icodeforlove/Colors for the ANSI color library
