@@ -1,5 +1,5 @@
 # Regen
-Regen generates objective-c code for accessing your images and localized string.
+Regen generates objective-c\swift code for accessing your images and localized string.
 
 ## Installation
 
