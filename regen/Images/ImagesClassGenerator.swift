@@ -8,5 +8,5 @@
 import Foundation
 
 protocol ImagesClassGenerator {
-    func generateClass(fromImages images : [ImageAssetMetadata], generatedFile : String)
+    func generateClass(fromImagesTree imagesTree : Tree<ImageNodeItem>, generatedFile : String)
 }

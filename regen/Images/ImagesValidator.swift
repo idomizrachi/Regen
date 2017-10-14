@@ -14,7 +14,7 @@ struct ValidationIssue {
 }
 
 class ImagesValidator {
-    func validate(_ images : [ImageAssetMetadata]) -> [ValidationIssue] {
+    func validate(_ images : [Image]) -> [ValidationIssue] {
         Logger.debug("\tImages validation: started")
         var issues : [ValidationIssue] = []
         guard images.count > 1 else {
@@ -22,9 +22,11 @@ class ImagesValidator {
             return issues
         }
         for i in 0...images.count-2 {
-            for j in i+1...images.count-1 {
-                if images[i].property == images[j].property {
-                    issues.append(ValidationIssue(firstImage: images[i].imageNamed, secondImage: images[j].imageNamed, property: images[i].property))
+            for j in i+1...images.count-1 {                
+                if images[i].file.propertyName == images[j].file.propertyName {
+                    if images[i].folders.last?.propertyName == images[j].folders.last?.propertyName {
+                        issues.append(ValidationIssue(firstImage: images[i].file.name, secondImage: images[j].file.name, property: images[i].file.name))
+                    }
                 }
             }
         }

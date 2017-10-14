@@ -21,7 +21,7 @@ class LocalizationClassGeneratorObjC: LocalizationClassGenerator {
         for localizationEntry in localization {
             headerFile += "+(NSString *)\(localizationEntry.property);\n"
             implementationFile += "+(NSString *)\(localizationEntry.property) {\n"
-            implementationFile += "    return NSLocalizedString(@\"\(localizationEntry.key)\" , \"\");\n"
+            implementationFile += "    return NSLocalizedString(@\"\(localizationEntry.key)\" , \"\(localizationEntry.value)\");\n"
             implementationFile += "}\n\n";
         }
         

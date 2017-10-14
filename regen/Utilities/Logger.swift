@@ -38,7 +38,7 @@ public class Logger {
     }
     
     public static func info(_ text: String) {
-        log(color ? text.blue : text, level: .info)
+        log(text, level: .info)
     }
     
     public static func warning(_ text: String) {

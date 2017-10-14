@@ -87,7 +87,7 @@ func matchesForRegexInText(_ regex: String!, text: String!, global: Bool = false
         var result:[String] = []
         
         for i in 0..<results[0].numberOfRanges {
-            result.append(nsString.substring(with: results[0].rangeAt(i)))
+            result.append(nsString.substring(with: results[0].range(at: i)))
         }
         
         return result

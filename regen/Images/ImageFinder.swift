@@ -16,10 +16,10 @@ class ImageFinder {
         self.fileManager = fileManager
     }
     
-    func findImages(inAsset asset : String) -> [String] {
+    func findImages(in assets : String) -> [String] {
         var images : [String] = []
-        var searchPath = asset
-        if !asset.hasSuffix("/") {
+        var searchPath = assets
+        if !assets.hasSuffix("/") {
             searchPath = searchPath + "/"
         }
         Logger.debug("\tSearching for images: started")
