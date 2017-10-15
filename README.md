@@ -20,6 +20,9 @@ or
 `regen`
 
 ## What's New
+### 0.0.8
+Fix xcode project wrong configuration
+
 ### 0.0.7
 Images generated class reflects the xcassets folders hierarchy
 
