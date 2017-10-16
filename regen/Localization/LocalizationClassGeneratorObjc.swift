@@ -11,12 +11,13 @@ class LocalizationClassGeneratorObjC: LocalizationClassGenerator {
     func generateClass(fromLocalizationEntries localization : [LocalizationEntry], generatedFile : String) {
         var headerFile = ""
         var implementationFile = ""
+        let className = String(NSString(string: generatedFile).lastPathComponent)
         
         headerFile += "@import Foundation;\n\n"
-        headerFile += "@interface \(generatedFile) : NSObject\n\n"
+        headerFile += "@interface \(className) : NSObject\n\n"
         
-        implementationFile += "#import \"\(generatedFile).h\"\n\n"
-        implementationFile += "@implementation \(generatedFile)\n\n"
+        implementationFile += "#import \"\(className).h\"\n\n"
+        implementationFile += "@implementation \(className)\n\n"
         
         for localizationEntry in localization {
             headerFile += "+(NSString *)\(localizationEntry.property);\n"
