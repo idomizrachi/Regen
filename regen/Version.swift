@@ -8,7 +8,7 @@
 import Cocoa
 
 class Version {
-    static let current = "0.0.8"
+    static let current = "0.0.9"
 
     static func display() {
         print(Version.current)
