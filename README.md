@@ -87,7 +87,7 @@ Update your code:
 
 To:
 
-`[UIImage imageNamed: Images.loginButton]`
+`[UIImage imageNamed: Images.sharedInstance.loginButton]`
 
 And from:
 
