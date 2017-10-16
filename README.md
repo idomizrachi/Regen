@@ -20,6 +20,9 @@ or
 `regen`
 
 ## What's New
+### 0.0.9
+Fix issue in localization generated file of wrong class/struct name
+
 ### 0.0.8
 Fix project install configuration.
 
