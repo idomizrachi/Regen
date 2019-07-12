@@ -97,6 +97,5 @@ To:
 
 `Localization.loginButton`
 
-
 ## Credits\Thanks
 https://github.com/icodeforlove/Colors for the ANSI color library

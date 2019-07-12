@@ -9,7 +9,7 @@
 import Cocoa
 
 extension String {
-    func className() -> String {
+    func className() -> String {        
         return prefix(1).uppercased() + String(dropFirst())
     }
 }

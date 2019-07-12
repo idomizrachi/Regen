@@ -4,6 +4,7 @@
 //
 //  Created by Chad Scira on 3/3/15.
 //
+//  https://github.com/icodeforlove/Colors
 
 import Foundation
 
@@ -114,7 +115,7 @@ func parseExistingANSI(_ string: String) -> [ANSIGroup] {
     
     for match in matches {
         var parts = matchesForRegexInText("\\u001B\\[([^m]*)m(.+?)\\u001B\\[0m", text: match),
-        codes = parts[1].characters.split {$0 == ";"}.map { String($0) },
+        codes = parts[1].split {$0 == ";"}.map { String($0) },
         string = parts[2]
         
         results.append(ANSIGroup(codes: codes.filter { Int($0) != nil }.map { Int($0)! }, string: string))

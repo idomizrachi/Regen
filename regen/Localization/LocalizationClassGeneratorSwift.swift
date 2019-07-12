@@ -8,7 +8,7 @@
 import Foundation
 
 class LocalizationClassGeneratorSwift: LocalizationClassGenerator {
-    func generateClass(fromLocalizationEntries localization : [LocalizationEntry], generatedFile : String) {
+    func generateClass(fromLocalizationEntries localization : [Localization.Entry], generatedFile : String) {
         var file = ""
         let className = String(NSString(string: generatedFile).lastPathComponent)
         
