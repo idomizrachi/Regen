@@ -1,5 +1,7 @@
 os: osx
 osx_image: xcode10.2
 language: swift
-xcode_project: regen.xcodeproj
-xcode_scheme: regen
+script:
+  - xcodebuild -scheme regen clean build test
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
