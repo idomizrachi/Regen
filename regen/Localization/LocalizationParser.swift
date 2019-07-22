@@ -8,14 +8,28 @@
 import Foundation
 
 extension Localization {
+
+    struct KeyValue: Codable {
+        let key: String
+        let value: String
+    }
+
     struct Entry: Codable {
-        var path : String
-        var key : String
-        var value : String
-        var property : String
+        let path : String
+        let key : String
+        let value : String
+        let property : String
+        let params: [KeyValue]
     }
 
     class Parser {
+        let parameterDetection: ParameterDetection?
+        let whitelist: [String]?
+
+        init(parameterDetection: ParameterDetection?, whitelist: [String]?) {
+            self.parameterDetection = parameterDetection
+            self.whitelist = whitelist
+        }
 
         func parseLocalizationFile(_ file : String) -> [Entry] {
             var localizationEntries : [Entry] = []
@@ -26,32 +40,33 @@ extension Localization {
                 for line in lines {
                     let keyValue = parseLocalizationLine(line)
                     if let key = keyValue.0, let value = keyValue.1 {
+                        if let whitelist = self.whitelist {
+                            if !whitelist.contains(key) {
+                                continue
+                            }
+                        }
                         let property = key.propertyName()
-                        localizationEntries.append(Entry(path: file, key: key, value: value, property: property))
+                        var params: [KeyValue] = []
+                        if let parameterDetection = parameterDetection {
+                            var range = value.startIndex..<value.endIndex
+                            while let parameterRange = value.range(of: "(\(parameterDetection.startRegex))[^\(parameterDetection.startRegex)]+(\(parameterDetection.endRegex))", options: .regularExpression, range: range) {
+                                let start = value.index(parameterRange.lowerBound, offsetBy: parameterDetection.startOffset)
+                                let end = value.index(parameterRange.upperBound, offsetBy: -parameterDetection.endOffset)
+                                let parameter = String(value[start..<end])
+                                if !params.contains { $0.key == parameter.propertyName() } {
+                                    params.append(KeyValue(key: parameter.propertyName(), value: parameter))
+                                }
+                                range = parameterRange.upperBound..<value.endIndex
+                            }
+
+                        }
+                        localizationEntries.append(Entry(path: file, key: key, value: value, property: property, params: params))
                     }
                 }
             } catch {
                 content = ""
             }
             return localizationEntries
-        }
-
-        func appendEntries(_ from : [Entry], to : inout [Entry]) {
-            for entry in from {
-                if Localization.Parser.contains(to, key: entry.key) {
-                    continue
-                }
-                to.append(entry)
-            }
-        }
-
-        static func contains(_ entries : [Entry], key : String) -> Bool {
-            for entry in entries {
-                if entry.key == key {
-                    return true
-                }
-            }
-            return false
         }
 
         func parseLocalizationLine(_ line: String) -> (String?, String?) {

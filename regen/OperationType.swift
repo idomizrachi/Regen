@@ -7,21 +7,6 @@
 
 import Foundation
 
-extension Localization {
-    struct Parameters {
-        let searchPath: String
-        let templateFilepath: String
-        let outputFilename: String
-        let outputClassName: String
-        let baseLanguageCode: String
-    }
-}
-
-struct ImagesParameters {
-    let templateFilepath: String
-    let outputFilename: String
-}
-
 enum OperationType {
     // Info
     case version
@@ -31,9 +16,11 @@ enum OperationType {
     case localization(parameters: Localization.Parameters)
 }
 
-enum OperationTypeKeys: String {
-    case version = "--version"
-    case usage
-    case images
-    case localization
+extension OperationType {
+    enum Keys: String {
+        case version = "--version"
+        case usage
+        case images
+        case localization
+    }
 }

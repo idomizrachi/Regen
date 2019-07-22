@@ -12,16 +12,14 @@ extension Localization {
 
         let searchPath: String
         let stringsFilename: String
-        let fileManager: FileManager
 
-        init(searchPath: String, stringsFilename: String, fileManager: FileManager = FileManager.default) {
+        init(searchPath: String, stringsFilename: String) {
             self.searchPath = searchPath
             self.stringsFilename = stringsFilename
-            self.fileManager = fileManager
         }
 
         func findLocalizationFiles() -> [String] {
-            let enumerator = fileManager.enumerator(atPath: searchPath)
+            let enumerator = FileManager.default.enumerator(atPath: searchPath)
             var localizationFiles : [String] = []
             while let element = enumerator?.nextObject() as? String  {
                 if element.hasSuffix(stringsFilename) {

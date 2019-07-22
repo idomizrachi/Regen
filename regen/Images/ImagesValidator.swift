@@ -15,10 +15,10 @@ struct ValidationIssue {
 
 class ImagesValidator {
     func validate(_ images : [Image]) -> [ValidationIssue] {
-        Logger.debug("\tImages validation: started")
+//        Logger.debug("\tImages validation: started")
         var issues : [ValidationIssue] = []
         guard images.count > 1 else {
-            Logger.debug("\tImages validation: finished")
+//            Logger.debug("\tImages validation: finished")
             return issues
         }
         for i in 0...images.count-2 {
@@ -30,7 +30,7 @@ class ImagesValidator {
                 }
             }
         }
-        Logger.debug("\tImages validation: finished (\(issues.count) issue\\s found)")
+//        Logger.debug("\tImages validation: finished (\(issues.count) issue\\s found)")
         return issues
     }
 }
