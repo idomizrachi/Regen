@@ -4,4 +4,4 @@ language: swift
 script:
   - xcodebuild -scheme regen clean build test
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
+  - bash <(curl -s https://codecov.io/bash) -J 'regen'
