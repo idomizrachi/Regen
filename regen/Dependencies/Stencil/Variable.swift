@@ -80,7 +80,7 @@ public struct Variable: Equatable, Resolvable {
       current = try node.render(context)
     }
 
-    return normalize(current)
+    return Variable.normalize(current)
   }
 
   // Split the lookup string and resolve references if possible
@@ -91,7 +91,7 @@ public struct Variable: Equatable, Resolvable {
 
   // Try to resolve a partial keypath for the given context
   private func resolve(bit: String, context: Any?) -> Any? {
-    let context = normalize(context)
+    let context = Variable.normalize(context)
 
     if let context = context as? Context {
       return context[bit]
@@ -192,12 +192,14 @@ public struct RangeVariable: Resolvable {
 
 }
 
-func normalize(_ current: Any?) -> Any? {
-  if let current = current as? Normalizable {
-    return current.normalize()
-  }
+extension Variable {
+    static func normalize(_ current: Any?) -> Any? {
+      if let current = current as? Normalizable {
+        return current.normalize()
+      }
 
-  return current
+      return current
+    }
 }
 
 protocol Normalizable {
@@ -222,9 +224,9 @@ extension Dictionary: Normalizable {
 
     for (key, value) in self {
       if let key = key as? String {
-        dictionary[key] = regen.normalize(value)
+        dictionary[key] = Variable.normalize(value)
       } else if let key = key as? CustomStringConvertible {
-        dictionary[key.description] = regen.normalize(value)
+        dictionary[key.description] = Variable.normalize(value)
       }
     }
 
