@@ -19,4 +19,13 @@ enum CommandLineParameter: String {
     case parameterEndRegex = "--parameter-end-regex"
     case parameterStartOffset = "--parameter-start-offset"
     case parameterEndOffset = "--parameter-end-offset"
+    case assetsFile = "--assets"
+}
+
+func tryParse<T: CanBeInitializedWithString>(_ parameter: CommandLineParameter, from arguments: [String]) -> T? {
+    if let index = arguments.firstIndex(of: parameter.rawValue), index+1 < arguments.count {
+        return T(arguments[index+1])
+    } else {
+        return nil
+    }
 }

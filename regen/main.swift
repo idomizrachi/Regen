@@ -11,7 +11,6 @@ let operationTimer = OperationTimer()
 operationTimer.start()
 
 let arguments = Array(CommandLine.arguments.dropFirst())
-//let arguments = ["localization", "--search-path", "/Users/idomizrachi/dev/bringg/ios/ios-driver-app-2.0/BringgDriverApp2/Resources/Translations", "--template", "ParametersLocalizationTemplate.swift", "--output-filename", "Localization.swift", "--output-class-name", "SomeLocalization", "--base-language-code", "en", "--parameter-start-regex", "#\\{", "--parameter-end-regex", "\\}", "--parameter-start-offset", "2", "--parameter-end-offset", "1", "--whitelist", "whitelist.txt"]
 
 let argumentsParser = ArgumentsParser(arguments: arguments)
 switch argumentsParser.operationType {

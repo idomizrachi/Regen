@@ -38,14 +38,4 @@ class LocalizationParametersParser {
         }
         return Localization.Parameters(searchPath: searchPath, templateFile: templateFile, outputFilename: outputFilename, outputClassName: outputClassName, baseLanguageCode: baseLanguageCode, parameterDetection: parameterDetection, whitelistFile: whitelistFile)
     }
-
-    //TODO: Move to a more general location
-    func tryParse<T: CanBeInitializedWithString>(_ parameter: CommandLineParameter, from arguments: [String]) -> T? {
-        if let index = arguments.firstIndex(of: parameter.rawValue), index+1 < arguments.count {
-            return T(arguments[index+1])
-        } else {
-            return nil
-        }
-    }
-
 }

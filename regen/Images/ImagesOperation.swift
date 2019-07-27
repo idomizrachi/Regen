@@ -10,55 +10,139 @@ import Foundation
 extension Images {
     class Operation {
 
-        let parameters: ImagesParameters
+        let parameters: Parameters
 
-        init(parameters: ImagesParameters) {
+        init(parameters: Parameters) {
             self.parameters = parameters
         }
 
         func run() {
-            let finder = Finder()
+            let imagesetsFinder = ImagesetsFinder()
             let imagesetParser = ImagesetParser()
             var images : [Image] = []
-
-//            let xcassetsFiles = assetsFinder.findAssetsFiles(in: parameters.searchPath)
-//            for assetsFile in xcassetsFiles {
-                let imageFiles = finder.find(in: parameters.assetsFile)
-                for imageFile in imageFiles {
-                    if let image = imagesetParser.parseImage(imageFile) {
-                        images.append(image)
-                    }
+            let imagesetFiles = imagesetsFinder.find(in: parameters.assetsFile)
+            for imagesetFile in imagesetFiles {
+                if let image = imagesetParser.parse(imagesetFile) {
+                    images.append(image)
                 }
-//            }
-            let validator = ImagesValidator()
-            let validationIssues = validator.validate(images)
-            guard validationIssues.count == 0 else {
+            }
+            let validator = Validator()
+            let issues = validator.validate(images)
+            guard issues.isEmpty else {
                 return
             }
-//            let imagesTree = foldersTree(images: images)
-            generate()
-//            if validationIssues.count == 0 {
-//                let generator: ImagesClassGenerator
-//                switch self.language {
-//                case .objc:
-//                    generator = ImagesClassGeneratorObjC()
-//                case .swift:
-//                    generator = ImagesClassGeneratorSwift()
-//                }
-//                generator.generateClass(fromImagesTree: imagesTree, generatedFile: output)
-//            } else {
-//                Logger.error("Issues found:")
-//                for validationIssue in validationIssues {
-//                    let firstImage = validationIssue.firstImage
-//                    let secondImage = validationIssue.secondImage
-//                    Logger.error("\timage \(firstImage) conflicts with \(secondImage) as property \(validationIssue.property)")
-//                }
-//                exit(EXIT_FAILURE)
-//            }
-//            Logger.info("Images scan: Finished")
+            let imagesTree = foldersTree(images: images)
+
+            let result = generate(tree: imagesTree)
+            try! result.data(using: .utf8)!.write(to: URL(fileURLWithPath: parameters.outputFilename))
+//            generate()
+////            if validationIssues.count == 0 {
+////                let generator: ImagesClassGenerator
+////                switch self.language {
+////                case .objc:
+////                    generator = ImagesClassGeneratorObjC()
+////                case .swift:
+////                    generator = ImagesClassGeneratorSwift()
+////                }
+////                generator.generateClass(fromImagesTree: imagesTree, generatedFile: output)
+////            } else {
+////                Logger.error("Issues found:")
+////                for validationIssue in validationIssues {
+////                    let firstImage = validationIssue.firstImage
+////                    let secondImage = validationIssue.secondImage
+////                    Logger.error("\timage \(firstImage) conflicts with \(secondImage) as property \(validationIssue.property)")
+////                }
+////                exit(EXIT_FAILURE)
+////            }
+////            Logger.info("Images scan: Finished")
         }
 
-        private func generate() {
+        private func generate(root: Tree<ImageNodeItem>) {
+//            let data = try! JSONEncoder().encode(imagesTree)
+//            let array = try! JSONSerialization.jsonObject(with: data, options: []) as! [AnyHashable]
+//
+//            let context: [String: AnyHashable] = ["className": parameters.outputClassName, "properties": array]
+//
+//            let environment = Environment(loader: FileSystemLoader(paths: [""]))
+//            let render = try! environment.renderTemplate(name: parameters.templateFile, context: context)
+//            try! render.data(using: .utf8)!.write(to: URL(fileURLWithPath: parameters.outputFilename))
+        }
+
+        /**
+         public struct {{ className }} {
+         {% for folder in folders %} let {{ folder.propertyName }}: {{folder.className }} = {{folder.className }}()
+
+         {% for image in images %} let {{ image.propertyName }}: String = "{{ image.imageSetName }}"
+         }
+
+ */
+        private func generate(tree: Tree<ImageNodeItem>) -> String {
+            //flatten the tree
+            //generate code per section
+            //construct a single file
+            let folders: [[String: String]] = tree.children.map {
+                let folder: [String: String] = [
+                    "propertyName": $0.item.folder.propertyName(),
+                    "className": $0.item.folderClass
+                ]
+                return folder
+            }
+            let images: [[String: String]] = tree.item.images.map {
+                let image: [String: String] = [
+                    "propertyName": $0.propertyName,
+                    "imageSetName": $0.name
+
+                ]
+                return image
+            }
+            let context: [String: AnyHashable] = [
+                "className": parameters.outputClassName,
+                "folders": folders,
+                "images": images
+            ]
+            let environment = Environment(loader: FileSystemLoader(paths: [""]))
+            let render = try! environment.renderTemplate(name: parameters.templateFile, context: context)
+            let result = String(data: render.data(using: .utf8)!, encoding: .utf8)!
+            var childrenGenerated: String = ""
+            tree.children.forEach {
+                childrenGenerated += generateChild(tree: $0, parent: parameters.outputClassName) + "\n"
+            }
+
+            return childrenGenerated + "\n" + result
+        }
+
+        private func generateChild(tree: TreeNode<ImageNodeItem>, parent: String) -> String {
+            let folders: [[String: String]] = tree.children.map {
+                let folder: [String: String] = [
+                    "propertyName": $0.item.folder.propertyName(),
+                    "className": $0.item.folderClass
+                ]
+                return folder
+            }
+            let images: [[String: String]] = tree.item.images.map {
+                let image: [String: String] = [
+                    "propertyName": $0.propertyName,
+                    "imageSetName": $0.name
+
+                ]
+                return image
+            }
+            let context: [String: AnyHashable] = [
+                "parent": parent,
+                "className": tree.item.folderClass,
+                "folders": folders,
+                "images": images
+            ]
+            let environment = Environment(loader: FileSystemLoader(paths: [""]))
+            let render = try! environment.renderTemplate(name: parameters.templateFile, context: context)
+            let result = String(data: render.data(using: .utf8)!, encoding: .utf8)!
+
+            var childrenGenerated: String = ""
+            tree.children.forEach {
+                childrenGenerated += generateChild(tree: $0, parent: tree.item.folderClass)
+//                childrenGenerated += "\n"
+            }
+            return childrenGenerated + /*"\n\n" +*/ result
         }
 
         func foldersTree(images: [Image]) -> Tree<ImageNodeItem> {
@@ -80,8 +164,7 @@ extension Images {
                             }
                         }
                         if found == false {
-                            let uuid = UUID().uuidString
-                            let folderClass = folder.propertyName.className() + "_" + String(uuid[..<uuid.index(uuid.startIndex, offsetBy: 5)])
+                            let folderClass = folder.propertyName.className()
                             let folderNode: TreeNode<ImageNodeItem> = TreeNode(item: ImageNodeItem(folder: folder.propertyName, folderClass: folderClass))
                             node.addChild(folderNode)
                             node = folderNode
@@ -95,17 +178,7 @@ extension Images {
 
             return tree
         }
-
-
-        //    func run(_ searchPath : String, output : String) {
-        //        Logger.info("Images scan: started")
-
-
-        //        let imagesetParser = ImagesetParser()
-
     }
-
-
 }
 
 

@@ -26,7 +26,7 @@ extension Images {
             }
         }
 
-        func parseImage(_ imageset: String) -> Image? {
+        func parse(_ imageset: String) -> Image? {
             guard let relativeImagename = ImagesetParser.removeAssetsPath(imageset) else {
                 return nil
             }

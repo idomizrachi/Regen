@@ -9,5 +9,8 @@
 import Foundation
 
 struct Images {
+}
+
+extension Images {
     static let imagesetSuffix = ".imageset"
 }

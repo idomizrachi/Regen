@@ -55,27 +55,9 @@ class ArgumentsParser {
         return parser.parse()
     }
 
-    private static func parseImagesParameters(_ arguments: [String]) -> ImagesParameters? {
-//        guard let firstArgument = arguments.first else {
-//            return nil
-//        }
-//        guard let operationType = OperationType.Keys(rawValue: firstArgument) else {
-//            return nil
-//        }
-//        guard operationType == .images else {
-//            return nil
-//        }
-//        guard let assetsFile = parseAssetsFile(arguments: arguments) else {
-//            return nil
-//        }
-//        guard let templateFile = parseTemplateFile(arguments: arguments) else {
-//            return nil
-//        }
-//        guard let outputFilename = parseOutputFilename(arguments: arguments) else {
-//            return nil
-//        }
-//        return ImagesParameters(assetsFile: assetsFile, templateFile: templateFile, outputFilename: outputFilename)
-        return nil
+    private static func parseImagesParameters(_ arguments: [String]) -> Images.Parameters? {
+        let parser = ImagesParametersParser(arguments: arguments)
+        return parser.parse()
     }
 
 //    private static func parseAssetsFile(arguments: [String]) -> String? {

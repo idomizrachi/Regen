@@ -54,6 +54,13 @@ class ArgumentsParserLocalizationTests: XCTestCase {
         }
     }
 
+    func testImagesOperationWithDefaultArguments() {
+        let argumentsParser = ArgumentsParser(arguments: ["images"])
+        switch argumentsParser.operationType {
+        case .usage: break
+        default: XCTFail("Bad operation")
+        }
+    }
     
 
 //    func testLocalizationOperationWithValidParameters() {

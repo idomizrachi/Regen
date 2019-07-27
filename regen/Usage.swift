@@ -40,12 +40,14 @@ class Usage {
             Handling Localization Parameters: "hello %d" / "Welcome #{user}"
             --parameter-start-regex     The regex for the beginning of the parameters, in the above cases a regex for % or #{
             --parameter-end-regex       The regex for the beginning of the parameters, in the above cases a regex for d or }
-            --parameter-start-offset    The number of characters to skip when a parameter for example to extract only "user" from #{users} skip 1 character
-            --parameter-end-offset      The number of characters to skip when a parameter for example to extract only "user" from #{users} skip 2 characters from the end
+            --parameter-start-offset    The number of characters to skip when a parameter for example to extract only "user" from #{users} skip 2 characters from the start
+            --parameter-end-offset      The number of characters to skip when a parameter for example to extract only "user" from #{users} skip 1 character from the end
 
         Images Parameters:
-            --template      Set the Stencil template file
-            --output         Set the output file
+            --assets                    The .xcassets file path
+            --template                  Stencil template file, for example: Template.txt
+            --output-filename           The output filename, for example: Localization.swift, default value: Localization.swift
+            --output-class-name         The generated class name, for example: LocalizableStrings, default value: Localization
         """#
 
 

@@ -8,7 +8,7 @@
 import Cocoa
 
 extension Images {
-    class Finder {
+    class ImagesetsFinder {
 
         init() {
         }

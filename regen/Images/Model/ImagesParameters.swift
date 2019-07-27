@@ -8,8 +8,11 @@
 
 import Foundation
 
-struct ImagesParameters {
-    let assetsFile: String
-    let templateFile: String
-    let outputFilename: String
+extension Images {
+    struct Parameters {
+        let assetsFile: String
+        let templateFile: String
+        let outputFilename: String        
+        let outputClassName: String
+    }
 }

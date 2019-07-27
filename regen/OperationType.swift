@@ -12,7 +12,7 @@ enum OperationType {
     case version
     case usage
     // Actions
-    case images(parameters: ImagesParameters)
+    case images(parameters: Images.Parameters)
     case localization(parameters: Localization.Parameters)
 }
 
