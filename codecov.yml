@@ -1,0 +1,4 @@
+coverage:
+  ignore:
+    - "regen/Dependencies/**/*"
+    - "regen-tests/**/*"

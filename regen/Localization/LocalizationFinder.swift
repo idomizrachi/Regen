@@ -7,25 +7,27 @@
 
 import Foundation
 
-class LocalizationFinder {
-    
-    let fileManager : FileManager
-    
-    init(fileManager: FileManager) {
-        self.fileManager = fileManager
-    }
-    
-    func findLocalizationFiles(inPath path : String) -> [String] {
-        let enumerator = fileManager.enumerator(atPath: path)
-        var localizationFiles : [String] = []
-        Logger.debug("\tSearching localization files: started")
-        while let element = enumerator?.nextObject() as? String  {
-            if element.hasSuffix(LocalizationOperation.localizableStrings) {
-                localizationFiles.append(path + "/" + element)
-            }
+extension Localization {
+    class Finder {
+
+        let searchPath: String
+        let stringsFilename: String
+
+        init(searchPath: String, stringsFilename: String) {
+            self.searchPath = searchPath
+            self.stringsFilename = stringsFilename
         }
-        Logger.debug("\tSearching localization files: finished (\(localizationFiles.count) file\\s found)")
-        return localizationFiles
+
+        func findLocalizationFiles() -> [String] {
+            let enumerator = FileManager.default.enumerator(atPath: searchPath)
+            var localizationFiles : [String] = []
+            while let element = enumerator?.nextObject() as? String  {
+                if element.hasSuffix(stringsFilename) {
+                    localizationFiles.append(searchPath + "/" + element)
+                }
+            }
+            return localizationFiles
+        }
+
     }
-    
 }

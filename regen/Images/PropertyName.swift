@@ -19,7 +19,7 @@ private extension String {
 
 extension String {
     func propertyName() -> String {
-        if self.characters.count == 0 {
+        if self.isEmpty {
             return self
         }
         var propertyName = ""
@@ -27,12 +27,12 @@ extension String {
         var currentToken = String(self[self.index(self.startIndex, offsetBy: 0)])
         var previousCharacterType = CharacterType.fromCharacter(self[self.index(self.startIndex, offsetBy: 0)])
         var isFirstToken = true
-        for i in 1..<self.characters.count {
+        for i in 1..<self.count {
             let character = self[self.index(self.startIndex, offsetBy: i)]
             let characterType = CharacterType.fromCharacter(character)
             if character.isValidForPropertyName() {
                 if characterType != previousCharacterType {
-                    if currentToken.isUppercased() && currentToken.characters.count == 1 {
+                    if currentToken.isUppercased() && currentToken.count == 1 {
                     } else {
                         if isFirstToken == false {
                             currentToken = currentToken.capitalized
@@ -60,7 +60,7 @@ extension String {
         var index = 0
         while index < tokens.count {
             let token = tokens[index]
-            if token.characters.count == 1 && token.isUppercased() && index+1 < tokens.count && token != "A" {
+            if token.count == 1 && token.isUppercased() && index+1 < tokens.count && token != "A" {
                 propertyName += token + tokens[index+1].lowercased()
                 index += 1
             } else {

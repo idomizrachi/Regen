@@ -10,17 +10,11 @@ import Cocoa
 
 //TODO: Rename
 public class ImageNodeItem: Hashable {
-    var folder: String = "" {
-        didSet {
-            self.hashValue = self.folder.hashValue
-        }
-    }
+    var folder: String = ""
     var folderClass: String = ""
     
     var images: [Property] = []
-    
-    public var hashValue: Int = 0
-    
+
     public static func ==(lhs: ImageNodeItem, rhs: ImageNodeItem) -> Bool {
         return lhs.folder == rhs.folder
     }
@@ -29,5 +23,10 @@ public class ImageNodeItem: Hashable {
         self.folder = folder
         self.folderClass = folderClass
         self.images = []
-    }    
+    }
+
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(folder)
+    }
+
 }

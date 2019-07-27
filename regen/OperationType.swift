@@ -8,8 +8,19 @@
 import Foundation
 
 enum OperationType {
+    // Info
     case version
-    case images
-    case localization
     case usage
+    // Actions
+    case images(parameters: Images.Parameters)
+    case localization(parameters: Localization.Parameters)
+}
+
+extension OperationType {
+    enum Keys: String {
+        case version = "--version"
+        case usage
+        case images
+        case localization
+    }
 }

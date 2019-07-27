@@ -7,123 +7,70 @@
 
 import Foundation
 
-enum Language {
-    case ObjC
-    case Swift
+protocol CanBeInitializedWithString {
+    init?(_ description: String)
 }
 
+extension Int: CanBeInitializedWithString {}
+extension String: CanBeInitializedWithString {}
+
 class ArgumentsParser {
-    
-    static let imagesType = "images"
-    static let localizationType = "localization"
-    
     let arguments : [String]
-    
-    var output : String?
-    var language: Language = .ObjC
-    var verbose:Bool = false
-    var color:Bool = true
-    
+    let operationType: OperationType
+
     init(arguments : [String]) {
         self.arguments = arguments
-        parseOutput()
-        parseLanguage()
-        parseVerbose()
-        parseColor()
+        self.operationType = ArgumentsParser.parseOperationType(arguments: arguments)
     }
-    
-    func operationType() -> OperationType {
-        if isVersionOperationType() {
+
+    private static func parseOperationType(arguments: [String]) -> OperationType  {
+        let operationTypeKey = parseOperationTypeKey(arguments)
+        switch operationTypeKey {
+        case .localization:
+            guard let parameters = parseLocalizationParameters(arguments) else {
+                return .usage
+            }
+            return .localization(parameters: parameters)
+        case .images:
+            guard let parameters = parseImagesParameters(arguments) else {
+                return .usage
+            }
+            return .images(parameters: parameters)
+        case .version:
             return .version
-        }
-        if isImagesOperationType() {
-            return .images
-        }
-        if isLocalizationOperationType() {
-            return .localization
-        }
-        return .usage
-    }
-    
-    func isVersionOperationType() -> Bool {
-        //The first argument contains the executable file path
-        if arguments.contains("--version") && arguments.count == 2 {
-            return true
-        }
-        return false
-    }
-    
-    func scanType() -> String? {
-        guard let indexOfScanType = arguments.index(of: "--scanType") else {
-            return nil
-        }
-        if indexOfScanType+1 < arguments.count {
-            let scanType = arguments[indexOfScanType+1]
-            return scanType.lowercased()
-        }
-        return nil
-    }
-    
-    
-    func isImagesOperationType() -> Bool {
-        if let scanType = scanType() {
-            if scanType == "images" {
-                return true
-            }
-        }
-        return false
-    }
-    
-    func isLocalizationOperationType() -> Bool {
-        if let scanType = scanType() {
-            if scanType == "localization" {
-                return true
-            }
-        }
-        return false
-    }
-    
-    func parseOutput() {
-        guard let indexOfOutput = arguments.index(of: "--output") else {
-            return
-        }
-        if indexOfOutput+1 < arguments.count {
-            self.output = arguments[indexOfOutput+1]
+        case .usage:
+            return .usage
         }
     }
-    
-    func parseLanguage() {
-        guard let indexOfLanguage = arguments.index(of: "--language") else {
-            return
+
+    private static func parseOperationTypeKey(_ arguments: [String]) -> OperationType.Keys {
+        guard let firstArgument = arguments.first else {
+            return .usage
         }
-        if indexOfLanguage+1 < arguments.count {
-            let language = arguments[indexOfLanguage+1].lowercased()
-            if (language == "swift") {
-                self.language = .Swift
-            } else {
-                self.language = .ObjC
-            }
-        }
+        return OperationType.Keys(rawValue: firstArgument) ?? .usage
     }
-    
-    func parseVerbose() {
-        if arguments.index(of: "--verbose") != nil {
-            self.verbose = true
-        } else if arguments.index(of: "-v") != nil {
-            self.verbose = true
-        } else {
-            self.verbose = false
-        }
+
+    private static func parseLocalizationParameters(_ arguments: [String]) -> Localization.Parameters? {
+        let parser = LocalizationParametersParser(arguments: arguments)
+        return parser.parse()
     }
-    
-    func parseColor() {
-        if arguments.index(of: "--nocolor") != nil {
-            self.color = false
-        } else {
-            self.color = true
-        }
+
+    private static func parseImagesParameters(_ arguments: [String]) -> Images.Parameters? {
+        let parser = ImagesParametersParser(arguments: arguments)
+        return parser.parse()
     }
-    
+
+//    private static func parseAssetsFile(arguments: [String]) -> String? {
+//        let assetsFile: String? = tryParse("--assets-file", from: arguments)
+//        return assetsFile
+//    }
+
+    private static func isVersionOperation(_ arguments: [String]) -> Bool {
+        guard let firstArgument = arguments.first else {
+            return false
+        }
+        return firstArgument.lowercased() == OperationType.Keys.version.rawValue
+    }
 }
 
 
