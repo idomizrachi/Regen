@@ -20,6 +20,9 @@ or
 `regen`
 
 ## What's New
+### 0.0.10
+Images and localization code is now generated based on a stencil templated instead of hardcoded
+
 ### 0.0.9
 Fix issue in localization generated file of wrong class/struct name
 
