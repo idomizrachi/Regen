@@ -102,3 +102,6 @@ To:
 
 ## Credits\Thanks
 https://github.com/icodeforlove/Colors for the ANSI color library
+https://github.com/stencilproject/Stencil for the template engine
+  https://github.com/kylef/PathKit - stencil dependency
+  https://github.com/kylef/Spectre.git - stencil dependecy
