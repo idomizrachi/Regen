@@ -20,6 +20,9 @@ or
 `regen`
 
 ## What's New
+### 0.0.11
+Raised the minimum macOS deployment target to 12.0 to build with the latest Xcode
+
 ### 0.0.10
 Images and localization code is now generated based on a stencil templated instead of hardcoded
 
